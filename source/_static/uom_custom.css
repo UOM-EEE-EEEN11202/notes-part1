@@ -13,7 +13,6 @@ header {
 
 
 body {
-    /* font-family: "Roboto", sans-serif; */
     font-family: var(--uom-font);
 }
 
@@ -23,15 +22,24 @@ body {
 
 
 .breadcrumb {
-    display: none;
-    /* display: flex; */
+    display: flex;
+    /* display: none; */
+}
+
+
+a {
+    text-decoration-color: var(--uom-purple);
+}
+
+
+a:hover {
+  color: var(--uom-purple) !important;
 }
 
 
 footer {
     font-family: var(--uom-font) !important;
 }
-
 
 
 /* For code use the default, Adobe Source Code Pro */

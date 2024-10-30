@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-GB">
+<html class="no-js" lang="en" data-content_root="./">
 <head>
     <meta charset="utf-8" />
         <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
@@ -11,10 +11,11 @@
         <link rel="shortcut icon" href="_static/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=ea6a6c20" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8c05e732" />
+      <link rel="stylesheet" type="text/css" href="_static/uom_custom.css?v=60c71207" />
             <link rel="index" title="Index" href="genindex.html" />
             <link rel="search" title="Search" href="search.html" />
             <link rel="top" title="notes-part1 0.1 documentation" href="#" />
+            <link rel="next" title="1. Course overview and motivation" href="1_intro_and_motivation.html" />
     </head>
 <body>
     <script type="text/javascript" src="_static/dist/blocking.js"></script>
@@ -26,7 +27,7 @@
                         title="University of Manchester logo"
                         class="logo navbar-brand"
                     >
-                        <img src="_static//images/uom_logo.png" width="46" height="109" alt="University of Manchester logo"
+                        <img src="_static//images/uom_logo_white.png" width="88" height="59" alt="University of Manchester logo"
                             class="logo-img"
                         />
                         Notes part 1
@@ -50,14 +51,19 @@
             <div class="input-group-prepend">
                 <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
             </div>
-            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search documentation" aria-label="Search documentation" id="searchinput" />
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search Notes part 1s" aria-label="Search notes" id="searchinput" />
         </div>
         <input type="hidden" name="check_keywords" value="yes" />
         <input type="hidden" name="area" value="default" />
     </form>
 </div><div class="site-toc">
     <nav class="toc mt-3" aria-label="Main menu">
-        
+        <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_intro_and_motivation.html">1. Course overview and motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_getting_started.html">2. Getting started</a></li>
+</ul>
+
     </nav>
     <template data-toggle-item-template>
         <button class="btn btn-sm btn-link toctree-expand" type="button">
@@ -65,7 +71,7 @@
         </button>
     </template>
 </div><p>
-    <img src="_static/images/uom_logo_white_background.png" alt="University of Manchester logo" style="width:200px;height:100px;">
+    <img src="_static/images/uom_logo_white_background.png" alt="University of Manchester logo" style="width: 100vw; min-width: 100px;">
 </p>
                     <div class="d-lg-none border-bottom">
                         
@@ -77,7 +83,7 @@
                     <div class="col">
                         <nav aria-label="breadcrumb">
     <ol class="breadcrumb m-0 p-0 bg-transparent">
-        <li class="breadcrumb-item"><a href="#">Docs</a></li>
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Introduction</li>
     </ol>
 </nav>
@@ -90,7 +96,7 @@
                             <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
                             <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
                         </button>
-    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/wagtail/sphinx_wagtail_theme/blob/main/docs/index.rst" rel="nofollow">
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/UOM-EEE-EEEN1XXX2/notes-part1index.rst" rel="nofollow">
         <span class="btn-icon"><span class="fab fa-github"></span></span>
         <span class="btn-text">Edit on GitHub</span>
     </a>
@@ -109,19 +115,34 @@
                 <div class="row">
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
-    <section id="introduction">
+    <div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_intro_and_motivation.html">1. Course overview and motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_intro_and_motivation.html#introduction">1.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_intro_and_motivation.html#where-you-ll-use-this-knowledge">1.2. Where you’ll use this knowledge</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2_getting_started.html">2. Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_getting_started.html#introduction">2.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_getting_started.html#where-you-ll-use-this-knowledge">2.2. Where you’ll use this knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_getting_started.html#how-we-actually-write-software">2.3. How we actually write software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_getting_started.html#software-development-tools">2.4. Software development tools</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
-<p>This is the start of the course notes.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This project is under active development. Test.</p>
-</div>
-<div class="toctree-wrapper compound">
-</div>
+<p>Main intro to part 1 of the notes goes here.</p>
 </section>
 
 </main>
-                        
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-right" href="1_intro_and_motivation.html" title="Next">
+        <span class="section-number">1. </span>Course overview and motivation <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
                     </div>
                     
                 </div>
@@ -148,20 +169,13 @@
                 </nav>
             
             <div class="text-center">
-                <p style="display: none">
-                    <a class="text-light" href="https://github.com/wagtail/sphinx_wagtail_theme" rel="nofollow" target="_blank">
-                        Wagtail Sphinx Theme 6.3.0
-                    </a>
-                </p>
-            </div>
-            <div class="text-center">
-                    &copy; Copyright 2024, Alex Casson
+                    &copy; Copyright Alex Casson. <a class="nav-link text-light" href="https://creativecommons.org/licenses/by/4.0/deed.en">Released under CC-BY 4.0 license.</a>
             </div>
         </div>
     </div>
         </div>
     </footer>
-        <script src="_static/documentation_options.js?v=818a811f"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script type="text/javascript" src="_static/dist/theme.js"></script>
