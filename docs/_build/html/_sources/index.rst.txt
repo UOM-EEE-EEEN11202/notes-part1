@@ -1,0 +1,13 @@
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+   :numbered:
+
+   chapters/1_intro_and_motivation
+   chapters/2_getting_started
+
+
+Introduction
+============
+
+Main intro to part 1 of the notes goes here..

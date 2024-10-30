@@ -25,7 +25,10 @@ language = 'en'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 
-html_theme_path = ['./_theme']
+#extensions.append('sphinx_wagtail_theme')
+#html_theme = 'sphinx_wagtail_theme'
+
+html_theme_path = ['./theme']
 html_theme = 'uom_sphinx_wagtail_theme'
 html_static_path = ['_static']
 html_theme_options = dict(
@@ -38,7 +41,7 @@ html_theme_options = dict(
         "The University of Manchester|https://www.manchester.ac.uk/",
         "Canvas|https://online.manchester.ac.uk/",
     ]),
-    github_url = "https://github.com/UOM-EEE-EEEN1XXX2/notes-part1",
+    github_url = "https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/docs/",
 )
 html_favicon = "_static/images/favicon.ico"
 html_show_copyright = True
