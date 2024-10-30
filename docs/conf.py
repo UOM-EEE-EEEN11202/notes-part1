@@ -25,7 +25,8 @@ language = 'en'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 
-#extensions.append('sphinx_wagtail_theme')
+
+extensions.append('sphinx_wagtail_theme')
 #html_theme = 'sphinx_wagtail_theme'
 
 html_theme_path = ['./theme']
