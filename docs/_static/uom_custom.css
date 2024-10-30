@@ -37,6 +37,11 @@ a:hover {
 }
 
 
+.navbar-brand{
+  color: #000 !important;
+}
+
+
 footer {
     font-family: var(--uom-font) !important;
 }
