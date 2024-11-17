@@ -17,6 +17,9 @@ body {
 }
 
 
+p{
+  line-height: 1.5;
+}
 
 .bg-primary{background-color: var(--uom-purple) !important}
 
@@ -37,8 +40,13 @@ a:hover {
 }
 
 
+.navbar-brand{
+  color: #FFF !important;
+}
+
+
 .navbar-brand:hover{
-  color: #FFF;
+  color: #6c6c6c !important;
 }
 
 
