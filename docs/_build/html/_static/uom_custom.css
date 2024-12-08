@@ -1,14 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
 
 
+@font-face { 
+    font-family: "OpenDyslexic";
+    font-style: normal;
+    font-weight: normal;
+    src: url("./fonts/opendyslexic-0.91.12/OpenDyslexic-Regular.woff2") format('woff2');
+}
+
+
+@font-face { 
+    font-family: "OpenDyslexic";
+    font-style: italic;
+    font-weight: normal;
+    src: url("./fonts/opendyslexic-0.91.12/OpenDyslexic-Italic.woff2") format('woff2');
+}
+
+
+@font-face { 
+    font-family: "OpenDyslexic";
+    font-style: bold;
+    font-weight: normal;
+    src: url("./fonts/opendyslexic-0.91.12/OpenDyslexic-Bold.woff2") format('woff2');
+}
+
+
+@font-face { 
+    font-family: "OpenDyslexic";
+    font-style: bold;
+    font-weight: italic;
+    src: url("./fonts/opendyslexic-0.91.12/OpenDyslexic-Bold-Italic.woff2") format('woff2');
+}
+
+
 :root {
     --uom-purple: #660099;
     --uom-font: "Roboto", sans-serif;
+    --uom-font-alt: OpenDyslexic;
 }
 
 
 header {
-    font-family: var(--uom-font) !important;
+    font-family: var(--uom-font);
+}
+
+
+header.alt-font{
+    font-family: var(--uom-font-alt);
 }
 
 
@@ -17,9 +55,26 @@ body {
 }
 
 
+body.alt-font{
+    font-family: var(--uom-font-alt);
+}
+
+
+footer {
+    font-family: var(--uom-font);
+}
+
+
+footer.alt-font{
+    font-family: var(--uom-font-alt);
+}
+
+
+
 p{
   line-height: 1.5;
 }
+
 
 .bg-primary{background-color: var(--uom-purple) !important}
 
@@ -49,15 +104,10 @@ a:hover {
   color: #6c6c6c !important;
 }
 
-
-footer {
-    font-family: var(--uom-font) !important;
+.alt-font-nodisplay{
+  display: none;
 }
 
-
-/* For code use the default, Adobe Source Code Pro */
-/* Code snippets. */
-/*pre, code, kbd, samp {
-  font-family: "Courier New", monospace;
-}*/
-
+.alt-font-display{
+  display: inline-block;
+}

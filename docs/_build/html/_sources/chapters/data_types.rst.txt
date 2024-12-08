@@ -9,4 +9,5 @@ Intro goes here.
 
    data_types/number_formats
    data_types/text_formats
-   data_types/data_types
+   data_types/other_data_types
+   data_types/custom_data_types

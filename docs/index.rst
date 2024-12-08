@@ -27,15 +27,10 @@ The contents of Part 1 of the notes are:
    :includehidden:
 
    0. Introduction <self>
-   chapters/why_programming
-   chapters/language_types
+   chapters/motivation
    chapters/computer_hardware
    chapters/computer_software
-   chapters/major_operating_systems
-   chapters/files_and_folders
-   chapters/sustainability
-   chapters/cybersecurity
-   chapters/edia
+   chapters/wider_factors
    chapters/software_lifecycle
    chapters/software_development_tools
    chapters/data_types

@@ -6,23 +6,23 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>10.2. Software architecture &mdash; notes-part1 0.1 documentation</title>
+        <title>5.2. Software architecture &mdash; notes-part1 0.1 documentation</title>
     
         <link rel="shortcut icon" href="../../_static/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=ea6a6c20" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../_static/uom_custom.css?v=ddd92291" />
+      <link rel="stylesheet" type="text/css" href="../../_static/uom_custom.css?v=c4fbeeee" />
             <link rel="index" title="Index" href="../../genindex.html" />
             <link rel="search" title="Search" href="../../search.html" />
             <link rel="top" title="notes-part1 0.1 documentation" href="#" />
-            <link rel="up" title="10. Software lifecycle" href="../software_lifecycle.html" />
-            <link rel="next" title="11. Software development tools" href="../software_development_tools.html" />
-            <link rel="prev" title="10.1. Requirements capture" href="requirements_capture.html" />
+            <link rel="up" title="5. Software lifecycle" href="../software_lifecycle.html" />
+            <link rel="next" title="5.3. Testing and debugging" href="testing_and_debugging.html" />
+            <link rel="prev" title="5.1. Requirements capture" href="requirements_capture.html" />
     </head>
 <body>
     <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
-    <header class="container-fluid bg-primary">
+    <header id="uom_header_title" class="container-fluid bg-primary">
         <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
         <div class="container-fluid">
             <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
@@ -30,7 +30,7 @@
                         title="University of Manchester logo"
                         class="logo navbar-brand"
                     >
-                        <img src="../../_static//images/uom_logo_white.png" width="88" height="59" alt="University of Manchester logo"
+                        <img src="../../_static//img/uom_logo_white.png" width="88" height="59" alt="University of Manchester logo"
                             class="logo-img"
                         />
                         EEEN1XXX2 course notes
@@ -54,7 +54,7 @@
             <div class="input-group-prepend">
                 <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
             </div>
-            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search Notes Part 0" aria-label="Search notes" id="searchinput" />
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes" aria-label="Search notes" id="searchinput" />
         </div>
         <input type="hidden" name="check_keywords" value="yes" />
         <input type="hidden" name="area" value="default" />
@@ -63,29 +63,56 @@
     <nav class="toc mt-3" aria-label="Main menu">
         <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">0. Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../why_programming.html">1. Why study programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../language_types.html">2. Types of programming langugage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">3. Computer hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computer_software.html">4. Computer software</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../major_operating_systems.html">5. Major operating systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../files_and_folders.html">6. Files, folders, and filesystems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sustainability.html">7. Sustainability</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cybersecurity.html">8. Cybersecurity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../edia.html">9. Equality, diversity, inclusion, and accessibility in programming</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../software_lifecycle.html">10. Software lifecycle</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="requirements_capture.html">10.1. Requirements capture</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">10.2. Software architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../motivation.html">1. Motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/why_programming.html">1.1. Why study programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/language_types.html">1.2. Types of programming langugage</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../software_development_tools.html">11. Software development tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ide.html">11.1. Integrated Development Environments (IDEs)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/comments.html">11.2. Comments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.2. Files, folders, and filesystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.3. User interfaces: graphical and the command line</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../data_types.html">12. Data types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../data_types/number_formats.html">12.1. Number formats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data_types/text_formats.html">12.2. Text formats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data_types/data_types.html">12.3. other data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">4. Wider factors to consider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wider_factors/sustainability.html">4.1. Sustainability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wider_factors/cybersecurity.html">4.2. Cybersecurity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wider_factors/edia.html">4.3. Equality, diversity, inclusion, and accessibility in programming</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../software_lifecycle.html">5. Software lifecycle</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="requirements_capture.html">5.1. Requirements capture</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.2. Software architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing_and_debugging.html">5.3. Testing and debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release.html">5.4. Release, support, maintenance, and bug fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">5.5. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quality_management.html">5.6. Quality management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_development_tools.html">6. Software development tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ide.html">6.1. Integrated Development Environments (IDEs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/comments.html">6.2. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_generators.html">6.3. Documentation generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">6.4. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">6.5. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">6.6. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">6.7. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">6.8. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">6.9. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">6.10. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">6.11. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">6.12. Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">6.13. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">6.14. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">6.15. Co-pilot and other AI tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_types.html">7. Data types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_types/number_formats.html">7.1. Number formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_types/text_formats.html">7.2. Text formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_types/other_data_types.html">7.3. Other data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_types/custom_data_types.html">7.4. Custom data types</a></li>
 </ul>
 </li>
 </ul>
@@ -105,13 +132,13 @@
                 </div>
             </aside>
             <div class="col-12 col-lg-9 pt-5">
-                <header class="row align-items-baseline">
+                <header id="uom_header_buttons" class="row align-items-baseline">
                     <div class="col">
                         <nav aria-label="breadcrumb">
     <ol class="breadcrumb m-0 p-0 bg-transparent">
         <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="../software_lifecycle.html"><span class="section-number">10. </span>Software lifecycle</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">10.2. </span>Software architecture</li>
+            <li class="breadcrumb-item"><a href="../software_lifecycle.html"><span class="section-number">5. </span>Software lifecycle</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.2. </span>Software architecture</li>
     </ol>
 </nav>
                     </div>
@@ -122,6 +149,10 @@
                         <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
                             <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
                             <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+                        <button id="uom_alt_font_button" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span id="default-font"><i class="fas fa-strikethrough"></i> Default font</span>
+                            <span id="alt-font"><i class="fas fa-font"></i> OpenDyslexic font</span>
                         </button>
     <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/docs/chapters/software_lifecycle/software_architecture.rst" rel="nofollow">
         <span class="btn-icon"><span class="fab fa-github"></span></span>
@@ -143,16 +174,16 @@
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
     <section id="software-architecture">
-<h1><span class="section-number">10.2. </span>Software architecture<a class="headerlink" href="#software-architecture" title="Link to this heading">¶</a></h1>
+<h1><span class="section-number">5.2. </span>Software architecture<a class="headerlink" href="#software-architecture" title="Link to this heading">¶</a></h1>
 </section>
 
 </main>
                         <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
     <a class="float-left" href="requirements_capture.html" title="Previous">
-        <span aria-hidden="true">←&nbsp;</span><span class="section-number">10.1. </span>Requirements capture
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.1. </span>Requirements capture
     </a>
-    <a class="float-right" href="../software_development_tools.html" title="Next">
-        <span class="section-number">11. </span>Software development tools <span aria-hidden="true">&nbsp;→</span>
+    <a class="float-right" href="testing_and_debugging.html" title="Next">
+        <span class="section-number">5.3. </span>Testing and debugging <span aria-hidden="true">&nbsp;→</span>
     </a>
 </nav>
                     </div>
@@ -161,7 +192,7 @@
             </div>
         </div>
     </div>
-    <footer class="container-fluid bg-primary text-light">
+    <footer id="uom_footer_info" class="container-fluid bg-primary text-light">
         <div class="container">
             <div class="row">
         <div class="col p-4">

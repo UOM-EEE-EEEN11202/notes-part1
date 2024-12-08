@@ -13,3 +13,17 @@ This section provides a brief walk though of some of the most common tools.
 
    software_development_tools/ide
    software_development_tools/comments
+   software_development_tools/documentation_generators
+   software_development_tools/static_code_analysis
+   software_development_tools/debugger
+   software_development_tools/profiler
+   software_development_tools/version_control
+   software_development_tools/environment_control
+   software_development_tools/automated_testing
+   software_development_tools/continuous_integration
+   software_development_tools/code_reviews
+   software_development_tools/buddy_programming
+   software_development_tools/libraries
+   software_development_tools/licensing
+   software_development_tools/pseudocode
+   software_development_tools/ai_tools

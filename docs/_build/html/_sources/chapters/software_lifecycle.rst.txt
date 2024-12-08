@@ -16,3 +16,7 @@ We won't go through these international standards in detail, but will briefly ov
 
    software_lifecycle/requirements_capture
    software_lifecycle/software_architecture
+   software_lifecycle/testing_and_debugging
+   software_lifecycle/release
+   software_lifecycle/documentation
+   software_lifecycle/quality_management
