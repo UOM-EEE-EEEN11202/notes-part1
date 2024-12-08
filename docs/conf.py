@@ -26,6 +26,7 @@ html_theme = 'uom_sphinx_wagtail_theme'
 html_static_path = ['_static']
 html_theme_options = dict(
     project_name = "EEEN1XXX2 course notes",
+    searchbox_text = "Search notes part 1",
     logo = "/img/uom_logo_white.png",
     logo_alt = "University of Manchester logo",
     logo_url = "/",
