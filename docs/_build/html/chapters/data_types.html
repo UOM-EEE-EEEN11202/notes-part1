@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" data-content_root="../">
+<html class="no-js" lang="en-GB" data-content_root="../">
 <head>
     <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,16 +8,14 @@
     
         <title>7. Data types &mdash; notes-part1 0.1 documentation</title>
     
-        <link rel="shortcut icon" href="../_static/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../_static/dist/fontawesome.css" />
-      <link rel="stylesheet" type="text/css" href="../_static/dist/theme.css?v=ea6a6c20" />
+      <link rel="stylesheet" type="text/css" href="../_static/dist/theme.css?v=310cf088" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../_static/uom_custom.css?v=c4fbeeee" />
             <link rel="index" title="Index" href="../genindex.html" />
             <link rel="search" title="Search" href="../search.html" />
             <link rel="top" title="notes-part1 0.1 documentation" href="#" />
             <link rel="next" title="7.1. Number formats" href="data_types/number_formats.html" />
-            <link rel="prev" title="6.15. Co-pilot and other AI tools" href="software_development_tools/ai_tools.html" />
+            <link rel="prev" title="6.16. Co-pilot and other AI tools" href="software_development_tools/ai_tools.html" />
     </head>
 <body>
     <script type="text/javascript" src="../_static/dist/blocking.js"></script>
@@ -29,7 +27,7 @@
                         title="University of Manchester logo"
                         class="logo navbar-brand"
                     >
-                        <img src="../_static//img/uom_logo_white.png" width="88" height="59" alt="University of Manchester logo"
+                        <img src="../_static/img/wagtail-logo-circle.svg" width="88" height="59" alt="University of Manchester logo"
                             class="logo-img"
                         />
                         EEEN1XXX2 course notes
@@ -53,7 +51,7 @@
             <div class="input-group-prepend">
                 <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
             </div>
-            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes" aria-label="Search notes" id="searchinput" />
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes part 1" aria-label="Search notes" id="searchinput" />
         </div>
         <input type="hidden" name="check_keywords" value="yes" />
         <input type="hidden" name="area" value="default" />
@@ -96,15 +94,16 @@
 <li class="toctree-l2"><a class="reference internal" href="software_development_tools/static_code_analysis.html">6.4. Static code analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="software_development_tools/debugger.html">6.5. Debugger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="software_development_tools/profiler.html">6.6. Profiler and computational complexity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_development_tools/environment_control.html">6.7. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_development_tools/automated_testing.html">6.8. Automated testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_development_tools/continuous_integration.html">6.9. Continuous integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_development_tools/code_reviews.html">6.10. Code reviews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_development_tools/buddy_programming.html">6.11. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_development_tools/libraries.html">6.12. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_development_tools/licensing.html">6.13. Software licensing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_development_tools/pseudocode.html">6.14. Pseudocode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="software_development_tools/ai_tools.html">6.15. Co-pilot and other AI tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/version_control.html">6.7. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/environment_control.html">6.8. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/automated_testing.html">6.9. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/continuous_integration.html">6.10. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/code_reviews.html">6.11. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/buddy_programming.html">6.12. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/libraries.html">6.13. Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/licensing.html">6.14. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/pseudocode.html">6.15. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_development_tools/ai_tools.html">6.16. Co-pilot and other AI tools</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Data types</a><ul>
@@ -122,9 +121,7 @@
             <span class="sr-only">Toggle menu contents</span>
         </button>
     </template>
-</div><p>
-    <img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo" style="width: 100vw; min-width: 100px;">
-</p>
+</div>
                     <div class="d-lg-none border-bottom">
                         
                     </div>
@@ -181,7 +178,7 @@
 </main>
                         <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
     <a class="float-left" href="software_development_tools/ai_tools.html" title="Previous">
-        <span aria-hidden="true">←&nbsp;</span><span class="section-number">6.15. </span>Co-pilot and other AI tools
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">6.16. </span>Co-pilot and other AI tools
     </a>
     <a class="float-right" href="data_types/number_formats.html" title="Next">
         <span class="section-number">7.1. </span>Number formats <span aria-hidden="true">&nbsp;→</span>
@@ -219,11 +216,12 @@
     </div>
         </div>
     </footer>
-        <script src="../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../_static/documentation_options.js?v=818a811f"></script>
         <script src="../_static/doctools.js?v=9bcbadda"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=8fd896e3"></script>
         <script type="text/javascript" src="../_static/dist/theme.js"></script>
         <script type="text/javascript" src="../_static/dist/vendor.js"></script>
         <script type="text/javascript" src="../_static/searchtools.js"></script>
