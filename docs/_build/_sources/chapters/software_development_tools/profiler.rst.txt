@@ -1,2 +1,0 @@
-Profiler and computational complexity
-=====================================

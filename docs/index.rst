@@ -22,7 +22,7 @@ In places some of what we cover will be a bit *approximate*. The desciriptions a
 The contents of Part 1 of the notes are:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
    :includehidden:
 
