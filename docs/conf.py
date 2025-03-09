@@ -5,7 +5,7 @@ author = 'Alex Casson'
 release = '0.1'
 templates_path = ['_templates']
 exclude_patterns = []
-language = 'en'
+language = 'en_GB'
 
 
 # Set extensions
@@ -27,7 +27,7 @@ html_static_path = ['_static']
 html_theme_options = dict(
     project_name = "EEEN1XXX2 course notes",
     searchbox_text = "Search notes part 1",
-    logo = "/img/uom_logo_white.png",
+    breadcrumb_home = "Part 1",
     logo_alt = "University of Manchester logo",
     logo_url = "/",
     logo_width = 88,
@@ -37,14 +37,7 @@ html_theme_options = dict(
     ]),
     github_url = "https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/docs/",
 )
-html_favicon = "_static/img/favicon.ico"
 html_show_copyright = True
-html_css_files = ["uom_custom.css"]
-html_sidebars = {"**": [
-    "searchbox.html",
-    "globaltoc.html",
-    "uom_logo_sidebar.html",
-]}
 html_show_sphinx = False
 
 
@@ -53,9 +46,9 @@ notfound_urls_prefix = "/"
 
 
 # Allow cross-references to other Sphinx sites
-intersphinx_mapping = {
-    'part1': ('https://uom-eee-eeen1xxx2.github.io/notes-part1/', None),
-}
+#intersphinx_mapping = {
+#    'part1': ('https://uom-eee-eeen1xxx2.github.io/notes-part1/', None),
+#}
 
 # All external links are set here to ease checking of whether they are still the correct version
 # (This isn't checking whether the links are valid, other tools do that. This is for updating, say, policy links to this year's version) 
