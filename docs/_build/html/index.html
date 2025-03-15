@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB" data-content_root="./">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>Introduction &mdash; notes-part1 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="_static/dist/theme.css?v=310cf088" />
+      <link rel="stylesheet" type="text/css" href="_static/uom_custom.css?v=79662979" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments-theme-light.css?v=cf22d736" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments-theme-dark.css?v=54fad279" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+            <link rel="index" title="Index" href="genindex.html" />
+            <link rel="search" title="Search" href="search.html" />
+            <link rel="top" title="notes-part1 0.1 documentation" href="#" />
+            <link rel="next" title="1. Motivation" href="chapters/motivation.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="_static/dist/blocking.js"></script>
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script>
+        try {
+            var font_store = localStorage.getItem('uom-sphinx-font');
+            if (font_store.startsWith('"') && font_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-font', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+        try {
+            var theme_store = localStorage.getItem('uom-sphinx-theme');
+            if (theme_store.startsWith('"') && theme_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-theme', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>   
+    <!-- Set font/code theme before content loads to prevent a flash --> 
+    <script>
+        var html = document.querySelector('html');
+        var body   = document.querySelector('body');
+        var font;
+        try { font = localStorage.getItem('uom-sphinx-font'); } catch(e) { }
+        if (font === null || font === undefined) { font = "font-roboto"; }
+        if (font === "font-opendyslexic") {
+            html.classList.remove('font-alt');
+            body.classList.remove('font-alt');
+        } else {
+            html.classList.add('font-alt');
+            body.classList.add('font-alt');
+        }
+        try { theme = localStorage.getItem('uom-sphinx-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) { theme = "theme-light"; }
+        if (theme === "theme-dark") {
+                html.classList.remove('theme-light');
+                body.classList.remove('theme-light');
+                html.classList.add('theme-dark');
+                body.classList.add('theme-dark');
+            } else {
+                html.classList.remove('theme-dark');
+                body.classList.remove('theme-dark');
+                html.classList.add('theme-light');
+                body.classList.add('theme-light');
+            }
+        </script>
+    <header id="uom_header_title" class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="/"
+                        title="University of Manchester logo"
+                        class="logo navbar-brand"
+                    >
+                        <img src="_static/./img/uom_logo_white.png" width="88" alt="University of Manchester logo"
+                            class="logo-img"
+                        />
+                        EEEN1XXX2 course notes
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes part 1" aria-label="Search notes" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/motivation.html">1. Motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapters/motivation/why_programming.html">1.1. Why study programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/motivation/language_types.html">1.2. Types of programming language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/motivation/our_choices.html">1.3. Our choices for this course</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/computer_hardware.html">2. Computer hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/computer_software.html">3. Computer software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapters/computer_software/gui_and_cli.html">3.1. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/computer_software/files_and_folders.html">3.2. Files, folders, and filesystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/computer_software/major_operating_systems.html">3.3. Major operating systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/software_lifecycle.html">4. Software lifecycle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_lifecycle/requirements_capture.html">4.1. Requirements capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_lifecycle/software_architecture.html">4.2. Software architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_lifecycle/testing_and_debugging.html">4.3. Testing and debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_lifecycle/release.html">4.4. Release, support, maintenance, and bug fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_lifecycle/documentation.html">4.5. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_lifecycle/quality_management.html">4.6. Quality management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/software_development_tools.html">5. Software development tools fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/comments.html">5.2. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/documentation_generators.html">5.3. Documentation generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/static_code_analysis.html">5.4. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/debugger.html">5.5. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/profiler.html">5.6. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/version_control.html">5.7. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/environment_control.html">5.8. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/automated_testing.html">5.9. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/continuous_integration.html">5.10. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/code_reviews.html">5.11. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/buddy_programming.html">5.12. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/libraries.html">5.13. Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/licensing.html">5.14. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/pseudocode.html">5.15. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/software_development_tools/ai_tools.html">5.16. Co-pilot and other AI tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/programming_fundamentals.html">6. Programming fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapters/programming_fundamentals/number_formats.html">6.1. Number formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/programming_fundamentals/text_formats.html">6.2. Text formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/programming_fundamentals/other_data_types.html">6.3. Other data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/programming_fundamentals/custom_data_types.html">6.4. Custom data types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/wider_factors.html">7. Wider factors to consider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapters/wider_factors/sustainability.html">7.1. Sustainability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/wider_factors/cybersecurity.html">7.2. Cybersecurity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/wider_factors/edia.html">7.3. Equality, diversity, inclusion, and accessibility in programming</a></li>
+</ul>
+</li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div><div>
+  <p>
+    <img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo" style="width: 100vw; min-width: 100px;">
+  </p>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header id="uom_header_buttons" class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="#">Part 1</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Introduction</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+                        <button id="uom_alt_font_button" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="alt-only"><i class="fas fa-strikethrough"></i> Default font</span>
+                            <span class="default-only"><i class="fas fa-font"></i> OpenDyslexic font</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/docs/index.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="_sources/index.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<p>In this Part we’re going to look at a number of different ways in which computers operate. It would probably be possible to do an entire course on any one of these topics! Our aim isn’t to be the expert in all of them. Rather, the aim is to have enough familiarity in order to be able to progress with our programming.</p>
+<p>We won’t get very far with our programming without needing to know a little about how computers work <em>under the hood</em> in order to know why our code looks the way it does. If we treat the computer as black box, it’s very hard to get the most oyt of it. We don’t need to know everything about what’s inside the box, but knowing a little helps a lot.</p>
+<p>Remember that computers are human designed objects - they work the way they do because someone decided to make them work that way. Sometimes these decisions make a lot of sense. Sometimes the decision made sense at the time, possibly 50+ year ago. We might do it differently if we were to do it today, but we have to stick with what’s already in place. Sometimes, different people decided different things, and there are different standards or ways of doing things. We need to pick one to actually use, even if other choices are perfectly good and someone else might pick a different one. Before starting our programming we need to know a little about which choices we’re making and why. This includes learning about some common software development techniques.</p>
+<p>In places some of what we cover will be a bit <em>approximate</em>. The descriptions are sufficient and accurate for the depth we need them to be for this course. If you go on to cover some of the topics in more detail, you might find that some of the definitions get refined and a bit tighter compared to what we have here.</p>
+<p>The contents of Part 1 of the notes are:</p>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/motivation.html">1. Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/computer_hardware.html">2. Computer hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/computer_software.html">3. Computer software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/software_lifecycle.html">4. Software lifecycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/software_development_tools.html">5. Software development tools fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/programming_fundamentals.html">6. Programming fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/wider_factors.html">7. Wider factors to consider</a></li>
+</ul>
+</div>
+<p>Links to the other parts of the course:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uom-eee-eeen1xxx2.github.io/">Part 0 on course administration</a>.</p></li>
+<li><p><a class="reference external" href="https://uom-eee-eeen1xxx2.github.io/notes-part1/">Part 1 (this part) on underlying theory of how computers operate</a>.</p></li>
+<li><p><a class="reference external" href="https://uom-eee-eeen1xxx2.github.io/notes-part2/">Part 2 on general purpose computing, mainly with Python</a>.</p></li>
+<li><p><a class="reference external" href="https://uom-eee-eeen1xxx2.github.io/notes-part3/">Part 3 on higher performance computing, mainly with Rust</a>.</p></li>
+</ul>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-right" href="chapters/motivation.html" title="Next">
+        <span class="section-number">1. </span>Motivation <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="uom_footer_info" class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://www.manchester.ac.uk/">The University of Manchester</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://online.manchester.ac.uk/">Canvas</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                    &copy; Copyright Alex Casson. <a class="nav-link text-light" href="https://creativecommons.org/licenses/by/4.0/deed.en">Released under CC-BY 4.0 license.</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="_static/documentation_options.js?v=818a811f"></script>
+        <script src="_static/doctools.js?v=9bcbadda"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+        <script src="_static/translations.js?v=8fd896e3"></script>
+        <script type="text/javascript" src="_static/dist/theme.js"></script>
+        <script type="text/javascript" src="_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="_static/uom_custom.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

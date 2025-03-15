@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB" data-content_root="../../">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>3.2. Files, folders, and filesystems &mdash; notes-part1 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
+      <link rel="stylesheet" type="text/css" href="../../_static/uom_custom.css?v=79662979" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-light.css?v=cf22d736" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-dark.css?v=54fad279" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+            <link rel="index" title="Index" href="../../genindex.html" />
+            <link rel="search" title="Search" href="../../search.html" />
+            <link rel="top" title="notes-part1 0.1 documentation" href="#" />
+            <link rel="up" title="3. Computer software" href="../computer_software.html" />
+            <link rel="next" title="3.3. Major operating systems" href="major_operating_systems.html" />
+            <link rel="prev" title="3.1. User interfaces: graphical and the command line" href="gui_and_cli.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script>
+        try {
+            var font_store = localStorage.getItem('uom-sphinx-font');
+            if (font_store.startsWith('"') && font_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-font', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+        try {
+            var theme_store = localStorage.getItem('uom-sphinx-theme');
+            if (theme_store.startsWith('"') && theme_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-theme', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>   
+    <!-- Set font/code theme before content loads to prevent a flash --> 
+    <script>
+        var html = document.querySelector('html');
+        var body   = document.querySelector('body');
+        var font;
+        try { font = localStorage.getItem('uom-sphinx-font'); } catch(e) { }
+        if (font === null || font === undefined) { font = "font-roboto"; }
+        if (font === "font-opendyslexic") {
+            html.classList.remove('font-alt');
+            body.classList.remove('font-alt');
+        } else {
+            html.classList.add('font-alt');
+            body.classList.add('font-alt');
+        }
+        try { theme = localStorage.getItem('uom-sphinx-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) { theme = "theme-light"; }
+        if (theme === "theme-dark") {
+                html.classList.remove('theme-light');
+                body.classList.remove('theme-light');
+                html.classList.add('theme-dark');
+                body.classList.add('theme-dark');
+            } else {
+                html.classList.remove('theme-dark');
+                body.classList.remove('theme-dark');
+                html.classList.add('theme-light');
+                body.classList.add('theme-light');
+            }
+        </script>
+    <header id="uom_header_title" class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="/"
+                        title="University of Manchester logo"
+                        class="logo navbar-brand"
+                    >
+                        <img src="../../_static/./img/uom_logo_white.png" width="88" alt="University of Manchester logo"
+                            class="logo-img"
+                        />
+                        EEEN1XXX2 course notes
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes part 1" aria-label="Search notes" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../motivation.html">1. Motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/why_programming.html">1.1. Why study programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/language_types.html">1.2. Types of programming language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/our_choices.html">1.3. Our choices for this course</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gui_and_cli.html">3.1. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Files, folders, and filesystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="major_operating_systems.html">3.3. Major operating systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/requirements_capture.html">4.1. Requirements capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/software_architecture.html">4.2. Software architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/testing_and_debugging.html">4.3. Testing and debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/release.html">4.4. Release, support, maintenance, and bug fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/documentation.html">4.5. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/quality_management.html">4.6. Quality management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/comments.html">5.2. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_generators.html">5.3. Documentation generators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">5.4. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">5.5. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">5.6. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/version_control.html">5.7. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">5.8. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">5.9. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">5.10. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">5.11. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">5.12. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">5.13. Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">5.14. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">5.15. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">5.16. Co-pilot and other AI tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/number_formats.html">6.1. Number formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/text_formats.html">6.2. Text formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/other_data_types.html">6.3. Other data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/custom_data_types.html">6.4. Custom data types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wider_factors/sustainability.html">7.1. Sustainability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wider_factors/cybersecurity.html">7.2. Cybersecurity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wider_factors/edia.html">7.3. Equality, diversity, inclusion, and accessibility in programming</a></li>
+</ul>
+</li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div><div>
+  <p>
+    <img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo" style="width: 100vw; min-width: 100px;">
+  </p>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header id="uom_header_buttons" class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
+            <li class="breadcrumb-item"><a href="../computer_software.html"><span class="section-number">3. </span>Computer software</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">3.2. </span>Files, folders, and filesystems</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+                        <button id="uom_alt_font_button" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="alt-only"><i class="fas fa-strikethrough"></i> Default font</span>
+                            <span class="default-only"><i class="fas fa-font"></i> OpenDyslexic font</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/docs/chapters/computer_software/files_and_folders.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="../../_sources/chapters/computer_software/files_and_folders.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="files-folders-and-filesystems">
+<h1><span class="section-number">3.2. </span>Files, folders, and filesystems<a class="headerlink" href="#files-folders-and-filesystems" title="Link to this heading">¶</a></h1>
+<p>Code files can be very long! The labs for this course are intended to take 2-3 hours each, and so we’re constrained to looking at relatively small programs. Typically a hundred lines of code or so. Real programming projects have much more than this. For example, the Chrome web browser is estimated to have <a class="reference external" href="https://interestingengineering.com/lists/whats-the-biggest-software-package-by-lines-of-code">6-7 million lines of code</a>. When having so much code, its important to keep it organized. To do this, we split the code into <em>files</em> and store files in <em>folders</em>.</p>
+<div class="admonition-aside admonition">
+<p class="admonition-title">Aside</p>
+<p>The concepts of files and folders come from the <em>desktop metaphor</em>. When computers first became widely used in the 1980’s, lots of terms were selected to make them familiar to people who had only ever previously worked on a physical desk, with pens, paper, books and similar. Back then, there were lots of physical pieces of paper (files), and means for grouping these together such as ring binders and filing cabinets (folders). This is why your computer has a <em>desktop</em> with <em>files</em> on it, it mirrors a physical desk. Of course, this doesn’t make a huge amount of sense today. Many people just have a computer on their physical desk!</p>
+</div>
+<section id="files">
+<h2><span class="section-number">3.2.1. </span>Files<a class="headerlink" href="#files" title="Link to this heading">¶</a></h2>
+<p>The basic unit of storing a document on a computer is a <em>file</em>. Each file has a name, known as the filename. This is usually something like</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">my_file_name.txt</span>
+</pre></div>
+</div>
+<p>Here my_file_name is the <em>basename</em>, what you want to call the file. Hopefully this is something meaningful to you as the user. The .txt is the <em>extension</em>. This tells the computer what type of file is present. This is also known as the <em>format</em>. A file can be perfectly valid even if no extension is present, but an extension helps tell the computer, and you, what kind of information is in the file.</p>
+<p>For example, .docx indicates this file is for a Word document. .png indicates it contains a picture. There are lots of different file types, and not every program can open every type of file. Note that sometimes the extension is hidden by default. It may be present, but the interface just doesn’t display it unless you change the settings. (This is the default behavior in the Windows GUI.)</p>
+<p>When programming, we often use files with a .sh, .py, .rs, .c, .cpp, extension, to indicate which programming language is being used for the code in that file.</p>
+</section>
+<section id="folders">
+<h2><span class="section-number">3.2.2. </span>Folders<a class="headerlink" href="#folders" title="Link to this heading">¶</a></h2>
+<p>For any practical project, you probably need several different files to store all of the information that’s needed. For example, when writing a report you may have a .docx Word file that actually contains the report. You may have several .png or .jpg pictures that you took and need to be included in the report to show your work. You may also have a spreadsheet document in .xlsx or .csv format that stores the results from an experiment.</p>
+<p>The basic organizational unit for storing files is a <em>folder</em>. Folders are also known as <em>directories</em>. Files are stored in folders. You can also put folders into folders to help organize things into different levels. For example, the figure below shows the files and folders used for these notes (which you can view if you click the GitHub (<a class="reference internal" href="../../_images/GitHub_Invertocat_Dark.svg"><img alt="ico1" src="../../_images/GitHub_Invertocat_Dark.svg" style="width: 20px;" /></a>) icon at the top of the page). There is a folder called notes-part1. In here are several folders (.github, .venv, docs). The notes are stores in files with .rst extensions within the chapters folder.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/tree_view.png"><img alt="Tree view of files and folders" src="../../_images/tree_view.png" style="width: 300px;" />
+</a>
+</figure>
+</section>
+<section id="file-systems">
+<h2><span class="section-number">3.2.3. </span>File systems<a class="headerlink" href="#file-systems" title="Link to this heading">¶</a></h2>
+<p>Each file and folder has an address on your computer to locate it. The address to a file is also known as the file <em>path</em>. The way in which addresses work varies depending on which operating system you’re using.</p>
+<section id="windows">
+<h3><span class="section-number">3.2.3.1. </span>Windows<a class="headerlink" href="#windows" title="Link to this heading">¶</a></h3>
+<p>Addresses begin with a letter, followed by a colon (:). Folders are separated by backslashes (). For example this might be:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\Users\alex\hello_world.py</span>
+</pre></div>
+</div>
+<p>We can also see this location (C:\Users\alex\) if we use the File Explorer GUI. It contains a file called hello_world.py.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/file_explorer.png"><img alt="The Windows file explorer" src="../../_images/file_explorer.png" style="width: 800px;" />
+</a>
+</figure>
+<p>By convention, the letter C:\ refers to the hard drive in the computer being used. You may see other letters being used. For example, students logged in to computers at the University of Manchester also have a P:\ drive. This is a <em>network drive</em>. The P:\ drive storage isn’t on the computer being used, it’s connected via the Internet and so given a different address letter. (This arrangement is very common for shared computers, as you want files to be accessible no matter which computer you log in to. You can’t do this if the files are only stored on the one physical computer.) If you plug in a USB thumb drive, it will be given another letter, which may vary from computer to computer.</p>
+<p>Using a drive letter is a form of <em>physical addressing</em>. It forces you to think about <em>where</em> you are storing the files. Is it on this computer, a thumb drive, or on a network computer, and so on.</p>
+<p>In many programming languages the backslash character (\) has a special meaning and can’t be used directly. It’s thus common to enter a Windows path using two backslashes, i.e. as</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\\Users\\alex\\hello_world.py</span>
+</pre></div>
+</div>
+<p>or with forward slashes (/) as</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:/Users/alex/hello_world.py</span>
+</pre></div>
+</div>
+<p>These aren’t how Windows represents a path, it uses a single backslash, but may be the syntax needed in a programming file to represent the same thing.</p>
+</section>
+<section id="macos-and-linux">
+<h3><span class="section-number">3.2.3.2. </span>macOS and Linux<a class="headerlink" href="#macos-and-linux" title="Link to this heading">¶</a></h3>
+<p>Addresses begin with a forward slash (/). Folders are separated by forward slashes (/). For example this might be:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/Users/alex/hello_world.py</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/home/alex/hello_world.py</span>
+</pre></div>
+</div>
+<p>macOS usually puts users files in /Users/, while Linux puts them in /home.</p>
+<p>Just</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/</span>
+</pre></div>
+</div>
+<p>is a valid address. It is known as the <em>root</em> of the filesystem.</p>
+<p>This is a form of <em>logical</em> addressing. You put the data in the most sensible location, without necessarily thinking about where the data is physically put. In principle</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/home/alex/</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/home/casson/</span>
+</pre></div>
+</div>
+<p>could be pointing to two different hard drives. The actual storage location has been abstracted away.</p>
+</section>
+<section id="cloud-storage">
+<h3><span class="section-number">3.2.3.3. </span>Cloud storage<a class="headerlink" href="#cloud-storage" title="Link to this heading">¶</a></h3>
+<p>At the University of Manchester, our cloud storage provider is Microsoft OneDriver. Cloud storage changes the statements above a little.</p>
+<p>On Windows, you will have a folder called</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\Users\alex\OneDrive - The University of Manchester</span>
+</pre></div>
+</div>
+<p>or similar. (There will be similar locations on macOS and Linux, but we’ll only give the Windows example.) Files in here are on the C:drive. That is, they are on the hard drive of the computer being used.</p>
+<p>At the same time, OneDrive will automatically copy the files to the Cloud. This means that they are backed up automatically, and so if anything happens to your computer you’ll still have all of your work. It also means that the files will be automatically available on any computer which has access to your OneDrive account. (There’s also the option of having the file online by default. That is, Windows sees the file as usable, but to save disk space it isn’t actually kept on the computer. It’s kept on the Cloud and downloaded when needed.)</p>
+<p>You can access files in OneDrive using the same C:address as you would for any other file.</p>
+</section>
+<section id="absolute-vs-relative-addresses">
+<h3><span class="section-number">3.2.3.4. </span>Absolute vs. relative addresses<a class="headerlink" href="#absolute-vs-relative-addresses" title="Link to this heading">¶</a></h3>
+<p>The addresses given above, starting with C:or / are <em>absolute</em> addresses. They start from the root of the computer being used and everything is given a full address from this starting point.</p>
+<p>You can also have <em>relative</em> addresses. That is, an address of a file or folder, as steps from a current location or file or folder.</p>
+<p>Giving examples for macOS/Linux using forward slashes,</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./</span>
+</pre></div>
+</div>
+<p>represents the current folder. Two dots</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">../</span>
+</pre></div>
+</div>
+<p>represents the folder one level up. That is, the folder containing the current location / file / folder.</p>
+<p>Showing the same <em>tree view</em> of the files/folders for these notes</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/tree_view.png"><img alt="Tree view of files and folders" src="../../_images/tree_view.png" style="width: 300px;" />
+</a>
+</figure>
+<p>From files_and_folders.rst, gui_and_cli.rst is in the same folder, and so can be accessed with the relative address</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./gui_and_cli.rst</span>
+</pre></div>
+</div>
+<p>our_choices.rst is up one level, and then in a different folder called motivation. From files_and_folders.rst, our_choices.rst can be accessed with the relative address</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">../motivation/our_choices.rst</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="best-practices">
+<h2><span class="section-number">3.2.4. </span>Best practices<a class="headerlink" href="#best-practices" title="Link to this heading">¶</a></h2>
+<section id="where-should-i-put-my-files">
+<h3><span class="section-number">3.2.4.1. </span>Where should I put my files?<a class="headerlink" href="#where-should-i-put-my-files" title="Link to this heading">¶</a></h3>
+<p>The short answer is in your University provided OneDrive. This will ensure that the files will be automatically backed up, and automatically available on any computer which has access to your OneDrive account.</p>
+<p>You may find that some programs don’t like files which are stored in OneDrive. Your second choice location should be your P:drive. This is a network drive, and the storage is maintained for you by IT. That means its automatically backed up, and available on any University computer as all of these have access to your P:drive.</p>
+<p>The C:drive should be the location of last resort. Files here are only on the computer you’re using at the time. If you switch to a different computer, or your lose/damage the computer your files will be lost (unless you’ve taken some other steps to back them up).</p>
+</section>
+<section id="how-much-filing-to-do">
+<h3><span class="section-number">3.2.4.2. </span>How much filing to do<a class="headerlink" href="#how-much-filing-to-do" title="Link to this heading">¶</a></h3>
+<p>When programming, you’ll quickly find that you actually have quite a few files, even for simple programs. Indeed, it’s common for the programming tools to automatically make a number of files and folders to store additional information about your program, even if your program is fundamentally only in one file.</p>
+<p>If you don’t keep any track at all of what you put where, it’s easy to lose files - as in, they’re there, you just don’t know where. Or, to have multiple copies of the same underlying file.</p>
+<p>You can of course search to find files, but when you have lots of files with similar names and/or content this can be quite hard. It is worth spending some time to organize your files. Wherever you put it, we would reccmend making an eeen1xxx2 folder, and then having a folder for each lab within that.</p>
+</section>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="gui_and_cli.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">3.1. </span>User interfaces: graphical and the command line
+    </a>
+    <a class="float-right" href="major_operating_systems.html" title="Next">
+        <span class="section-number">3.3. </span>Major operating systems <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">3.2. Files, folders, and filesystems</a><ul>
+<li><a class="reference internal" href="#files">3.2.1. Files</a></li>
+<li><a class="reference internal" href="#folders">3.2.2. Folders</a></li>
+<li><a class="reference internal" href="#file-systems">3.2.3. File systems</a><ul>
+<li><a class="reference internal" href="#windows">3.2.3.1. Windows</a></li>
+<li><a class="reference internal" href="#macos-and-linux">3.2.3.2. macOS and Linux</a></li>
+<li><a class="reference internal" href="#cloud-storage">3.2.3.3. Cloud storage</a></li>
+<li><a class="reference internal" href="#absolute-vs-relative-addresses">3.2.3.4. Absolute vs. relative addresses</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#best-practices">3.2.4. Best practices</a><ul>
+<li><a class="reference internal" href="#where-should-i-put-my-files">3.2.4.1. Where should I put my files?</a></li>
+<li><a class="reference internal" href="#how-much-filing-to-do">3.2.4.2. How much filing to do</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="uom_footer_info" class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://www.manchester.ac.uk/">The University of Manchester</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://online.manchester.ac.uk/">Canvas</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                    &copy; Copyright Alex Casson. <a class="nav-link text-light" href="https://creativecommons.org/licenses/by/4.0/deed.en">Released under CC-BY 4.0 license.</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="../../_static/documentation_options.js?v=818a811f"></script>
+        <script src="../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/translations.js?v=8fd896e3"></script>
+        <script type="text/javascript" src="../../_static/dist/theme.js"></script>
+        <script type="text/javascript" src="../../_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="../../_static/uom_custom.js"></script>
+        <script type="text/javascript" src="../../_static/searchtools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("../../searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

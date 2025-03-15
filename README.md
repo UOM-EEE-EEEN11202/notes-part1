@@ -9,7 +9,6 @@ This work is licensed under a
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
-
-Sphinx theming used a modified version of the [sphinx-wagtail-theme]: https://github.com/wagtail/sphinx-wagtail-theme, which is released, modified, and included here under an MIT license. 
-
-OpenDyslexic font is included from [OpenDyslexic]: https://opendyslexic.org/, which is released and included here under an SIL Open Font License v1.1.
+TODO
+====
+Add more quantification to the programming motivation.
