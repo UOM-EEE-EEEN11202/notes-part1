@@ -9,6 +9,6 @@ We don't assume you're coming from a background with programming experience, and
    :maxdepth: 1
    :hidden:
 
+   computer_software/major_operating_systems
    computer_software/gui_and_cli
    computer_software/files_and_folders
-   computer_software/major_operating_systems

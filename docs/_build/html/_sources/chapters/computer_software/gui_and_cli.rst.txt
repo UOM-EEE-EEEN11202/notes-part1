@@ -9,6 +9,7 @@ Most computer systems we interact with as users have a Graphical User Interface 
 
 .. figure:: desktop.png
   :width: 800
+  :align: center
   :alt: The standard Windows graphical user interface
 
 
@@ -16,6 +17,7 @@ Different Apps and Programs are displayed in *windows*, which you can arrange to
 
 .. figure:: gui_windows.png
   :width: 800
+  :align: center
   :alt: Apps and Programs are displayed in *windows*
 
 

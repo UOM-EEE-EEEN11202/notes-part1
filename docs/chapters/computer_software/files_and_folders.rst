@@ -1,3 +1,6 @@
+.. role:: console(code)
+   :language: console
+
 Files, folders, and filesystems
 ===============================
 
@@ -44,7 +47,7 @@ Each file and folder has an address on your computer to locate it. The address t
 
 Windows
 ^^^^^^^
-Addresses begin with a letter, followed by a colon (:). Folders are separated by backslashes (\). For example this might be:
+Addresses begin with a letter, followed by a colon :console:`:`. Folders are separated by backslashes :console:`\\`. For example this might be:
 
 .. code-block:: console
 
@@ -54,19 +57,22 @@ We can also see this location (C:\\Users\\alex\\) if we use the File Explorer GU
 
 .. figure:: file_explorer.png
   :width: 800
+  :align: center
   :alt: The Windows file explorer
 
-By convention, the letter C:\\ refers to the hard drive in the computer being used. You may see other letters being used. For example, students logged in to computers at the University of Manchester also have a P:\\ drive. This is a *network drive*. The P:\\ drive storage isn't on the computer being used, it's connected via the Internet and so given a different address letter. (This arrangement is very common for shared computers, as you want files to be accessible no matter which computer you log in to. You can't do this if the files are only stored on the one physical computer.) If you plug in a USB thumb drive, it will be given another letter, which may vary from computer to computer.
+By convention, the letter :console:`C:\\` refers to the hard drive in the computer being used. You may see other letters being used. For example, students logged in to computers at the University of Manchester also have a :console:`P:\\` drive. This is a *network drive*. The :console:`P:\\` drive storage isn't on the computer being used, it's connected via the Internet and so given a different address letter. 
+
+This arrangement is very common for shared computers, although different places may use different letters. For shared devices, you want files to be accessible no matter which computer you log in to. You can't do this if the files are only stored on the one physical computer. If you plug in a USB thumb drive, it will be given another letter, which may vary from computer to computer.
 
 Using a drive letter is a form of *physical addressing*. It forces you to think about *where* you are storing the files. Is it on this computer, a thumb drive, or on a network computer, and so on.
 
-In many programming languages the backslash character (\\) has a special meaning and can't be used directly. It's thus common to enter a Windows path using two backslashes, i.e. as 
+In many programming languages the backslash character :console:`\\` has a special meaning and can't be used directly. It's thus common to enter a Windows path using two backslashes, i.e. as 
 
 .. code-block:: console
 
 	C:\\Users\\alex\\hello_world.py
 
-or with forward slashes (/) as
+or with forward slashes :console:`/` as
 
 .. code-block:: console
 
@@ -77,7 +83,7 @@ These aren't how Windows represents a path, it uses a single backslash, but may 
 
 macOS and Linux
 ^^^^^^^^^^^^^^^
-Addresses begin with a forward slash (/). Folders are separated by forward slashes (/). For example this might be:
+Addresses begin with a forward slash :console:`/`. Folders are separated by forward slashes :console:`/`. For example this might be:
 
 .. code-block:: console
 
@@ -89,15 +95,9 @@ or
 
 	/home/alex/hello_world.py
 
-macOS usually puts users' files in /Users/, while Linux puts them in /home.
+macOS usually puts users' files in :console:`/Users/username`, while Linux puts them in :console:`/home/username`.
 
-Just 
-
-.. code-block:: console
-
-	/
-
-is a valid address. It is known as the *root* of the filesystem. 
+Just :console:`/` is a valid address. It is known as the *root* of the filesystem. 
 
 This is a form of *logical* addressing. You put the data in the most sensible location, without necessarily thinking about where the data is physically put. In principle
 
@@ -124,18 +124,18 @@ On Windows, you will have a folder called
 
 	C:\Users\alex\OneDrive - The University of Manchester
 
-or similar. (There will be similar locations on macOS and Linux, but we'll only give the Windows example for brevity here.) Files in the OneDrive folder are on the C:\ drive. That is, they are on the hard drive of the computer being used. 
+or similar. (There will be similar locations on macOS and Linux, but we'll only give the Windows example for brevity here.) Files in the OneDrive folder are on the :console:`C:\\` drive. That is, they are on the hard drive of the computer being used. 
 
 At the same time, OneDrive will automatically copy the files to the Cloud. This means that they are backed up automatically, and so if anything happens to your computer you'll still have all of your work. It also means that the files will be automatically available on any computer which has access to your OneDrive account. 
 
-(There's also the option of having the file online by default. That is, Windows sees the file in the C:\\ drive as usual, but to save disk space it isn't actually kept on the computer. It's kept on the Cloud and downloaded when needed.)
+(There's also the option of having the file online by default. That is, Windows sees the file in the :console:`C:\\` drive as usual, but to save disk space it isn't actually kept on the computer. It's kept on the Cloud and downloaded when needed.)
 
-You can access files in OneDrive using the same C:\\ address as you would for any other file.
+You can access files in OneDrive using the same :console:`C:\\` address as you would for any other file.
 
 
 Absolute vs. relative addresses
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The addresses given above, starting with C:\\ or / are *absolute* addresses. They start from the root of the computer being used and everything is given a full address from that starting point.
+The addresses given above, starting with :console:`C:\\` or :console:`/` are *absolute* addresses. They start from the root of the computer being used and everything is given a full address from that starting point.
 
 You can also have *relative* addresses. That is, an address of a file or folder, as steps from a current location or file or folder.
 
@@ -151,7 +151,7 @@ represents the current folder. Two dots
 
 	../
 
-represents the folder one level up. That is, the folder containing the current location or file or folder.
+represents the folder one level up. That is, the folder containing the current location or file or folder. :console:`../../` is two levels up, and so on. 
 
 Showing the same *tree view* of the files/folders for these notes that we saw earlier on this page
 
@@ -160,13 +160,13 @@ Showing the same *tree view* of the files/folders for these notes that we saw ea
   :align: center
   :alt: Tree view of files and folders
 
-from files_and_folders.rst, gui_and_cli.rst is in the same folder and so can be accessed with the relative address
+from :console:`files_and_folders.rst`, :console:`gui_and_cli.rst` is in the same folder and so can be accessed with the relative address
 
 .. code-block:: console
 
 	./gui_and_cli.rst
 
-our_choices.rst is up one level, and then in a different folder called motivation. From files_and_folders.rst, our_choices.rst can be accessed with the relative address
+:console:`our_choices.rst` is up one level, and then in a different folder called motivation. From :console:`files_and_folders.rst`, our_choices.rst can be accessed with the relative address
 
 .. code-block:: console
 
@@ -181,9 +181,9 @@ Where should I put my files?
 
 The short answer is in your University provided OneDrive. This will ensure that the files will be automatically backed up, and automatically available on any computer which has access to your OneDrive account.
 
-You may find that some, mainly older, programs don't like files which are stored in OneDrive. Your second choice location should be your P:\\ drive. This is a network drive, and the storage is maintained for you by IT. That means it's automatically backed up, and available on any University computer. 
+You may find that some, mainly older, programs don't like files which are stored in OneDrive. Your second choice location should be your :console:`P:\\` drive. This is a network drive, and the storage is maintained for you by IT. That means it's automatically backed up, and available on any University computer. 
 
-The C:\\ drive should be the location of last resort. Files here are only on the computer you're using at the time. If you switch to a different computer, or you lose/damage the computer, your files will be lost (unless you've taken some other steps to back them up).
+The :console:`C:\\` drive should be the location of last resort. Files here are only on the computer you're using at the time. If you switch to a different computer, or you lose/damage the computer, your files will be lost (unless you've taken some other steps to back them up).
 
 How much filing to do
 ^^^^^^^^^^^^^^^^^^^^^

@@ -114,9 +114,9 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Computer hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="computer_software.html">3. Computer software</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="computer_software/gui_and_cli.html">3.1. User interfaces: graphical and the command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer_software/files_and_folders.html">3.2. Files, folders, and filesystems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer_software/major_operating_systems.html">3.3. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="software_lifecycle.html">4. Software lifecycle</a><ul>
@@ -224,14 +224,14 @@
 <p>This isn’t a course on computer architecture, but it’s useful to know a little about what is inside a modern computer (both hardware and software) as it shapes how we go about our programming. This section gives a brief introduction, sufficient for the depth of this course.</p>
 <p>A high level diagram showing the parts of a computer system is shown below. There are multiple different bits:</p>
 <ul class="simple">
-<li><p>The processor, which is the heart of the system, executes the commands we ask the computer to carry out. Consumer grade computers typically only have one processor in them, but high end machines may have more than one to increase performance and to improve resilience in case one fails. Inside most processors there is more than 1 core, with these multiple cores allowing multiple things to be executed at the same time.</p></li>
+<li><p>The processor, which is the heart of the system, executes the commands we ask the computer to carry out. Consumer grade computers typically only have one processor in them, but high end machines may have more than one to increase performance and to improve resilience in case one fails. Inside most processors there is more than 1 core, with these multiple cores allowing multiple things to be executed at the same time. There are different architectures of processor available. x86_64 from Intel/AMD, Arm (used in Apple computers and the Raspberry Pi), and RISC-V are all common. Generally, code compiled for one processor architecture will only run on that architecture, although programs that run on all platforms are also widely possible.</p></li>
 <li><p>There is memory (known as RAM, or possibly a cache close to the processor, or registers in the processor) for storing data and variables while they are being actively worked on or used.</p></li>
 <li><p>There is longer term memory, typically the hard drive, for storing data (for example when the computer is turned off) and data which won’t fit into the RAM.</p></li>
 <li><p>There are a range of Input/Output (I/O) devices such as the screen and keyboard for interacting with the computer. These include a network port (wired or wireless) to connect to other devices.</p></li>
 <li><p>There are specialist processing devices, in particular the graphics card. Graphics cards are very good at executing some types of tasks very quickly. A lot of machine learning uses the graphics card rather than the processor for doing the heavy lifting, as they are faster for this specialist task.</p></li>
 <li><p>There are other computers connected across the network. These may provide more storage, or more processing power, or something else that helps the computer run.</p></li>
 </ul>
-<figure class="align-default">
+<figure class="align-center">
 <a class="reference internal image-reference" href="../_images/computer_parts.png"><img alt="Component parts of a computer" src="../_images/computer_parts.png" style="width: 700px;" />
 </a>
 </figure>
