@@ -132,20 +132,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software_development_tools/comments.html">5.2. Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_generators.html">5.3. Documentation generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">5.4. Static code analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">5.5. Debugger</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">5.6. Profiler and computational complexity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/version_control.html">5.7. Version control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">5.8. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">5.9. Automated testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">5.10. Continuous integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">5.11. Code reviews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">5.12. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">5.13. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">5.14. Software licensing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">5.15. Pseudocode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">5.16. Co-pilot and other AI tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">5.5. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">5.6. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/version_control.html">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">5.10. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">5.12. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">5.13. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">5.14. Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">5.15. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">5.16. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">5.17. Co-pilot and other AI tools</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
@@ -320,7 +321,7 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">../</span>
 </pre></div>
 </div>
-<p>represents the folder one level up. That is, the folder containing the current location or file or folder. <code class="code highlight console docutils literal highlight-console"><span class="go">../../</span></code> is two levels up.</p>
+<p>represents the folder one level up. That is, the folder containing the current location or file or folder. <code class="code highlight console docutils literal highlight-console"><span class="go">../../</span></code> is two levels up, and so on.</p>
 <p>Showing the same <em>tree view</em> of the files/folders for these notes that we saw earlier on this page</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/tree_view.png"><img alt="Tree view of files and folders" src="../../_images/tree_view.png" style="width: 300px;" />
@@ -348,7 +349,7 @@
 <h3><span class="section-number">3.3.4.2. </span>How much filing to do<a class="headerlink" href="#how-much-filing-to-do" title="Link to this heading">¶</a></h3>
 <p>When programming, you’ll quickly find that you actually have quite a few files, even for simple programs. Indeed, it’s common for the programming tools to automatically make a number of files and folders to store additional information about your program, even if your program is fundamentally only in one file.</p>
 <p>If you don’t keep any track at all of what you put where, it’s easy to lose files - as in, they’re there, you just don’t know where. Or, to have multiple copies of the same underlying file.</p>
-<p>You can of course search to find files, but when you have lots of files with similar names and/or content this can be quite hard. It is worth spending some time to organize your files. Wherever you put it, we would recommend making an eeen1xxx2 folder, and then having a folder for each lab within that outer folder.</p>
+<p>You can of course search to find files, but when you have lots of files with similar names and/or content this can be quite hard. It is worth spending some time to organize your files. Wherever you put it, we would recommend making an EEEN11202 folder, and then having a folder for each lab within that outer folder.</p>
 </section>
 </section>
 </section>

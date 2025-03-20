@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>5.5. Debugger &mdash; notes-part1 0.1 documentation</title>
+        <title>5.6. Debugger &mdash; notes-part1 0.1 documentation</title>
     
     <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
@@ -18,8 +18,8 @@
             <link rel="search" title="Search" href="../../search.html" />
             <link rel="top" title="notes-part1 0.1 documentation" href="#" />
             <link rel="up" title="5. Software development tools fundamentals" href="../software_development_tools.html" />
-            <link rel="next" title="5.6. Profiler and computational complexity" href="profiler.html" />
-            <link rel="prev" title="5.4. Static code analysis" href="static_code_analysis.html" />
+            <link rel="next" title="5.7. Profiler and computational complexity" href="profiler.html" />
+            <link rel="prev" title="5.5. Static code analysis" href="static_code_analysis.html" />
     </head>
 <body>
     <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
@@ -115,9 +115,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.1. User interfaces: graphical and the command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.2. Files, folders, and filesystems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.3. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
@@ -132,20 +132,22 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comments.html">5.2. Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation_generators.html">5.3. Documentation generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="static_code_analysis.html">5.4. Static code analysis</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.5. Debugger</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profiler.html">5.6. Profiler and computational complexity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="version_control.html">5.7. Version control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.8. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.9. Automated testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.10. Continuous integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.11. Code reviews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.12. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.13. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.14. Software licensing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.15. Pseudocode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.16. Co-pilot and other AI tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="static_code_analysis.html">5.5. Static code analysis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.6. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiler.html">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version_control.html">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.15. Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
@@ -186,7 +188,7 @@
     <ol class="breadcrumb m-0 p-0 bg-transparent">
         <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
             <li class="breadcrumb-item"><a href="../software_development_tools.html"><span class="section-number">5. </span>Software development tools fundamentals</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.5. </span>Debugger</li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.6. </span>Debugger</li>
     </ol>
 </nav>
                     </div>
@@ -222,16 +224,29 @@
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
     <section id="debugger">
-<h1><span class="section-number">5.5. </span>Debugger<a class="headerlink" href="#debugger" title="Link to this heading">¶</a></h1>
+<h1><span class="section-number">5.6. </span>Debugger<a class="headerlink" href="#debugger" title="Link to this heading">¶</a></h1>
+<p>The debugger is for analyzing your code, while it is running. It puts the code into a special state which lets you look at (say) the value of a variable. This makes the code slower to execute, as everything needs to be logged, but is very useful for examining what’s going on when things aren’t working as expected. Most debuggers then let you then step through the code, say line-by-line, to let you pin-point errors and, hopefully, fix them. An example in Rust is shown below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/debugger.png"><img alt="Example of debugging in VSCode" src="../../_images/debugger.png" style="width: 800px;" />
+</a>
+</figure>
+<p>Here, a <em>break point</em> has been added, by clicking next to the line number. When compiled and run, the program executes up to the break point, and then pauses. Debug information is then displayed and can be used by you to help you fix the program. For example, you can change the value of a variable by hand, and then continue the execution to see what happens.</p>
+<p>In the example above, the error is probably a typo. Line 4 should probably be <code class="code highlight rust docutils literal highlight-rust"><span class="n">i</span><span class="o">+</span><span class="mi">1</span></code> rather than <code class="code highlight rust docutils literal highlight-rust"><span class="mi">1</span><span class="o">+</span><span class="mi">1</span></code>. Static code analysis struggles to spot this, as <code class="code highlight rust docutils literal highlight-rust"><span class="mi">1</span><span class="o">+</span><span class="mi">1</span></code> is perfectly valid, code just probably not what’s wanted in this case. (Also <code class="code highlight rust docutils literal highlight-rust"><span class="n">i</span></code> is used later on in the code, so static analysis can’t detect that it’s not being used.)</p>
+<p>It’s worth spending some time exploring the debugger as it’s an incredibly powerful tool for identifying and fixing issues with your code. For example, you can add conditional break points, which will only trigger the program to pause execution if certain conditions are met.</p>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>We’ll use debugging in VSCode a lot throughout the course and you’ll be expected to be familiar with how to use this.</p>
+<p>Note that debuggers show the limitations of VSCode as an IDE. For example, the GUI buttons in VSCode will only let you step forwards through the code, to see what happens next. Some debuggers will let you do <em>reverse debugging</em>, where you can step backwards through the code to see how it got into a particular state. In VSCode you have to run this from the command line, a GUI button for it. We thus won’t look in to it, but do remember there are lots of tools available to help you. Don’t limit your thinking or reading to only the ones considered here.</p>
+</div>
 </section>
 
 </main>
                         <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
     <a class="float-left" href="static_code_analysis.html" title="Previous">
-        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.4. </span>Static code analysis
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.5. </span>Static code analysis
     </a>
     <a class="float-right" href="profiler.html" title="Next">
-        <span class="section-number">5.6. </span>Profiler and computational complexity <span aria-hidden="true">&nbsp;→</span>
+        <span class="section-number">5.7. </span>Profiler and computational complexity <span aria-hidden="true">&nbsp;→</span>
     </a>
 </nav>
                     </div>

@@ -21,6 +21,11 @@ macOS
 -----
 macOS is made by Apple, and can only run on Apple devices. It is the second most common operating system for desktop/laptop type devices. It is based around a desktop, with a *dock* which shows the commonly used programs and running programs. The concept is that all instances of a particular program are shown under that program's icon in the dock. So all Word documents under the Word icon, all web sessions under the browser icon, and so on. 
 
+.. figure:: macos_desktop.png
+  :width: 800
+  :align: center
+  :alt: An example macOS desktop
+
 macOS is descended from a different operating system, known as BSD. In turn, BSD is descended from an operating system known as Unix. Linux (discussed below) also has its roots in Unix. Although there are a lot of differences today, this common ancestor operating system is why so many of the commands we'll see in this course are the same for macOS/Linux, and something different for Windows.
 
 

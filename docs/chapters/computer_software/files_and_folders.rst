@@ -192,4 +192,4 @@ When programming, you'll quickly find that you actually have quite a few files, 
 
 If you don't keep any track at all of what you put where, it's easy to lose files - as in, they're there, you just don't know where. Or, to have multiple copies of the same underlying file. 
 
-You can of course search to find files, but when you have lots of files with similar names and/or content this can be quite hard. It is worth spending some time to organize your files. Wherever you put it, we would recommend making an eeen1xxx2 folder, and then having a folder for each lab within that outer folder. 
+You can of course search to find files, but when you have lots of files with similar names and/or content this can be quite hard. It is worth spending some time to organize your files. Wherever you put it, we would recommend making an EEEN11202 folder, and then having a folder for each lab within that outer folder. 

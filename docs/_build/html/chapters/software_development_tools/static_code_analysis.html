@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>5.4. Static code analysis &mdash; notes-part1 0.1 documentation</title>
+        <title>5.5. Static code analysis &mdash; notes-part1 0.1 documentation</title>
     
     <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
@@ -18,8 +18,8 @@
             <link rel="search" title="Search" href="../../search.html" />
             <link rel="top" title="notes-part1 0.1 documentation" href="#" />
             <link rel="up" title="5. Software development tools fundamentals" href="../software_development_tools.html" />
-            <link rel="next" title="5.5. Debugger" href="debugger.html" />
-            <link rel="prev" title="5.3. Documentation generators" href="documentation_generators.html" />
+            <link rel="next" title="5.6. Debugger" href="debugger.html" />
+            <link rel="prev" title="5.4. Documentation tools" href="documentation_tools.html" />
     </head>
 <body>
     <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
@@ -115,9 +115,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.1. User interfaces: graphical and the command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.2. Files, folders, and filesystems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.3. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
@@ -132,20 +132,22 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comments.html">5.2. Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation_generators.html">5.3. Documentation generators</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.4. Static code analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="debugger.html">5.5. Debugger</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profiler.html">5.6. Profiler and computational complexity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="version_control.html">5.7. Version control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.8. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.9. Automated testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.10. Continuous integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.11. Code reviews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.12. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.13. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.14. Software licensing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.15. Pseudocode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.16. Co-pilot and other AI tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.5. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugger.html">5.6. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiler.html">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version_control.html">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.15. Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
@@ -186,7 +188,7 @@
     <ol class="breadcrumb m-0 p-0 bg-transparent">
         <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
             <li class="breadcrumb-item"><a href="../software_development_tools.html"><span class="section-number">5. </span>Software development tools fundamentals</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.4. </span>Static code analysis</li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.5. </span>Static code analysis</li>
     </ol>
 </nav>
                     </div>
@@ -222,16 +224,28 @@
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
     <section id="static-code-analysis">
-<h1><span class="section-number">5.4. </span>Static code analysis<a class="headerlink" href="#static-code-analysis" title="Link to this heading">¶</a></h1>
+<h1><span class="section-number">5.5. </span>Static code analysis<a class="headerlink" href="#static-code-analysis" title="Link to this heading">¶</a></h1>
+<p>Static code analysis refers to checking your code for errors, before you run or compile the code. This can avoid you wasting time trying to run code which has known issues or other reasons why it might not work. Remember, our simple examples will likely run or compile in a few seconds, but real programs with thousands or millions of lines of code might take hours or more to compile, and so failed compilations can be a real time drain.</p>
+<p>There are many different types of static code analysis.</p>
+<p><em>Linting</em> is essentially a spell-check of your code. The example below shows Rust program code. It has detected that the variable <code class="code highlight rust docutils literal highlight-rust"><span class="n">j</span></code> (and indeed <code class="code highlight rust docutils literal highlight-rust"><span class="n">i</span></code> in this simple example) is never used. It’s checking that this is what you want, because it might indicate a mistake, and suggested using the preferred (but optional) of using <code class="code highlight rust docutils literal highlight-rust"><span class="n">_j</span></code> to indicate it’s deliberately not used for some reason. Indeed for a simple error like this offers a <em>Quick Fix</em> to automatically correct it for you.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/linting.png"><img alt="Example of static code analysis in VSCode" src="../../_images/linting.png" style="width: 800px;" />
+</a>
+</figure>
+<p>Linting is probably the most common form of static code analysis that you’ll encounter. If desired, there are many other checks you can perform via static code analysis. For example, you can get analyzers that compare your code against a given style guide, or analyzers that examine the code for known security risks. We would encourage you to explore the VSCode interface, documentation, and online help to explore what other types of analysis might be useful.</p>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>We’ve set up the development tools to do linting automatically. We won’t cover other forms of static code analysis.</p>
+</div>
 </section>
 
 </main>
                         <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
-    <a class="float-left" href="documentation_generators.html" title="Previous">
-        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.3. </span>Documentation generators
+    <a class="float-left" href="documentation_tools.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.4. </span>Documentation tools
     </a>
     <a class="float-right" href="debugger.html" title="Next">
-        <span class="section-number">5.5. </span>Debugger <span aria-hidden="true">&nbsp;→</span>
+        <span class="section-number">5.6. </span>Debugger <span aria-hidden="true">&nbsp;→</span>
     </a>
 </nav>
                     </div>

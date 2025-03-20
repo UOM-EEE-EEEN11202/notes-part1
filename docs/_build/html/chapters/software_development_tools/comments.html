@@ -115,9 +115,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.1. User interfaces: graphical and the command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.2. Files, folders, and filesystems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.3. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
@@ -223,6 +223,30 @@
                         <main role="main" id="main">
     <section id="comments">
 <h1><span class="section-number">5.2. </span>Comments<a class="headerlink" href="#comments" title="Link to this heading">¶</a></h1>
+<p>Comments allow you to add non-executable information into your code. Generally they are used for explaining what the code is doing and why, to keep track of what this unit of code is for, and to explain anything which might not be obvious. Sometimes they are used to deactivate code that you have written, but don’t want to be part of the program at the moment (for whatever reason).</p>
+<p>Comments aren’t a substitute for good documentation, as they can usually only be text (no diagrams or similar) and they sit at a particular place in your code and so generally explain what’s happening only there, rather than giving the big picture. Nevertheless, comments are an essential part of any code.</p>
+<p>In Python, lines that start with a hash <code class="code highlight python docutils literal highlight-python"><span class="c1">#</span></code> are comments. In Rust, lines that start with two forward slashes <code class="code highlight rust docutils literal highlight-rust"><span class="c1">//</span></code> are comments.</p>
+<p>Comments can start at any point during a line of code.</p>
+<p>Examples of Rust comments might be:</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// This is a comment at the start of the file.</span>
+<span class="linenos"> 2</span><span class="c1">// We usually include some lines at the top of a file</span>
+<span class="linenos"> 3</span><span class="c1">// to explain what the code is for, what it&#39;s trying to do.</span>
+<span class="linenos"> 4</span><span class="c1">// Possibly who wrote it, a copyright statement, and so on.</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// comment in-line with code.</span>
+<span class="linenos"> 8</span><span class="w">                </span><span class="c1">// This code is run, the</span>
+<span class="linenos"> 9</span><span class="w">                </span><span class="c1">// comment helps explain what it does</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="c1">// let i = 1; // this code is commented out</span>
+<span class="linenos">12</span><span class="w">                  </span><span class="c1">// It won&#39;t run</span>
+<span class="linenos">13</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>We’ll expect you to use suitable comments to document and explain your code. You might lose marks in the lab tasks and/or in the exam if you don’t have any comments present.</p>
+</div>
 </section>
 
 </main>

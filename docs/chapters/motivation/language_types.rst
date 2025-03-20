@@ -28,7 +28,6 @@ as display "some text" in bold. In LaTeX, the markup for the same thing has a di
 JSON, yaml, and similar are for passing data around. For example, JSON stores key-value pairs as: 
 
 .. code-block:: JSON
-   :linenos:
 
    {"name": "Alex", 
     "office number": 4.018, 

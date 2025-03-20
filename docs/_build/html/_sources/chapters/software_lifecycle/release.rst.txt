@@ -1,2 +1,8 @@
 Release, support, maintenance, and bug fixes
 ============================================
+
+Once all of your development has been done, and the code compiled and tested, an end product can be shipped to customers. In any non-trivial project, they'll probably find more bugs! Testing is hard, and if your software is being used on thousands or millions of devices, each with a slightly different setup, it's extremely hard to detect everything in advance. (This isn't an excuse for shipping poor quality, bug-riddled code, just pragmatism. I'm sure we'll all familiar with encountering bugs in programs we use on a computer.)
+
+An important part of the software lifecycle is thus supporting your application after it's been released. Typically programs are supported for a number of years, and customers can look up how long this is. Within the support period, new versions will be released, with bug fixes, possibly some small feature updates, and any security related updates. After the support period, the software falls out of support and the customer needs to get (possibly buy) a new version if they want to get the latest fixes. It's not uncommon for customers to pay more money for longer support periods, so that they can get bug and security fixes without having to completely update or change the software. 
+
+This support and maintenance needs to be factored in when planning a software project. It may need fewer resources (people, money) than making the program in the first place, but it's going to need some. Writing code which is easy to read and maintain is very important, as it may not be the original writer who has to go in and hunt down obscure bugs many years later!

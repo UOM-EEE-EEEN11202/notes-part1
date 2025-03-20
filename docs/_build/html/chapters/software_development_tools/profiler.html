@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>5.6. Profiler and computational complexity &mdash; notes-part1 0.1 documentation</title>
+        <title>5.7. Profiler and computational complexity &mdash; notes-part1 0.1 documentation</title>
     
     <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
@@ -18,8 +18,8 @@
             <link rel="search" title="Search" href="../../search.html" />
             <link rel="top" title="notes-part1 0.1 documentation" href="#" />
             <link rel="up" title="5. Software development tools fundamentals" href="../software_development_tools.html" />
-            <link rel="next" title="5.7. Version control" href="version_control.html" />
-            <link rel="prev" title="5.5. Debugger" href="debugger.html" />
+            <link rel="next" title="5.8. Version control" href="version_control.html" />
+            <link rel="prev" title="5.6. Debugger" href="debugger.html" />
     </head>
 <body>
     <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
@@ -115,9 +115,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.1. User interfaces: graphical and the command line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.2. Files, folders, and filesystems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.3. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
@@ -132,20 +132,21 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="comments.html">5.2. Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation_generators.html">5.3. Documentation generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="static_code_analysis.html">5.4. Static code analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="debugger.html">5.5. Debugger</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.6. Profiler and computational complexity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="version_control.html">5.7. Version control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.8. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.9. Automated testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.10. Continuous integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.11. Code reviews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.12. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.13. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.14. Software licensing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.15. Pseudocode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.16. Co-pilot and other AI tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="static_code_analysis.html">5.5. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugger.html">5.6. Debugger</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version_control.html">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.12. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.13. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.14. Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.15. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.16. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.17. Co-pilot and other AI tools</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
@@ -186,7 +187,7 @@
     <ol class="breadcrumb m-0 p-0 bg-transparent">
         <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
             <li class="breadcrumb-item"><a href="../software_development_tools.html"><span class="section-number">5. </span>Software development tools fundamentals</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.6. </span>Profiler and computational complexity</li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.7. </span>Profiler and computational complexity</li>
     </ol>
 </nav>
                     </div>
@@ -222,16 +223,16 @@
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
     <section id="profiler-and-computational-complexity">
-<h1><span class="section-number">5.6. </span>Profiler and computational complexity<a class="headerlink" href="#profiler-and-computational-complexity" title="Link to this heading">¶</a></h1>
+<h1><span class="section-number">5.7. </span>Profiler and computational complexity<a class="headerlink" href="#profiler-and-computational-complexity" title="Link to this heading">¶</a></h1>
 </section>
 
 </main>
                         <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
     <a class="float-left" href="debugger.html" title="Previous">
-        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.5. </span>Debugger
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.6. </span>Debugger
     </a>
     <a class="float-right" href="version_control.html" title="Next">
-        <span class="section-number">5.7. </span>Version control <span aria-hidden="true">&nbsp;→</span>
+        <span class="section-number">5.8. </span>Version control <span aria-hidden="true">&nbsp;→</span>
     </a>
 </nav>
                     </div>
