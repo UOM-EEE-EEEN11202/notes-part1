@@ -141,12 +141,13 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5.9. Environment control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Automated testing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.11. Continuous integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.12. Code reviews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.13. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.14. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.15. Software licensing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.16. Pseudocode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.17. Co-pilot and other AI tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.15. Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
@@ -224,6 +225,24 @@
                         <main role="main" id="main">
     <section id="environment-control">
 <h1><span class="section-number">5.9. </span>Environment control<a class="headerlink" href="#environment-control" title="Link to this heading">¶</a></h1>
+<p>Version control is for keeping track of the code and documentation files that we make, letting us roll back to previous versions or see changes from previous versions.</p>
+<p>Often there might be a wide range of other files or information that are needed to make your code work, beyond the main code files themselves. In particular, there is the <em>version</em> of the programming language and tools that you use.</p>
+<p>Python has lots of different versions (e.g. 3.7, 3.10, 3.13), changing as new features are added. A new version is released each year, which then has active support for 2 years, and security support for 5 years. Rust is released in <em>editions</em> every 3 years and also has versions released more frequently. We’ll also find it’s common to load external code as part of a Python or Rust program. Each one of these <em>modules</em> will also have a version, which changes over time.</p>
+<p>Environment control helps us fix the development environment, ensuring that you’re using a fixed, known set of versions for everything. If there are multiple people all working on the same project, environment control also helps ensure everyone is using the same versions.</p>
+<p>Environment control software gives us tools for keeping track of which versions of the different tools and libraries are installed, and potentially to have multiple versions of these installed at the same time so we can move to different versions as required. They make a <em>container</em>, or possibly a complete virtual computer (a virtual machine) inside your real computer. You can have multiple containers running at the same time, each with different development environments installed in them.</p>
+<p>There are several parts to environment control:</p>
+<ol class="arabic simple">
+<li><p>There is a <em>container</em> which defines the operating system to be used and the programs it should have installed. <a class="reference external" href="https://www.docker.com/">Docker</a>,  <a class="reference external" href="https://podman.io/">Podman</a> and <a class="reference external" href="https://kubernetes.io/">kubernetes</a> are popular choices. (Generally Docker is the starting point, and kubernetes is for larger cloud based projects.) The user of the container may or may not be allowed to install additional programs.</p></li>
+<li><p>There is a <em>devcontainer</em> which configures the development environment, VSCode in our case, to have the settings we want. For VSCode, this is mainly installing the extensions needed for the different programming languages to be used.</p></li>
+<li><p>(Python only.) There is a <em>virtual environment</em> which defines the specific version of Python and the various modules being used. You may have multiple virtual environments if you have code that needs different versions of Python to run. Typically we have one virtual environment per <em>project</em>, and it’s up to the user to define how big or small each project is. Generally it’s bad practice to just have one global virtual environment for all of your work. You’ll probably quickly find you have conflicts in which versions of modules are needed in order for different parts of the code to work.</p></li>
+<li><p>There is a <em>configuration file</em> setting up the project, listing its <em>dependencies</em>. That is, what version of the programming language is being used; and whether there are any external modules that are being used to add functionality, and if so whether there are any constraints on which versions can be used. In Python, there are a number of options, but these would generally be listed in a <code class="code highlight console docutils literal highlight-console"><span class="go">requirements.txt</span></code> file or in a <code class="code highlight console docutils literal highlight-console"><span class="go">pyproject.toml</span></code> file. In Rust, the configuration is kept in a <code class="code highlight console docutils literal highlight-console"><span class="go">Cargo.toml</span></code> file.</p></li>
+</ol>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>We don’t expect you to know about containers and devcontainers. We have made these for you (because we want everyone to be using the same versions of the different tools needed!). You just need to follow the instructions given in the lab notes. Once you have a programming environment setup, you won’t need to refer to these again. If you’re interested, our <em>dockerfile</em> which defines the EEEN11202 container is in our <a class="reference external" href="https://github.com/UOM-EEE-EEEN1XXX2/dockerfile">GitHub repository</a>, as is our <a class="reference external" href="https://github.com/UOM-EEE-EEEN1XXX2/devcontainer">devcontainer file</a>.</p>
+<p>For Python, we do expect you to know about, and be able to use, virtual environments. They are an essential part of knowing Python, and we’ll use them throughout the labs.</p>
+<p>We’ll also make use of <code class="code highlight console docutils literal highlight-console"><span class="go">pyproject.toml</span></code> and <code class="code highlight console docutils literal highlight-console"><span class="go">Cargo.toml</span></code> files where appropriate. We’d expect you to have some knowledge of these, only to the extent that we use them in the labs.</p>
+</div>
 </section>
 
 </main>

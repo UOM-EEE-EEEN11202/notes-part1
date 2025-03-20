@@ -231,7 +231,7 @@
 <p>For all code, it’s useful to know which resources are being used the most. This allows you to potentially change your code to make it faster, or use fewer resources, or to compare how many resources two different approaches require. For performance critical applications this is very important.</p>
 <p>A <em>profiler</em> analyses your code to generate a report on resource usage that you can use to inform the design or optimization of your code.</p>
 <p>For example, in Python you might use</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span><span class="w"> </span><span class="nn">cProfile</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cProfile</span>
 <span class="n">cProfile</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;&lt;Python code here&gt;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -253,7 +253,11 @@
 </div>
 <p>this will scale linearly. If there were 10 values in the elements array, rather than the current 5, we’d expect it to take twice as long to execute. This is because the addition will take the same amount of time in every case, so the complexity is dominated by how many times the for loop has to run. If we double the number of values present, we double the number of times the loop executes. Doubling the size of the input, doubles the execution time, and so the complexity is scaling linearly with the input size.</p>
 <p>Typically we use <em>Big O</em> notation to represent complexity. If <span class="math notranslate nohighlight">\(n\)</span> is the number of values present in the elements array, the above example would be <span class="math notranslate nohighlight">\(O(n)\)</span>. The complexity just depends on the number of elements present.</p>
-<p>Different code could to be <span class="math notranslate nohighlight">\(O(n^2)\)</span>. Here, doubling the elements from 5 to 10 would result in code which takes 4 times as long to run <span class="math notranslate nohighlight">\((10^2/5^2))\)</span>. Code which is <span class="math notranslate nohighlight">\(O(n^3)\)</span> or even <span class="math notranslate nohighlight">\(O(n!)\)</span> is possible, if they may take a long time to run when you have lots of data! With some thought, lots of algorithms can be written to be <span class="math notranslate nohighlight">\(O(n \log n)\)</span>, but this might require some effort and not be the first approach you come up with.</p>
+<p>Different code could to be <span class="math notranslate nohighlight">\(O(n^2)\)</span>. Here, doubling the elements from 5 to 10 would result in code which takes 4 times as long to run <span class="math notranslate nohighlight">\((10^2/5^2)\)</span>. Code which is <span class="math notranslate nohighlight">\(O(n^3)\)</span> or even <span class="math notranslate nohighlight">\(O(n!)\)</span> is possible, if they may take a long time to run when you have lots of data! With some thought, lots of algorithms can be written to be <span class="math notranslate nohighlight">\(O(n \log n)\)</span>, but this might require some effort and not be the first approach you come up with.</p>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>In terms of this course, computational complexity is a relatively advanced topic. It’s more something to be aware of than something we’ll use lots. It affects the design stage of code, possibly more than the implementation stage where you can use the profiler. If your code is going to take a long time to run, at the design stage you need to consider both the architecture, and the potential computational complexity of the approach. Even if it’s just a rough estimate, it can help you discount some potential approaches early on. We won’t look at this in depth though.</p>
+</div>
 </section>
 </section>
 

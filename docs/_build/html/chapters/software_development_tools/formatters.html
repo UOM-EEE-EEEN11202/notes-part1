@@ -225,6 +225,13 @@
                         <main role="main" id="main">
     <section id="formatters">
 <h1><span class="section-number">5.12. </span>Formatters<a class="headerlink" href="#formatters" title="Link to this heading">¶</a></h1>
+<p>We mentioned <a class="reference external" href="https://uom-eee-eeen1xxx2.github.io/chapters/useful_information/style_guide.html">style guides previously</a>. There are lots of choices for how we layout code. For example, do we use AAAA or aaaa as a variable name? These choices don’t necessarily affect what the code does, but when working as part of a team if everyone’s code is formatted the same way, it makes it easier to share code and to read code written by others.</p>
+<p>To help with this, there are automatic formatting tools, such as <a class="reference external" href="https://docs.astral.sh/ruff/">Ruff</a> for Python, and <a class="reference external" href="https://github.com/rust-lang/rustfmt">rustfmt</a>  for Rust. These will re-layout your code automatically to try and keep it correctly on a specified style.</p>
+<p>For example, in Python it might convert single quotes <code class="code highlight python docutils literal highlight-python"><span class="s1">&#39;&#39;</span></code> into double quotes <code class="code highlight python docutils literal highlight-python"><span class="s2">&quot;&quot;</span></code>. In many places in Python, both styles of quote work in exactly the same way, but a style guide will say that one of the ways is preferred. (Probably double quotes).</p>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>You don’t need to learn anything about formatters. In the EEEN11202 devcontainer, we have turned on <em>format on save</em> automatically for Python and Rust files. This means that each time you save your code file the auto-formatter will automatically be applied to your work. It may change some of your code to put it onto the correct style.</p>
+</div>
 </section>
 
 </main>
