@@ -1,3 +1,5 @@
+.. _computer_hardware:
+
 Computer hardware
 =================
 
