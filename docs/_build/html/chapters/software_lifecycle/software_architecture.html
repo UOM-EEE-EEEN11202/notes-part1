@@ -132,20 +132,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../software_development_tools/comments.html">5.2. Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_generators.html">5.3. Documentation generators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">5.4. Static code analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">5.5. Debugger</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">5.6. Profiler and computational complexity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/version_control.html">5.7. Version control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">5.8. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">5.9. Automated testing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">5.10. Continuous integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">5.11. Code reviews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">5.12. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">5.13. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">5.14. Software licensing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">5.15. Pseudocode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">5.16. Co-pilot and other AI tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">5.5. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">5.6. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/version_control.html">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">5.10. Unit and integration testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">5.16. Software licenses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
@@ -222,7 +224,7 @@
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
     <section id="software-architecture">
-<h1><span class="section-number">4.2. </span>Software architecture<a class="headerlink" href="#software-architecture" title="Link to this heading">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">4.2. </span>Software architecture<a class="headerlink" href="#software-architecture" title="Link to this heading">¶</a></h1>
 <p>Software architecture refers to how you choose to split up your code and implement the required functionality. You could put everything in one big file, but that probably isn’t the best way to do it! Usually we split the code up by function.</p>
 <p>Continuing our example of detecting car number plates, maybe you have one unit of code which identifies where a number plate is in a camera picture, and another unit of code that does letter/number recognition on this. Each part has its own distinct aim, and they can potentially be developed separately (for example by different developers) before being brought together.</p>
 <p>There are lots of decisions that need to be made here. How do the two bits of code talk to each other? For the code which identifies where a number plate is, is the output a set of coordinates telling the other function where to look, or is it an image which has been cropped from the main picture to show just the area of interest? Both are potentially fine, you just need to agree which you’re doing.</p>

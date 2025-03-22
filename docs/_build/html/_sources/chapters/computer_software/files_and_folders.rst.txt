@@ -1,6 +1,8 @@
 .. role:: console(code)
    :language: console
 
+.. _files_folders_filesystems:
+
 Files, folders, and filesystems
 ===============================
 

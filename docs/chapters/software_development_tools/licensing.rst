@@ -1,2 +1,4 @@
-Software licensing
-==================
+.. _software_licenses:
+
+Software licenses
+=================

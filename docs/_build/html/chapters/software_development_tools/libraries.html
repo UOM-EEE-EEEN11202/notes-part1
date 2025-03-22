@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-        <title>5.15. Libraries &mdash; notes-part1 0.1 documentation</title>
+        <title>5.15. Modules, libraries, and similar &mdash; notes-part1 0.1 documentation</title>
     
     <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
@@ -18,7 +18,7 @@
             <link rel="search" title="Search" href="../../search.html" />
             <link rel="top" title="notes-part1 0.1 documentation" href="#" />
             <link rel="up" title="5. Software development tools fundamentals" href="../software_development_tools.html" />
-            <link rel="next" title="5.16. Software licensing" href="licensing.html" />
+            <link rel="next" title="5.16. Software licenses" href="licensing.html" />
             <link rel="prev" title="5.14. Buddy programming" href="buddy_programming.html" />
     </head>
 <body>
@@ -144,8 +144,8 @@
 <li class="toctree-l2"><a class="reference internal" href="formatters.html">5.12. Formatters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.13. Code reviews</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.14. Buddy programming</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.15. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licensing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licenses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.17. Pseudocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
 </ul>
@@ -188,7 +188,7 @@
     <ol class="breadcrumb m-0 p-0 bg-transparent">
         <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
             <li class="breadcrumb-item"><a href="../software_development_tools.html"><span class="section-number">5. </span>Software development tools fundamentals</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.15. </span>Libraries</li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.15. </span>Modules, libraries, and similar</li>
     </ol>
 </nav>
                     </div>
@@ -223,8 +223,56 @@
                 <div class="row">
                     <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
                         <main role="main" id="main">
-    <section id="libraries">
-<h1><span class="section-number">5.15. </span>Libraries<a class="headerlink" href="#libraries" title="Link to this heading">¶</a></h1>
+    <section id="modules-libraries-and-similar">
+<h1><span class="section-number">5.15. </span>Modules, libraries, and similar<a class="headerlink" href="#modules-libraries-and-similar" title="Link to this heading">¶</a></h1>
+<p>You don’t necessarily have to write all of your code yourself! There is lots of code that has already been written. Lots of it is freely available on the Internet for others to use, for example on sites like <a class="reference external" href="https://github.com/">GitHub</a>.</p>
+<p>There’s also code, generally known as <em>modules</em> or <em>libraries</em> or <em>packages</em> which extend what the base language can do. Using these is very common. (We’ll generally use modules, libraries, and packages inter-changeably, even if technically they’ll all slightly different things.)</p>
+<p>There are three broad categories of code that you might add in to your code.</p>
+<section id="standard-library">
+<h2><span class="section-number">5.15.1. </span>Standard library<a class="headerlink" href="#standard-library" title="Link to this heading">¶</a></h2>
+<p>Most programming languages only have a limited of commands enabled by default. This helps keep the resulting programs small and limits the potential attack vector for security bugs and similar.</p>
+<p>The standard library is installed together with the programming tools, and so always available. You need need to add <code class="code highlight python docutils literal highlight-python"><span class="kn">import</span></code> or <code class="code highlight rust docutils literal highlight-rust"><span class="k">use</span></code>, or similar, to explicitly say which parts you want to use. Lots of commands from the standard library won’t be available unless you explicitly add them.</p>
+<p>For example, in Python you might add</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+</pre></div>
+</div>
+<p>to add maths functions to the code. In Rust you might add</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">use</span> <span class="n">std</span><span class="p">::</span><span class="n">io</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>to add functions for reading input from the command line, and displaying output back to the terminal.</p>
+</section>
+<section id="packages-from-online-repositories">
+<h2><span class="section-number">5.15.2. </span>Packages from online repositories<a class="headerlink" href="#packages-from-online-repositories" title="Link to this heading">¶</a></h2>
+<p>There are many libraries available on the Internet to extend the functionality of the base programming language. These are stored in <em>repositories</em>.</p>
+<p>For Python, <a class="reference external" href="https://pypi.org/">PyPi</a> is a common repository for packages. Indeed it is likely the default one used unless you change your Python configuration. At the command line there is a Python tool called <code class="code highlight console docutils literal highlight-console"><span class="go">pip</span></code> which you can use to install additional modules from the Internet. You add these to your code with an <code class="code highlight python docutils literal highlight-python"><span class="kn">import</span></code> command. We’ll see examples of doing this in the labs.</p>
+<p>For Rust, <a class="reference external" href="https://crates.io/">crates.io</a> will be the default repository for packages. In Rust, you list <code class="code highlight rust docutils literal highlight-rust"><span class="p">[</span><span class="n">dependencies</span><span class="p">]</span></code> in the <code class="code highlight console docutils literal highlight-console"><span class="go">Cargo.toml</span></code> project configuration file and add these to your code with the <code class="code highlight rust docutils literal highlight-rust"><span class="k">use</span></code> command. Again, we’ll see examples of doing this in the labs.</p>
+<p>For C/C++, <a class="reference external" href="https://vcpkg.io/en/">vcpkg</a> is commonly used.</p>
+</section>
+<section id="code-from-online-sites-such-as-github">
+<h2><span class="section-number">5.15.3. </span>Code from online sites such as GitHub<a class="headerlink" href="#code-from-online-sites-such-as-github" title="Link to this heading">¶</a></h2>
+<p>The packages above have been <em>pre-packaged</em>. You download them and add them to your code, without necessarily ever seeing the actual code that you’re downloading. There are tools, such as <code class="code highlight console docutils literal highlight-console"><span class="go">pip</span></code> to make working with packages easier.</p>
+<p>In contrast, sites such as <a class="reference external" href="https://github.com/">GitHub</a> share raw source code. How to interact with this is up to you. You may copy-and-paste just some small sections of the code which are relevant to what you want; or you may download the whole project and add it to your own. Using code from a source like <a class="reference external" href="https://github.com/">GitHub</a> is useful if you want/need to be able to see how the code works, rather than just using the functionality a package provides in an <em>opaque box</em> manner.</p>
+</section>
+<section id="important-considerations">
+<h2><span class="section-number">5.15.4. </span>Important considerations<a class="headerlink" href="#important-considerations" title="Link to this heading">¶</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>When downloading code from others/the Internet, make sure you think about cybersecurity before doing so. If you let code run on your computer, it may have access to your files, to leak information to others or to take various other malicious actions.</p>
+<p>In general, we would trust items in the standard library without too much further consideration. For external packages, there are very commonly used ones, such as numpy and matplotlib, and again we would likely trust without too much further consideration. For more obscure packages, it may be that more thought is warranted.</p>
+<p>Most companies will probably restrict which external packages you can install to a pre-defined set which have been through some form of a security audit.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Just because code or pre-defined packages are openly available on the Internet doesn’t necessarily mean that they give you the correct permissions to use them in your project. We will discuss <span class="xref std std-ref">statement on software licenses</span> in more detail later. Briefly, code usually comes with a set of terms and conditions giving constraints on how it can be used. Potentially, these terms could be incompatible with the needs of your project, and may limit what can be used.</p>
+<p>Before using external code, make sure you check how it is licensed and what constraints or obligations the license places on the user.</p>
+</div>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>We’ll use external packages a lot throughout the code, and having knowledge of some common packages (e.g. Numpy, Scipy, Pandas/Polars, Matplotlib) is a topic we’ll cover.</p>
+<p>In the development environment we’ve not added any constraints on what packages can be installed, so that you can explore. Be aware that you might not have access to any arbitrary package in the exam or in your more general programming practice however.</p>
+</div>
+</section>
 </section>
 
 </main>
@@ -233,10 +281,26 @@
         <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.14. </span>Buddy programming
     </a>
     <a class="float-right" href="licensing.html" title="Next">
-        <span class="section-number">5.16. </span>Software licensing <span aria-hidden="true">&nbsp;→</span>
+        <span class="section-number">5.16. </span>Software licenses <span aria-hidden="true">&nbsp;→</span>
     </a>
 </nav>
                     </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">5.15. Modules, libraries, and similar</a><ul>
+<li><a class="reference internal" href="#standard-library">5.15.1. Standard library</a></li>
+<li><a class="reference internal" href="#packages-from-online-repositories">5.15.2. Packages from online repositories</a></li>
+<li><a class="reference internal" href="#code-from-online-sites-such-as-github">5.15.3. Code from online sites such as GitHub</a></li>
+<li><a class="reference internal" href="#important-considerations">5.15.4. Important considerations</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
                     
                 </div>
             </div>

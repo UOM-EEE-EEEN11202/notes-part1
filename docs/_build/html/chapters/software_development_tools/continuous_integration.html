@@ -18,8 +18,8 @@
             <link rel="search" title="Search" href="../../search.html" />
             <link rel="top" title="notes-part1 0.1 documentation" href="#" />
             <link rel="up" title="5. Software development tools fundamentals" href="../software_development_tools.html" />
-            <link rel="next" title="5.12. Code reviews" href="code_reviews.html" />
-            <link rel="prev" title="5.10. Automated testing" href="automated_testing.html" />
+            <link rel="next" title="5.12. Formatters" href="formatters.html" />
+            <link rel="prev" title="5.10. Unit and integration testing" href="automated_testing.html" />
     </head>
 <body>
     <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
@@ -139,14 +139,15 @@
 <li class="toctree-l2"><a class="reference internal" href="profiler.html">5.7. Profiler and computational complexity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="version_control.html">5.8. Version control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.9. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Unit and integration testing</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5.11. Continuous integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.12. Code reviews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.13. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.14. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.15. Software licensing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.16. Pseudocode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.17. Co-pilot and other AI tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licenses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
@@ -224,15 +225,24 @@
                         <main role="main" id="main">
     <section id="continuous-integration">
 <h1><span class="section-number">5.11. </span>Continuous integration<a class="headerlink" href="#continuous-integration" title="Link to this heading">¶</a></h1>
+<p>Continuous integration comes when we combine our <a class="reference internal" href="version_control.html#version-control"><span class="std std-ref">version control system</span></a> with <a class="reference internal" href="automated_testing.html#automated-testing"><span class="std std-ref">automated testing approaches</span></a>.</p>
+<p>You can configure tools to automatically run your test harness whenever you commit your code. It will thus automatically give you a list of what’s not working so you know where attention is still required.</p>
+<p>You can go so far as having Git reject any commits which don’t pass the tests present. This will ensure that you always have code that works in your repository, and you can’t ship code with known issues unless you override this. (Although this might get in the way of good version control of minor changes.)</p>
+<p>Common tools include <a class="reference external" href="https://github.com/features/actions">GitHub Actions</a> and <a class="reference external" href="https://www.jenkins.io/">Jenkins</a>, but there are many others.</p>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>We won’t make use of continuous integration in this course. You don’t need to know anything more than what’s in these brief notes, unless you want to go further for your own purposes.</p>
+<p>We don’t make use of fully continuous integration when making the course materials, but if interested you can view the <a class="reference external" href="https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/.github">GitHub Actions for these notes</a>. GitHub Actions automatically update the dependencies for us, and re-build the lecture notes and automatically update the website each time a new version is checked in to Git.</p>
+</div>
 </section>
 
 </main>
                         <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
     <a class="float-left" href="automated_testing.html" title="Previous">
-        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.10. </span>Automated testing
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.10. </span>Unit and integration testing
     </a>
-    <a class="float-right" href="code_reviews.html" title="Next">
-        <span class="section-number">5.12. </span>Code reviews <span aria-hidden="true">&nbsp;→</span>
+    <a class="float-right" href="formatters.html" title="Next">
+        <span class="section-number">5.12. </span>Formatters <span aria-hidden="true">&nbsp;→</span>
     </a>
 </nav>
                     </div>
