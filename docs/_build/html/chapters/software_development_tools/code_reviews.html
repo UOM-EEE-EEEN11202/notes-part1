@@ -139,13 +139,13 @@
 <li class="toctree-l2"><a class="reference internal" href="profiler.html">5.7. Profiler and computational complexity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="version_control.html">5.8. Version control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.9. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Unit and integration testing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.11. Continuous integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="formatters.html">5.12. Formatters</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5.13. Code reviews</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.14. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.15. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licenses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.17. Pseudocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
 </ul>
@@ -225,6 +225,37 @@
                         <main role="main" id="main">
     <section id="code-reviews">
 <h1><span class="section-number">5.13. </span>Code reviews<a class="headerlink" href="#code-reviews" title="Link to this heading">¶</a></h1>
+<p>The previous testing techniques have focused on automated approaches, and on running the code to see what happens. In addition, you can just have another human read your code and give feedback on it! Code reviews are widely used, getting a peer or a manager to look at code in order to improve its quality.</p>
+<p>Say I gave you some code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="linenos"> 4</span>    <span class="n">G</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos"> 5</span>    <span class="n">f</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos"> 6</span>    <span class="n">h</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    <span class="n">G</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="linenos"> 9</span>    <span class="n">f</span> <span class="o">=</span> <span class="n">h</span> <span class="o">+</span> <span class="mi">7</span>
+<span class="linenos">10</span>    <span class="n">h</span> <span class="o">=</span> <span class="n">f</span> <span class="o">+</span> <span class="mi">7</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">14</span>    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>What would your feedback on it be?</p>
+<p>Some options that you might say are below. (You’ve not seen all of these topics in the course yet, so you might also like to re-visit this when you’re a little further on.)</p>
+<ul class="simple">
+<li><p>There are no comments in the code. It’s not at all clear what it’s meant to be doing.</p></li>
+<li><p>Using upper case G is perfectly fine code, but it’s not in-line with our style guide that we’re following to keep our code consistent.</p></li>
+<li><p>It imports the math module, allowing more maths functions to be used in the code, but none of these are used. You don’t need to <code class="code highlight python docutils literal highlight-python"><span class="kn">import</span><span class="w"> </span><span class="nn">math</span></code> just for an addition. If you’re not using the functionality, you shouldn’t import the module.</p></li>
+<li><p>The <code class="code highlight python docutils literal highlight-python"><span class="o">+</span><span class="mi">7</span></code> appears multiple times. The <code class="code highlight python docutils literal highlight-python"><span class="mi">7</span></code> is thus <em>hard coded</em>. Would this be better as a variable, so if it changes, it changes everywhere? Indeed, <code class="code highlight python docutils literal highlight-python"><span class="n">G</span></code> contains <code class="code highlight python docutils literal highlight-python"><span class="mi">7</span></code>. Should these lines really be <code class="code highlight python docutils literal highlight-python"><span class="o">+</span><span class="n">G</span></code>?</p></li>
+</ul>
+<p>This is a simple example, but there’s lots of power in getting peer review and feedback on your code.</p>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>You can put up your hand in any of the lab sessions to get a graduate teaching assistant to review your code.</p>
+</div>
 </section>
 
 </main>

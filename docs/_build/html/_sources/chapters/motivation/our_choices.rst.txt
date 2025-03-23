@@ -1,3 +1,5 @@
+.. _motivation:
+
 Our choices for this course
 ===========================
 Programming and software development are very large areas. There are lots of different programming languages, and software development environments that we could chose to study! Here we include some motivations for the choices that we've made in terms of languages. When we go over :ref:`software tools <software_tools>` we'll give the motivations for the different tools we're going to work with. 

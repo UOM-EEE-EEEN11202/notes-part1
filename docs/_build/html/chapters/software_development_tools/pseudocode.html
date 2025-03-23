@@ -19,7 +19,7 @@
             <link rel="top" title="notes-part1 0.1 documentation" href="#" />
             <link rel="up" title="5. Software development tools fundamentals" href="../software_development_tools.html" />
             <link rel="next" title="5.18. Co-pilot and other AI tools" href="ai_tools.html" />
-            <link rel="prev" title="5.16. Software licensing" href="licensing.html" />
+            <link rel="prev" title="5.16. Software licenses" href="licensing.html" />
     </head>
 <body>
     <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
@@ -139,13 +139,13 @@
 <li class="toctree-l2"><a class="reference internal" href="profiler.html">5.7. Profiler and computational complexity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="version_control.html">5.8. Version control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.9. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Unit and integration testing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.11. Continuous integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="formatters.html">5.12. Formatters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.13. Code reviews</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.14. Buddy programming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.15. Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licenses</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5.17. Pseudocode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
 </ul>
@@ -157,12 +157,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/custom_data_types.html">6.4. Custom data types</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../wider_factors/sustainability.html">7.1. Sustainability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wider_factors/cybersecurity.html">7.2. Cybersecurity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wider_factors/edia.html">7.3. Equality, diversity, inclusion, and accessibility in programming</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a></li>
 </ul>
 
     </nav>
@@ -225,12 +220,37 @@
                         <main role="main" id="main">
     <section id="pseudocode">
 <span id="id1"></span><h1><span class="section-number">5.17. </span>Pseudocode<a class="headerlink" href="#pseudocode" title="Link to this heading">¶</a></h1>
+<p>The tools mentioned so far are software programs that help you write correct code. There are also tools and techniques that will help you plan and design your code. The main one to mention here is <em>pseudocode</em>. This isn’t a software tool, it’s an approach to planning your code before you write it in detail.</p>
+<p>Pseudocode is a detailed, but readable, description of what you want your program to do. A very high level example might be</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Decide to take train</span>
+<span class="go">Pick which train to get</span>
+<span class="go">Buy ticket</span>
+<span class="go">Get tram to Manchester Piccadilly station</span>
+<span class="go">Get on train</span>
+</pre></div>
+</div>
+<p>This a long way from actual code that gets a robot to take a train(!), but is a start towards some of the key functional blocks that are going to be needed.</p>
+<p>As a lower level example, when considering the profiler we had:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">elements</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">each</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">elements</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="n">value_of_current_element</span>
+</pre></div>
+</div>
+<p>This isn’t valid Python code. It won’t run if you try to put it in a <code class="code highlight console docutils literal highlight-console"><span class="go">.py</span></code> file directly. Instead, it is (hopefully) fairly easy to read and understand. It helps you to explain what you want your code to do, before you then go away and write the detailed code.</p>
+<p>You can do a lot of your code design at the pseudocode level, without having to worry about things like: should there be a bracket here?; or is this value initialized correctly?; or other details.</p>
+<p>Beyond this, there are no rules or standardized syntax around pseudocode, it’s whatever you find useful. You might write quite high level pseudocode which just gives the <em>gist</em> of what has to be done, or you might write very detailed pseudocode which is very close to actual code. Both have their places. Pseudocode is a way to writing down what you want your code to do, in order to help with the design and documentation phases.</p>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>We’ll use pseudocode in a number of places where it’s helpful to describe the concept of what we want to do, without some of the <em>boilerplate</em> code that would actually be needed to make it work in practice (and where having such extra details would make it harder to see the core underlying concept).</p>
+<p>In general, we don’t have any pseudocode specific tasks for you to do, but you might like to use pseudocode to rough out a solution before coding it; particularly for some of the bigger tasks we give you.</p>
+</div>
 </section>
 
 </main>
                         <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
     <a class="float-left" href="licensing.html" title="Previous">
-        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.16. </span>Software licensing
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.16. </span>Software licenses
     </a>
     <a class="float-right" href="ai_tools.html" title="Next">
         <span class="section-number">5.18. </span>Co-pilot and other AI tools <span aria-hidden="true">&nbsp;→</span>

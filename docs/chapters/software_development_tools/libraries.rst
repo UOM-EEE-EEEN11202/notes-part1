@@ -56,6 +56,8 @@ The packages above have been *pre-packaged*. You download them and add them to y
 In contrast, sites such as `GitHub <https://github.com/>`_ share raw source code. How to interact with this is up to you. You may copy-and-paste just some small sections of the code which are relevant to what you want; or you may download the whole project and add it to your own. Using code from a source like `GitHub <https://github.com/>`_ is useful if you want/need to be able to see how the code works, rather than just using the functionality a package provides in an *opaque box* manner.
 
 
+.. _code_security:
+
 Important considerations
 ------------------------
 

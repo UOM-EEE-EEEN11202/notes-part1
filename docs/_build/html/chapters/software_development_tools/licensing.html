@@ -139,7 +139,7 @@
 <li class="toctree-l2"><a class="reference internal" href="profiler.html">5.7. Profiler and computational complexity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="version_control.html">5.8. Version control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.9. Environment control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Automated testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Unit and integration testing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.11. Continuous integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="formatters.html">5.12. Formatters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.13. Code reviews</a></li>
@@ -157,12 +157,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/custom_data_types.html">6.4. Custom data types</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../wider_factors/sustainability.html">7.1. Sustainability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wider_factors/cybersecurity.html">7.2. Cybersecurity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../wider_factors/edia.html">7.3. Equality, diversity, inclusion, and accessibility in programming</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a></li>
 </ul>
 
     </nav>
@@ -225,6 +220,24 @@
                         <main role="main" id="main">
     <section id="software-licenses">
 <span id="id1"></span><h1><span class="section-number">5.16. </span>Software licenses<a class="headerlink" href="#software-licenses" title="Link to this heading">¶</a></h1>
+<p>In programming, there is a strong tradition of <em>open source</em> outputs. Sometimes companies want to keep their code private, or proprietary, so that others can’t copy what they’ve done. Other times, volunteers will freely offer to contribute code to a project to add features that are important to them. If the code is open source, they can do this.</p>
+<p>Moreover, for some code, being open source means that many people can look at it, and help identify bugs or security vulnerabilities. Also, people often like to share their code so that others can re-use it to help them meet their objectives more quickly. This may be altruistic, making a contribution to the community to help others.</p>
+<p>Just because your code is open source doesn’t mean that you can’t make money from it. Many companies fundamentally work on open source code, and then charge for providing support to users.</p>
+<p>If writing open source code, the worst thing you can do is <em>just stick it on the Interne</em>. This doesn’t give any potential users information on what they need to do to use the code legitimately. What is the author of the code responsible for, vs. the person that uses it in their project? What acknowledgement or recognition needs to be given to the original author? All open code should be accompanied by a license, which says what the code can and can’t be used for, and any restrictions or requirements for its use.</p>
+<p>If you set up a new repository at (say) <a class="reference external" href="https://github.com/">GitHub</a>, it will ask you what license you want to attach to the code. There are many different licenses you might choose between. Briefly, some major ones:</p>
+<ul class="simple">
+<li><p>MIT license. This is a very permissive license. It basically says you can do what you like with the code, but the original author isn’t involved. They hope it’s useful, but otherwise it’s up to you to make it work. You have to include a copyright statement saying who wrote the code.</p></li>
+<li><p>BSD license (3 clause). Is also very permissive, but says you can’t advertise the name of the original author as an endorsement of your software.</p></li>
+<li><p>GPL license (version 2 or version 3). Aims to avoid restrictions being placed on software. If you use or modify GPL code, that code will have the same GPL requirements. Thus, if you use GPL licensed code in your project, and you update that code, you are asked to provide the updated code to users. You can sell GPL code, but you then can’t limit a user’s right to modify or distribute the code.</p></li>
+<li><p>CC-BY. The above are licenses for code. For text and documents, CC-BY is a creative commons license. There are a number of variants. Generally asking you to give attribution to the original author, and to indicate what changes have been made.</p></li>
+</ul>
+<p>Sites such as <a class="reference external" href="https://choosealicense.com/appendix/">choosealicense</a> and <a class="reference external" href="https://creativecommons.org/share-your-work/cclicenses/">creative commons</a> have tools to help you pick a license.</p>
+<p>Depending on the needs of your project or company, the different licenses may mean you can’t use some code in your project, even if fundamentally it’s publicly available for people to use. You should read the license, and what it lets you do, before using code in a project.</p>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>Your code, even on <a class="reference external" href="https://github.com/">GitHub</a>, will be private, and so we won’t ask you to add a license. You thus don’t need to have any more familiarity than the contents of these notes. After the course, if you start your own programming projects and sharing your code publicly online, you should think about which license to add.</p>
+<p>For the course notes, we use a range of different licenses (after getting permission from the University of Manchester for the core course to be open source). If you click on the GitHub (<a class="reference internal" href="../../_images/GitHub_Invertocat_Dark1.svg"><img alt="ico1" src="../../_images/GitHub_Invertocat_Dark1.svg" style="width: 20px;" /></a>) icon to view the source for the notes, the GitHub site will contain information on the license(s). Usually our code is under an MIT license, and text under a CC-BY license. Where items have been used from others, a number of different licenses are present.</p>
+</div>
 </section>
 
 </main>
