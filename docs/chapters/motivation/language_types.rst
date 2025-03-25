@@ -1,3 +1,5 @@
+.. _language_types:
+
 Types of programming language
 =============================
 
@@ -36,12 +38,12 @@ JSON, yaml, and similar are for passing data around. For example, JSON stores ke
 which a receiving programme or person can interpret as appropriate. Markup languages are thus very useful for formatting the inputs and outputs of programs in a way that other computer systems know how to use. (Aside: More details on types of programming language.)
 
 
-Scripted languages
-------------------
+Interpreted languages
+---------------------
 
-Scripted languages run code by working through a series of commands, one line at a time. That is, they execute one line of code, get the results, then the next line, and so on. They're widely used for tasks where there's a fixed order to do things in. For example, in data analysis, first you load the data, then you do some filtering on the data to remove noise and outliers, then you transform the data to highlight the points of interest, then you plot the data, and so on. 
+Interpreted languages run code by working through a series of commands, one line at a time. That is, they execute one line of code, get the results, then the next line, and so on. They're widely used for tasks where there's a fixed order to do things in. For example, in data analysis, first you load the data, then you do some filtering on the data to remove noise and outliers, then you transform the data to highlight the points of interest, then you plot the data, and so on. 
 
-Scripts are generally quick and easy to write, but slow to run. It's thus a trade-off. They are also relatively sensitive to having run-time errors that the user sees. If there's a mistake on (say) line 50 of the script, the first 49 lines may run fine, and the script only errors out once it gets to line 50. 
+These sorts of programs are generally quick and easy to write, but slow to run. It's thus a trade-off. They are also relatively sensitive to having run-time errors that the user sees. If there's a mistake on (say) line 50 of the code, the first 49 lines may run fine, and the code only errors out once it gets to line 50. 
 
 
 Compiled languages
@@ -60,4 +62,4 @@ In practice it's common to use all of these together. Often we use a scripting l
 
    Firstly, technically markup is only for text. (So languages like HTML and Markdown.) JSON or yaml (as examples) for passing data around aren't markup. I think it's useful to badge them under the same heading of: a structured form for sending something around so the receiver knows what they're receiving and what they need to do to interpret it; which I've called markup. In any case, the ML in yaml stands for markup language (with the exact meaning having changed over time). 
    
-   Secondly, today, many scripted languages use *Just-In-Time Compilation* to help them run faster. Rather than running as a pure script, line-by-line; when run, first a quick compilation is carried out to check for errors and any optimizations that can be performed, before it is then run line-by-line. If you have an error on line 50, the Just-In-Time Compilation will probably spot this, and refuse to run anything before it's fixed. It's a technique used to speed up scripts, but they are usually still slower than a fully compiled language.
+   Secondly, today, many interpreted languages use *Just-In-Time Compilation* to help them run faster. Rather than running purely line-by-line; when run, first a quick compilation is carried out to check for errors and any optimizations that can be performed, before it is then run line-by-line. If you have an error on line 50, the Just-In-Time Compilation will probably spot this, and refuse to run anything before it's fixed. It's a technique used to speed up the code, but interpreted code is usually still slower than a fully compiled language.

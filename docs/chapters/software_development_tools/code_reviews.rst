@@ -9,7 +9,6 @@ The previous testing techniques have focused on automated approaches, and on run
 Say I gave you some code:
 
 .. code-block:: python
-    :linenos:
 
     import math
     
