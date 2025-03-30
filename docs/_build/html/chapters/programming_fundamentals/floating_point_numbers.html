@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB" data-content_root="../../">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>6.6.2.2. Floating point numbers &mdash; notes-part1 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
+      <link rel="stylesheet" type="text/css" href="../../_static/uom_custom.css?v=79662979" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-light.css?v=cf22d736" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-dark.css?v=54fad279" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+            <link rel="index" title="Index" href="../../genindex.html" />
+            <link rel="search" title="Search" href="../../search.html" />
+            <link rel="top" title="notes-part1 0.1 documentation" href="#" />
+            <link rel="up" title="6.6. Data types" href="data_types.html" />
+            <link rel="next" title="6.6.2.3. Text encoding" href="text_encoding.html" />
+            <link rel="prev" title="6.6.2.1. Integers" href="integers.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script>
+        try {
+            var font_store = localStorage.getItem('uom-sphinx-font');
+            if (font_store.startsWith('"') && font_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-font', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+        try {
+            var theme_store = localStorage.getItem('uom-sphinx-theme');
+            if (theme_store.startsWith('"') && theme_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-theme', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>   
+    <!-- Set font/code theme before content loads to prevent a flash --> 
+    <script>
+        var html = document.querySelector('html');
+        var body   = document.querySelector('body');
+        var font;
+        try { font = localStorage.getItem('uom-sphinx-font'); } catch(e) { }
+        if (font === null || font === undefined) { font = "font-roboto"; }
+        if (font === "font-opendyslexic") {
+            html.classList.remove('font-alt');
+            body.classList.remove('font-alt');
+        } else {
+            html.classList.add('font-alt');
+            body.classList.add('font-alt');
+        }
+        try { theme = localStorage.getItem('uom-sphinx-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) { theme = "theme-light"; }
+        if (theme === "theme-dark") {
+                html.classList.remove('theme-light');
+                body.classList.remove('theme-light');
+                html.classList.add('theme-dark');
+                body.classList.add('theme-dark');
+            } else {
+                html.classList.remove('theme-dark');
+                body.classList.remove('theme-dark');
+                html.classList.add('theme-light');
+                body.classList.add('theme-light');
+            }
+        </script>
+    <header id="uom_header_title" class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="/"
+                        title="University of Manchester logo"
+                        class="logo navbar-brand"
+                    >
+                        <img src="../../_static/./img/uom_logo_white.png" width="88" alt="University of Manchester logo"
+                            class="logo-img"
+                        />
+                        EEEN1XXX2 course notes
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes part 1" aria-label="Search notes" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../motivation.html">1. Motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/why_programming.html">1.1. Why study programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/language_types.html">1.2. Types of programming language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/our_choices.html">1.3. Our choices for this course</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/requirements_capture.html">4.1. Requirements capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/software_architecture.html">4.2. Software architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/testing_and_debugging.html">4.3. Testing and debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/release.html">4.4. Release, support, maintenance, and bug fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/documentation.html">4.5. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/quality_management.html">4.6. Quality management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/comments.html">5.2. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">5.5. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">5.6. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/version_control.html">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">5.10. Unit and integration testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">5.16. Software licenses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="scripts.html">6.1. Scripts vs. programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">6.2. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutability.html">6.3. Mutable vs. immutable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">6.4. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objects.html">6.5. Objects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="data_types.html">6.6. Data types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="integers.html">6.6.2.1. Integers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">6.6.2.2. Floating point numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text_encoding.html">6.6.2.3. Text encoding</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="conditionals_and_loops.html">6.7. Conditionals and loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_patterns.html">6.8. Design patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_and_heap.html">6.9. Stack and heap memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pointers.html">6.10. Pointers and smart pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div><div>
+  <p>
+    <img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo" style="width: 100vw; min-width: 100px;">
+  </p>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header id="uom_header_buttons" class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
+            <li class="breadcrumb-item"><a href="../programming_fundamentals.html"><span class="section-number">6. </span>Programming fundamentals</a></li>
+            <li class="breadcrumb-item"><a href="data_types.html"><span class="section-number">6.6. </span>Data types</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">6.6.2.2. </span>Floating point numbers</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+                        <button id="uom_alt_font_button" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="alt-only"><i class="fas fa-strikethrough"></i> Default font</span>
+                            <span class="default-only"><i class="fas fa-font"></i> OpenDyslexic font</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/docs/chapters/programming_fundamentals/floating_point_numbers.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="../../_sources/chapters/programming_fundamentals/floating_point_numbers.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="floating-point-numbers">
+<h1><span class="section-number">6.6.2.2. </span>Floating point numbers<a class="headerlink" href="#floating-point-numbers" title="Link to this heading">¶</a></h1>
+<p>Numbers which aren’t integers, i.e. those with decimal places, are stored as <em>floating point numbers</em>.</p>
+<p>Today, most computers use a standard known as IEEE/ISO/IEC 60559 to define how we interpret the binary bits that are stored on a computer as a number with decimal places. This standard defines multiple types of floating point number, mainly:</p>
+<ul class="simple">
+<li><p><em>Single</em>. Also known as a <em>float</em>.</p></li>
+<li><p><em>Double</em>.</p></li>
+<li><p><em>Quad</em>.</p></li>
+</ul>
+<section id="how-the-computer-stores-them">
+<h2><span class="section-number">6.6.2.2.1. </span>How the computer stores them<a class="headerlink" href="#how-the-computer-stores-them" title="Link to this heading">¶</a></h2>
+<p>We won’t go into the details of how a computer stores floating point numbers. You can read about the details of interpreting some bits as a <em>mantissa</em> and other bits as the <em>exponent</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">elsewhere</a> if you’re interested.</p>
+<p>The important point is that 32 bits are used to store a single, 64 bits for a double, and 128 bits for a quad.</p>
+</section>
+<section id="consequences-of-this-storage">
+<h2><span class="section-number">6.6.2.2.2. </span>Consequences of this storage<a class="headerlink" href="#consequences-of-this-storage" title="Link to this heading">¶</a></h2>
+<p>As with integers, as we’re using a finite number of bits to store a number, and that means there are a finite number of numbers that can be represented. There’s a maximum possible number to represent, a smallest possible number, and a smallest step change between numbers that’s possible.The table below gives an indication of the precision.</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Smallest possible value</p></th>
+<th class="head"><p>Largest possible value</p></th>
+<th class="head"><p>Precision</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>float</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.17549 \times 10^{-38}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.40282 \times 10^{38}\)</span></p></td>
+<td><p>6 digits</p></td>
+</tr>
+<tr class="row-odd"><td><p>double</p></td>
+<td><p><span class="math notranslate nohighlight">\(2.22507 \times 10^{-308}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.79769 \times 10^{308}\)</span></p></td>
+<td><p>15 digits</p></td>
+</tr>
+<tr class="row-even"><td><p>quad</p></td>
+<td><p><span class="math notranslate nohighlight">\(3.3621 \times 10^{−4932}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.1897 \times 10^{4932}\)</span></p></td>
+<td><p>39 digits</p></td>
+</tr>
+</tbody>
+</table>
+<p>What we find, very quickly, is that not every possible number can be represented as a floating point number. The example below shows an easy number, 4.2 being stored in a variable, and this variable being viewed in the debugger. What is actually stored in 4.2000000000000002. (This example is using Rust, where <code class="code highlight rust docutils literal highlight-rust"><span class="kt">f64</span></code> sets the data type to be a double.)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/floating_point_error.png"><img alt="An example of a floating point number displayed in the debugger" src="../../_images/floating_point_error.png" style="width: 800px;" />
+</a>
+</figure>
+<p>Numbers can have an infinite number of decimal places, but we only have a finite number of bits available in a computer to store a number in. It’s thus common to get a small amount of <em>floating point error</em>.</p>
+<p>In many situations this numerical rounding is negligible. 4.2000000000000002 is correctly representing 4.2 to 15 decimal places! This is more than enough for most situations. Imagine this 4.2 was representing a Voltage that you measured from a circuit in the lab. The number would be off by 0.2 fV. That’s <span class="math notranslate nohighlight">\(10^{-15}\)</span> V. It’s basically impossible to measure voltages that precisely, there will always be thermal or measurement or some other source of noise that’s larger. The fact that there’s some numerical noise as well, is just another source of noise.</p>
+<p>Nevertheless, float point error can be important to consider in some high performance situations, or if the error accumulates over multiple calculations, and so you need to be aware of it.</p>
+</section>
+<section id="number-representations">
+<h2><span class="section-number">6.6.2.2.3. </span>Number representations<a class="headerlink" href="#number-representations" title="Link to this heading">¶</a></h2>
+<p>You can enter floating point numbers in a number of different ways. This includes using an <code class="code highlight console docutils literal highlight-console"><span class="go">e</span></code> or <code class="code highlight console docutils literal highlight-console"><span class="go">E</span></code> to represent an exponent (that is, a <span class="math notranslate nohighlight">\(\times 10 ^{p}\)</span> factor, where <span class="math notranslate nohighlight">\(p\)</span> is the number that comes after the exponent.) For example, the below are all valid ways of entering the number 57:</p>
+<ul class="simple">
+<li><p><code class="code highlight console docutils literal highlight-console"><span class="go">57, 57.0, 57.0e0, 57E0, 5.7e1, 5.7e+1, 0.57e2, 570.0e-2</span></code>.</p></li>
+</ul>
+</section>
+<section id="which-should-i-use">
+<h2><span class="section-number">6.6.2.2.4. </span>Which should I use<a class="headerlink" href="#which-should-i-use" title="Link to this heading">¶</a></h2>
+<p>Most programs probably use double precision numbers by default, and no further thought is required. We suggest you stick with this, and you’ll probably know, quite readily, if you’re in a higher performance situation where it requires a bit more thought.</p>
+<p>For programs which have to be highly optimized for memory performance, or on embedded platforms, singles can be useful, as long as a little more numerical noise can be tolerated by the application. In general quads are overkill for most applications. Doubles provide more than enough accuracy, and so there’s no benefit to taking a performance hit on the amount of memory needed, unless you’re in a situation which really demands very small or very large numbers (or differences between numbers) to be represented.</p>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="integers.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">6.6.2.1. </span>Integers
+    </a>
+    <a class="float-right" href="text_encoding.html" title="Next">
+        <span class="section-number">6.6.2.3. </span>Text encoding <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">6.6.2.2. Floating point numbers</a><ul>
+<li><a class="reference internal" href="#how-the-computer-stores-them">6.6.2.2.1. How the computer stores them</a></li>
+<li><a class="reference internal" href="#consequences-of-this-storage">6.6.2.2.2. Consequences of this storage</a></li>
+<li><a class="reference internal" href="#number-representations">6.6.2.2.3. Number representations</a></li>
+<li><a class="reference internal" href="#which-should-i-use">6.6.2.2.4. Which should I use</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="uom_footer_info" class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://www.manchester.ac.uk/">The University of Manchester</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://online.manchester.ac.uk/">Canvas</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                    &copy; Copyright Alex Casson. <a class="nav-link text-light" href="https://creativecommons.org/licenses/by/4.0/deed.en">Released under CC-BY 4.0 license.</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="../../_static/documentation_options.js?v=818a811f"></script>
+        <script src="../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/translations.js?v=8fd896e3"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script type="text/javascript" src="../../_static/dist/theme.js"></script>
+        <script type="text/javascript" src="../../_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="../../_static/uom_custom.js"></script>
+        <script type="text/javascript" src="../../_static/searchtools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("../../searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

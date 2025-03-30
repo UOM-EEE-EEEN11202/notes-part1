@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB" data-content_root="../../">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>6.6.2.3. Text encoding &mdash; notes-part1 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
+      <link rel="stylesheet" type="text/css" href="../../_static/uom_custom.css?v=79662979" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-light.css?v=cf22d736" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-dark.css?v=54fad279" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+            <link rel="index" title="Index" href="../../genindex.html" />
+            <link rel="search" title="Search" href="../../search.html" />
+            <link rel="top" title="notes-part1 0.1 documentation" href="#" />
+            <link rel="up" title="6.6. Data types" href="data_types.html" />
+            <link rel="next" title="6.7. Conditionals and loops" href="conditionals_and_loops.html" />
+            <link rel="prev" title="6.6.2.2. Floating point numbers" href="floating_point_numbers.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script>
+        try {
+            var font_store = localStorage.getItem('uom-sphinx-font');
+            if (font_store.startsWith('"') && font_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-font', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+        try {
+            var theme_store = localStorage.getItem('uom-sphinx-theme');
+            if (theme_store.startsWith('"') && theme_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-theme', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>   
+    <!-- Set font/code theme before content loads to prevent a flash --> 
+    <script>
+        var html = document.querySelector('html');
+        var body   = document.querySelector('body');
+        var font;
+        try { font = localStorage.getItem('uom-sphinx-font'); } catch(e) { }
+        if (font === null || font === undefined) { font = "font-roboto"; }
+        if (font === "font-opendyslexic") {
+            html.classList.remove('font-alt');
+            body.classList.remove('font-alt');
+        } else {
+            html.classList.add('font-alt');
+            body.classList.add('font-alt');
+        }
+        try { theme = localStorage.getItem('uom-sphinx-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) { theme = "theme-light"; }
+        if (theme === "theme-dark") {
+                html.classList.remove('theme-light');
+                body.classList.remove('theme-light');
+                html.classList.add('theme-dark');
+                body.classList.add('theme-dark');
+            } else {
+                html.classList.remove('theme-dark');
+                body.classList.remove('theme-dark');
+                html.classList.add('theme-light');
+                body.classList.add('theme-light');
+            }
+        </script>
+    <header id="uom_header_title" class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="/"
+                        title="University of Manchester logo"
+                        class="logo navbar-brand"
+                    >
+                        <img src="../../_static/./img/uom_logo_white.png" width="88" alt="University of Manchester logo"
+                            class="logo-img"
+                        />
+                        EEEN1XXX2 course notes
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes part 1" aria-label="Search notes" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../motivation.html">1. Motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/why_programming.html">1.1. Why study programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/language_types.html">1.2. Types of programming language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/our_choices.html">1.3. Our choices for this course</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/requirements_capture.html">4.1. Requirements capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/software_architecture.html">4.2. Software architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/testing_and_debugging.html">4.3. Testing and debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/release.html">4.4. Release, support, maintenance, and bug fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/documentation.html">4.5. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/quality_management.html">4.6. Quality management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/comments.html">5.2. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">5.5. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">5.6. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/version_control.html">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">5.10. Unit and integration testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">5.16. Software licenses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="scripts.html">6.1. Scripts vs. programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">6.2. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutability.html">6.3. Mutable vs. immutable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">6.4. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objects.html">6.5. Objects</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="data_types.html">6.6. Data types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="integers.html">6.6.2.1. Integers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="floating_point_numbers.html">6.6.2.2. Floating point numbers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">6.6.2.3. Text encoding</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="conditionals_and_loops.html">6.7. Conditionals and loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_patterns.html">6.8. Design patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_and_heap.html">6.9. Stack and heap memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pointers.html">6.10. Pointers and smart pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div><div>
+  <p>
+    <img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo" style="width: 100vw; min-width: 100px;">
+  </p>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header id="uom_header_buttons" class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
+            <li class="breadcrumb-item"><a href="../programming_fundamentals.html"><span class="section-number">6. </span>Programming fundamentals</a></li>
+            <li class="breadcrumb-item"><a href="data_types.html"><span class="section-number">6.6. </span>Data types</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">6.6.2.3. </span>Text encoding</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+                        <button id="uom_alt_font_button" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="alt-only"><i class="fas fa-strikethrough"></i> Default font</span>
+                            <span class="default-only"><i class="fas fa-font"></i> OpenDyslexic font</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/docs/chapters/programming_fundamentals/text_encoding.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="../../_sources/chapters/programming_fundamentals/text_encoding.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="text-encoding">
+<h1><span class="section-number">6.6.2.3. </span>Text encoding<a class="headerlink" href="#text-encoding" title="Link to this heading">¶</a></h1>
+<p>There are multiple different standards for how computers store and represent text.</p>
+<section id="ascii">
+<h2><span class="section-number">6.6.2.3.1. </span>ASCII<a class="headerlink" href="#ascii" title="Link to this heading">¶</a></h2>
+<p>ASCII stands for the American Standard for Information Interchange. It is the oldest, and extremely common, standard for how characters are represented as binary numbers.</p>
+<p>We often refer to <em>plain text</em>, and by this we mean text represented by ASCII (or UTF-8, see below). ASCII is so common that it’s extremely unlikely you’ll encounter a computer system that’s in use today which wouldn’t be able to take an ASCII text input and display the associated letters if you asked it to. It’s a very robust format to be working with.</p>
+<p>It uses a very simple encoding system. Each letter, and a number of other characters such as full stops, are given a binary number that represents them. (The binary number can of course also be represented in decimal form,) If the computer sees this number, and is asked to interpret it as a character, it’s the character that gets displayed. A table of ASCII characters and the numbers used to represent each character is given below. ASCII uses 7 bits, and so there are 128 possible characters that it can represent. Some of the early ones represent control signals for a computer, rather than letters.</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Binary number</p></th>
+<th class="head"><p>Number as an integer</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Binary number</p></th>
+<th class="head"><p>Number as an integer</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Binary number</p></th>
+<th class="head"><p>Number as an integer</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>Null</p></td>
+<td><p>101011</p></td>
+<td><p>43</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1010110</p></td>
+<td><p>86</p></td>
+<td><p>V</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>Start of Heading</p></td>
+<td><p>101100</p></td>
+<td><p>44</p></td>
+<td><p>,</p></td>
+<td><p>1010111</p></td>
+<td><p>87</p></td>
+<td><p>W</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>2</p></td>
+<td><p>Start of Text</p></td>
+<td><p>101101</p></td>
+<td><p>45</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1011000</p></td>
+<td><p>88</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>3</p></td>
+<td><p>End of Text</p></td>
+<td><p>101110</p></td>
+<td><p>46</p></td>
+<td><p>.</p></td>
+<td><p>1011001</p></td>
+<td><p>89</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>4</p></td>
+<td><p>End of Transmission</p></td>
+<td><p>101111</p></td>
+<td><p>47</p></td>
+<td><p>/</p></td>
+<td><p>1011010</p></td>
+<td><p>90</p></td>
+<td><p>Z</p></td>
+</tr>
+<tr class="row-odd"><td><p>101</p></td>
+<td><p>5</p></td>
+<td><p>Enquiry</p></td>
+<td><p>110000</p></td>
+<td><p>48</p></td>
+<td><p>0</p></td>
+<td><p>1011011</p></td>
+<td><p>91</p></td>
+<td><p>[</p></td>
+</tr>
+<tr class="row-even"><td><p>110</p></td>
+<td><p>6</p></td>
+<td><p>Acknowledge</p></td>
+<td><p>110001</p></td>
+<td><p>49</p></td>
+<td><p>1</p></td>
+<td><p>1011100</p></td>
+<td><p>92</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>111</p></td>
+<td><p>7</p></td>
+<td><p>Bell, Alert</p></td>
+<td><p>110010</p></td>
+<td><p>50</p></td>
+<td><p>2</p></td>
+<td><p>1011101</p></td>
+<td><p>93</p></td>
+<td><p>]</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>8</p></td>
+<td><p>Backspace</p></td>
+<td><p>110011</p></td>
+<td><p>51</p></td>
+<td><p>3</p></td>
+<td><p>1011110</p></td>
+<td><p>94</p></td>
+<td><p>^</p></td>
+</tr>
+<tr class="row-odd"><td><p>1001</p></td>
+<td><p>9</p></td>
+<td><p>Horizontal Tab</p></td>
+<td><p>110100</p></td>
+<td><p>52</p></td>
+<td><p>4</p></td>
+<td><p>1011111</p></td>
+<td><p>95</p></td>
+<td><p>_</p></td>
+</tr>
+<tr class="row-even"><td><p>1010</p></td>
+<td><p>10</p></td>
+<td><p>Line Feed</p></td>
+<td><p>110101</p></td>
+<td><p>53</p></td>
+<td><p>5</p></td>
+<td><p>1100000</p></td>
+<td><p>96</p></td>
+<td><p><a href="#id1"><span class="problematic" id="id2">`</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>1011</p></td>
+<td><p>11</p></td>
+<td><p>Vertical Tab</p></td>
+<td><p>110110</p></td>
+<td><p>54</p></td>
+<td><p>6</p></td>
+<td><p>1100001</p></td>
+<td><p>97</p></td>
+<td><p>a</p></td>
+</tr>
+<tr class="row-even"><td><p>1100</p></td>
+<td><p>12</p></td>
+<td><p>Form Feed</p></td>
+<td><p>110111</p></td>
+<td><p>55</p></td>
+<td><p>7</p></td>
+<td><p>1100010</p></td>
+<td><p>98</p></td>
+<td><p>b</p></td>
+</tr>
+<tr class="row-odd"><td><p>1101</p></td>
+<td><p>13</p></td>
+<td><p>Carriage Return</p></td>
+<td><p>111000</p></td>
+<td><p>56</p></td>
+<td><p>8</p></td>
+<td><p>1100011</p></td>
+<td><p>99</p></td>
+<td><p>c</p></td>
+</tr>
+<tr class="row-even"><td><p>1110</p></td>
+<td><p>14</p></td>
+<td><p>Shift Out</p></td>
+<td><p>111001</p></td>
+<td><p>57</p></td>
+<td><p>9</p></td>
+<td><p>1100100</p></td>
+<td><p>100</p></td>
+<td><p>d</p></td>
+</tr>
+<tr class="row-odd"><td><p>1111</p></td>
+<td><p>15</p></td>
+<td><p>Shift In</p></td>
+<td><p>111010</p></td>
+<td><p>58</p></td>
+<td><p>:</p></td>
+<td><p>1100101</p></td>
+<td><p>101</p></td>
+<td><p>e</p></td>
+</tr>
+<tr class="row-even"><td><p>10000</p></td>
+<td><p>16</p></td>
+<td><p>Data Link Escape</p></td>
+<td><p>111011</p></td>
+<td><p>59</p></td>
+<td><p>;</p></td>
+<td><p>1100110</p></td>
+<td><p>102</p></td>
+<td><p>f</p></td>
+</tr>
+<tr class="row-odd"><td><p>10001</p></td>
+<td><p>17</p></td>
+<td><p>Device Control One</p></td>
+<td><p>111100</p></td>
+<td><p>60</p></td>
+<td><p>&lt;</p></td>
+<td><p>1100111</p></td>
+<td><p>103</p></td>
+<td><p>g</p></td>
+</tr>
+<tr class="row-even"><td><p>10010</p></td>
+<td><p>18</p></td>
+<td><p>Device Control Two</p></td>
+<td><p>111101</p></td>
+<td><p>61</p></td>
+<td><p>=</p></td>
+<td><p>1101000</p></td>
+<td><p>104</p></td>
+<td><p>h</p></td>
+</tr>
+<tr class="row-odd"><td><p>10011</p></td>
+<td><p>19</p></td>
+<td><p>Device Control Three</p></td>
+<td><p>111110</p></td>
+<td><p>62</p></td>
+<td><p>&gt;</p></td>
+<td><p>1101001</p></td>
+<td><p>105</p></td>
+<td><p>i</p></td>
+</tr>
+<tr class="row-even"><td><p>10100</p></td>
+<td><p>20</p></td>
+<td><p>Device Control Four</p></td>
+<td><p>111111</p></td>
+<td><p>63</p></td>
+<td><p>?</p></td>
+<td><p>1101010</p></td>
+<td><p>106</p></td>
+<td><p>j</p></td>
+</tr>
+<tr class="row-odd"><td><p>10101</p></td>
+<td><p>21</p></td>
+<td><p>Negative Acknowledge</p></td>
+<td><p>1000000</p></td>
+<td><p>64</p></td>
+<td><p>&#64;</p></td>
+<td><p>1101011</p></td>
+<td><p>107</p></td>
+<td><p>k</p></td>
+</tr>
+<tr class="row-even"><td><p>10110</p></td>
+<td><p>22</p></td>
+<td><p>Synchronous Idle</p></td>
+<td><p>1000001</p></td>
+<td><p>65</p></td>
+<td><p>A</p></td>
+<td><p>1101100</p></td>
+<td><p>108</p></td>
+<td><p>l</p></td>
+</tr>
+<tr class="row-odd"><td><p>10111</p></td>
+<td><p>23</p></td>
+<td><p>End of Transmission Block</p></td>
+<td><p>1000010</p></td>
+<td><p>66</p></td>
+<td><p>B</p></td>
+<td><p>1101101</p></td>
+<td><p>109</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p>11000</p></td>
+<td><p>24</p></td>
+<td><p>Cancel</p></td>
+<td><p>1000011</p></td>
+<td><p>67</p></td>
+<td><p>C</p></td>
+<td><p>1101110</p></td>
+<td><p>110</p></td>
+<td><p>n</p></td>
+</tr>
+<tr class="row-odd"><td><p>11001</p></td>
+<td><p>25</p></td>
+<td><p>End of medium</p></td>
+<td><p>1000100</p></td>
+<td><p>68</p></td>
+<td><p>D</p></td>
+<td><p>1101111</p></td>
+<td><p>111</p></td>
+<td><p>o</p></td>
+</tr>
+<tr class="row-even"><td><p>11010</p></td>
+<td><p>26</p></td>
+<td><p>Substitute</p></td>
+<td><p>1000101</p></td>
+<td><p>69</p></td>
+<td><p>E</p></td>
+<td><p>1110000</p></td>
+<td><p>112</p></td>
+<td><p>p</p></td>
+</tr>
+<tr class="row-odd"><td><p>11011</p></td>
+<td><p>27</p></td>
+<td><p>Escape</p></td>
+<td><p>1000110</p></td>
+<td><p>70</p></td>
+<td><p>F</p></td>
+<td><p>1110001</p></td>
+<td><p>113</p></td>
+<td><p>q</p></td>
+</tr>
+<tr class="row-even"><td><p>11100</p></td>
+<td><p>28</p></td>
+<td><p>File Separator</p></td>
+<td><p>1000111</p></td>
+<td><p>71</p></td>
+<td><p>G</p></td>
+<td><p>1110010</p></td>
+<td><p>114</p></td>
+<td><p>r</p></td>
+</tr>
+<tr class="row-odd"><td><p>11101</p></td>
+<td><p>29</p></td>
+<td><p>Group Separator</p></td>
+<td><p>1001000</p></td>
+<td><p>72</p></td>
+<td><p>H</p></td>
+<td><p>1110011</p></td>
+<td><p>115</p></td>
+<td><p>s</p></td>
+</tr>
+<tr class="row-even"><td><p>11110</p></td>
+<td><p>30</p></td>
+<td><p>Record Separator</p></td>
+<td><p>1001001</p></td>
+<td><p>73</p></td>
+<td><p>I</p></td>
+<td><p>1110100</p></td>
+<td><p>116</p></td>
+<td><p>t</p></td>
+</tr>
+<tr class="row-odd"><td><p>11111</p></td>
+<td><p>31</p></td>
+<td><p>Unit Separator</p></td>
+<td><p>1001010</p></td>
+<td><p>74</p></td>
+<td><p>J</p></td>
+<td><p>1110101</p></td>
+<td><p>117</p></td>
+<td><p>u</p></td>
+</tr>
+<tr class="row-even"><td><p>100000</p></td>
+<td><p>32</p></td>
+<td><p>Space</p></td>
+<td><p>1001011</p></td>
+<td><p>75</p></td>
+<td><p>K</p></td>
+<td><p>1110110</p></td>
+<td><p>118</p></td>
+<td><p>v</p></td>
+</tr>
+<tr class="row-odd"><td><p>100001</p></td>
+<td><p>33</p></td>
+<td><p>!</p></td>
+<td><p>1001100</p></td>
+<td><p>76</p></td>
+<td><p>L</p></td>
+<td><p>1110111</p></td>
+<td><p>119</p></td>
+<td><p>w</p></td>
+</tr>
+<tr class="row-even"><td><p>100010</p></td>
+<td><p>34</p></td>
+<td><p>“</p></td>
+<td><p>1001101</p></td>
+<td><p>77</p></td>
+<td><p>M</p></td>
+<td><p>1111000</p></td>
+<td><p>120</p></td>
+<td><p>x</p></td>
+</tr>
+<tr class="row-odd"><td><p>100011</p></td>
+<td><p>35</p></td>
+<td><p>#</p></td>
+<td><p>1001110</p></td>
+<td><p>78</p></td>
+<td><p>N</p></td>
+<td><p>1111001</p></td>
+<td><p>121</p></td>
+<td><p>y</p></td>
+</tr>
+<tr class="row-even"><td><p>100100</p></td>
+<td><p>36</p></td>
+<td><p>$</p></td>
+<td><p>1001111</p></td>
+<td><p>79</p></td>
+<td><p>O</p></td>
+<td><p>1111010</p></td>
+<td><p>122</p></td>
+<td><p>z</p></td>
+</tr>
+<tr class="row-odd"><td><p>100101</p></td>
+<td><p>37</p></td>
+<td><p>%</p></td>
+<td><p>1010000</p></td>
+<td><p>80</p></td>
+<td><p>P</p></td>
+<td><p>1111011</p></td>
+<td><p>123</p></td>
+<td><p>{</p></td>
+</tr>
+<tr class="row-even"><td><p>100110</p></td>
+<td><p>38</p></td>
+<td><p>&amp;</p></td>
+<td><p>1010001</p></td>
+<td><p>81</p></td>
+<td><p>Q</p></td>
+<td><p>1111100</p></td>
+<td><p>124</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>100111</p></td>
+<td><p>39</p></td>
+<td></td>
+<td><p>1010010</p></td>
+<td><p>82</p></td>
+<td><p>R</p></td>
+<td><p>1111101</p></td>
+<td><p>125</p></td>
+<td><p>}</p></td>
+</tr>
+<tr class="row-even"><td><p>101000</p></td>
+<td><p>40</p></td>
+<td><p>(</p></td>
+<td><p>1010011</p></td>
+<td><p>83</p></td>
+<td><p>S</p></td>
+<td><p>1111110</p></td>
+<td><p>126</p></td>
+<td><p>~</p></td>
+</tr>
+<tr class="row-odd"><td><p>101001</p></td>
+<td><p>41</p></td>
+<td><p>)</p></td>
+<td><p>1010100</p></td>
+<td><p>84</p></td>
+<td><p>T</p></td>
+<td><p>1111111</p></td>
+<td><p>127</p></td>
+<td><p>Delete</p></td>
+</tr>
+<tr class="row-even"><td><p>101010</p></td>
+<td><p>42</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>1010101</p></td>
+<td><p>85</p></td>
+<td><p>U</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="latin-i">
+<h2><span class="section-number">6.6.2.3.2. </span>Latin-I<a class="headerlink" href="#latin-i" title="Link to this heading">¶</a></h2>
+<p>While very robust, and recognized by essentially every computer, the big limitation of ASCII is that it assumes you are writing English, using the 26 letters of the English alphabet. It is not very inclusive, and does not allow characters from other languages to be used.</p>
+<p>Latin-I was an updated version of ASCII which used 8 bits rather than 7 to represent each character. This allowed the character map to have numbers representing 256 characters rather than 128, and so it supports many character accents, as used in many European languages.</p>
+</section>
+<section id="unicode-and-utf-8-and-similar">
+<h2><span class="section-number">6.6.2.3.3. </span>Unicode and UTF-8 (and similar)<a class="headerlink" href="#unicode-and-utf-8-and-similar" title="Link to this heading">¶</a></h2>
+<p>Unicode and UTF-8 (and UTF-16 and UTF-32) are how plain text is represented in modern computer systems. You may still encounter some older computer systems in use which only recognize ASCII, but in general if you say <em>plain text</em> today, this would probably be assumed to be Unicode encoded in UTF-8. Your programming files are being written in plain text, most likely UFT-8 plain text, and VSCode shows you the encoding used for your text file at the bottom of the screen.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/encoding_in_vscode.png"><img alt="Highlighting of the text encoding used in VSCode" src="../../_images/encoding_in_vscode.png" style="width: 800px;" />
+</a>
+</figure>
+<p>The encoding scheme, mapping letters to binary numbers computers can store, is more complicated with Unicode and UFT-8 and the details are not important here. The major benefit of UTF-8/16/32 based schemes is that essentially every character from any language can be represented. It is much more inclusive and should be the default.</p>
+<p>The negative of UTF-8/16/32 based schemes is that there are lots of characters that look very similar. For example, <code class="code highlight console docutils literal highlight-console"><span class="go">&#39;</span></code> and <code class="code highlight console docutils literal highlight-console"><span class="go">’</span></code> are both characters for quotes, one is curved and one is straight. It’s easy to get the wrong one, especially if copying and pasting between different programs and/or the Internet. In general, programming files expect a straight quote symbol <code class="code highlight console docutils literal highlight-console"><span class="go">&#39;</span></code>. You’ll get an error if you try and put <code class="code highlight console docutils literal highlight-console"><span class="go">’</span></code> in your code.</p>
+<p>This is just one example. You can get some very hard to spot errors in your text files with characters that look very similar, but are in fact different ones. Occasionally, switching the encoding to ASCII can be useful as it’s more limited character set limits what can be entered.</p>
+</section>
+<section id="which-should-i-use">
+<h2><span class="section-number">6.6.2.3.4. </span>Which should I use<a class="headerlink" href="#which-should-i-use" title="Link to this heading">¶</a></h2>
+<p>Most modern files and programs will accept UTF-8. You shouldn’t need to worry about text encoding more this until you get to more advanced programming.</p>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="floating_point_numbers.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">6.6.2.2. </span>Floating point numbers
+    </a>
+    <a class="float-right" href="conditionals_and_loops.html" title="Next">
+        <span class="section-number">6.7. </span>Conditionals and loops <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">6.6.2.3. Text encoding</a><ul>
+<li><a class="reference internal" href="#ascii">6.6.2.3.1. ASCII</a></li>
+<li><a class="reference internal" href="#latin-i">6.6.2.3.2. Latin-I</a></li>
+<li><a class="reference internal" href="#unicode-and-utf-8-and-similar">6.6.2.3.3. Unicode and UTF-8 (and similar)</a></li>
+<li><a class="reference internal" href="#which-should-i-use">6.6.2.3.4. Which should I use</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="uom_footer_info" class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://www.manchester.ac.uk/">The University of Manchester</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://online.manchester.ac.uk/">Canvas</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                    &copy; Copyright Alex Casson. <a class="nav-link text-light" href="https://creativecommons.org/licenses/by/4.0/deed.en">Released under CC-BY 4.0 license.</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="../../_static/documentation_options.js?v=818a811f"></script>
+        <script src="../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/translations.js?v=8fd896e3"></script>
+        <script type="text/javascript" src="../../_static/dist/theme.js"></script>
+        <script type="text/javascript" src="../../_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="../../_static/uom_custom.js"></script>
+        <script type="text/javascript" src="../../_static/searchtools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("../../searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

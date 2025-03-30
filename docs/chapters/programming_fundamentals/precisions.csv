@@ -1,0 +1,4 @@
+Type, Smallest possible value, Largest possible value, Precision
+float, :math:`1.17549 \times 10^{-38}`, :math:`3.40282 \times 10^{38}`, 6 digits
+double, :math:`2.22507 \times 10^{-308}`, :math:`1.79769 \times 10^{308}`, 15 digits
+quad, :math:`3.3621 \times 10^{−4932}`, :math:`1.1897 \times 10^{4932}`, 39 digits
