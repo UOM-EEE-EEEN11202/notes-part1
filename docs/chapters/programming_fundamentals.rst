@@ -22,6 +22,10 @@ In any program, there are two key things that we need: *data* the information we
    programming_fundamentals/objects
    programming_fundamentals/data_types
    programming_fundamentals/conditionals_and_loops
+   programming_fundamentals/scope
    programming_fundamentals/design_patterns
+   programming_fundamentals/copies
    programming_fundamentals/stack_and_heap
    programming_fundamentals/pointers
+   programming_fundamentals/lifetimes
+   programming_fundamentals/advanced_topics

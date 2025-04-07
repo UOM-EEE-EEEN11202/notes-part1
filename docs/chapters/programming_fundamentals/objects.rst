@@ -1,6 +1,8 @@
 .. role:: python(code)
    :language: python
 
+.. _objects:
+
 Objects
 =======
 
@@ -79,5 +81,7 @@ returns the keys that are used with the dictionary (:python:`"x"` and :python:`"
    piece1_pos_d.clear()
 
 removes all of the entries in :python:`piece1_pos_d`.
+
+In general, an object has *attributes* which are accessed by having a dot :python:`.` after the object name. Methods are one example of attributes. 
 
 There are many more methods that can be used with common objects, and we'll see some of these in the labs.

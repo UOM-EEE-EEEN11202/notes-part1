@@ -33,9 +33,13 @@ There are a number of common data types, and we'll introduce the properties of s
 .. toctree::
    :maxdepth: 1
 
+   booleans
    integers
    floating_point_numbers
    text_encoding
+   none_some
+   datetimes
+   dataframes
 
 
 Dynamically typed vs. statically typed
@@ -70,8 +74,3 @@ Being strongly typed makes it more work for the programmer, as you have to enter
     These *hints* are intended for programmers looking at or using the code. Particularly for large code bases or multi-developer teams, they can help people understand the code and use it correctly. There are also automatic tools which can flag if there is a conflict in the types being hinted at.
 
     As this is an introductory course, we won't look at, or enforce, type hinting any further beyond this aside. For Python coding however, it is generally considered best practice to include type hints in your code. 
-
-
-Common data types
------------------
-

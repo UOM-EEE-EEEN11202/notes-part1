@@ -1,2 +1,0 @@
-Pointers and smart pointers
-===========================
