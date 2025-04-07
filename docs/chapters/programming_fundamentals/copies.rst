@@ -35,6 +35,8 @@ you'll find that both :python:`a` and :python:`b` have updated. However, if you 
   :align: center
   :alt: Illustration of appending items to a shallow copy
 
+This can lead to some confusing behavior if you're not expecting it. 
+
 If you want two completely independent copies of a piece of data you need to make a *deep copy*. In Python this is done with
 
 .. code-block:: python
