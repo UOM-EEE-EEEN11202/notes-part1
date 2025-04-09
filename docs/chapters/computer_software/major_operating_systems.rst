@@ -1,3 +1,5 @@
+.. _operating_systems:
+
 Major operating systems
 =======================
 

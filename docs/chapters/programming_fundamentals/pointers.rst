@@ -7,6 +7,8 @@
 .. role:: cpp(code)
    :language: cpp
 
+.. _pointers:
+
 Pointers and smart pointers
 ===========================
 Python doesn't have pointers, it works a bit differently. You thus won't meet them until towards the end of the course. For languages such as C/C++ and Rust, pointers are an important part of how the languages can be used to write high performance code. You thus need to have some awareness of what they are, to enable you to do deeper and further in future work, even if we don't make a lot of use of them in this course. 
@@ -82,6 +84,8 @@ is accessing the memory location, one address up from :C:`p`. This is very usefu
 
 In C you can use :C:`free()` to release the pointer once you've finished with it. Other languages have similar, but differently named, commands.
 
+
+.. _smart_pointers:
 
 Smart pointers
 --------------

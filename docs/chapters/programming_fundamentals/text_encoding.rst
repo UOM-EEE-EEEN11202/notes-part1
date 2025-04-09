@@ -1,8 +1,12 @@
+.. role:: console(code)
+   :language: console
+
 Text encoding
 =============
 
 There are multiple different standards for how computers store and represent text.
 
+.. _ascii:
 
 ASCII
 -----

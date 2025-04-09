@@ -16,6 +16,10 @@ Memory in the stack is *contiguous*. That means that all of the memory locations
   :align: center
   :alt: Illustration of the stack
 
+.. admonition:: Aside
+
+   Opposite to how the figure above is drawn, the stack usually starts at the top and grows *downwards* in terms of memory addresses. That way, the last address is always 0, no matter how big the overall stack is.
+
 Stack memory is only visible to your program, the current thread that's running. 
 
 Each time a new variable (or similar) is made, it's put on the top of the stack. The computer thus doesn't have to search for a suitable memory location, it just puts the next item on top of the big pile of items that it already has. Variables on the stack are automatically deleted when they go out of scope, say when a function exits.
@@ -24,7 +28,7 @@ You can also manually add or remove things to the stack yourself. *Pop* means to
 
 Due to these properties, the stack memory is very quick. You, and the computer, don't need to think about where to put things in the memory. It just goes in the next available slot.
 
-It comes at the cost of being small in size. (The operating system can't guarantee to give every program Gigabytes of memory on the stack, you'd quickly run out of memory when running more than one program at the same time.) You can get *stack overflow* errors when the stack runs out of space.
+It comes at the cost of being small in size. (The operating system can't guarantee to give every program Gigabytes of memory on the stack, you'd quickly run out of memory when running more than one program at the same time.) You can get *stack overflow* errors when the stack runs out of space. You also really need data that is of a fixed size. If the data might change size while the program is running, its hard to move the stack point on my the correct amount to point to the next free memory location. 
 
 
 Heap memory

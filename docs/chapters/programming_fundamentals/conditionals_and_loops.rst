@@ -42,6 +42,8 @@ The :python:`else` case acts as catch all, the default if none of the other cond
         raise Exception("Something must have gone wrong!")
 
 
+.. _for_loops:
+
 For loops
 ---------
 It's very common that we want to perform the same operation multiple times. For example, maybe we want to add up all of the marks that a student has obtained across in each lab and sum them. What needs to be done is exactly the same each time, we just need to do it to each student in turn.

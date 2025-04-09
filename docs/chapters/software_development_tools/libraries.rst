@@ -7,6 +7,8 @@
 .. role:: rust(code)
    :language: rust
 
+.. _libraries:
+
 Modules, libraries, and similar
 ===============================
 
@@ -16,6 +18,8 @@ There's also code, generally known as *modules* or *libraries* or *packages* whi
 
 There are three broad categories of code that you might add in to your code.
 
+
+.. _standard_library:
 
 Standard library
 ----------------

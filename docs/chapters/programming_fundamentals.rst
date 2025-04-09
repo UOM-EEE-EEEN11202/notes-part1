@@ -1,3 +1,5 @@
+.. _programming_fundamentals:
+
 Programming fundamentals
 ========================
 

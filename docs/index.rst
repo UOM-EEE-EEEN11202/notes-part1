@@ -25,6 +25,8 @@ The contents of Part 1 of the notes are:
    chapters/programming_fundamentals
    chapters/wider_factors
 
+In general, we would advise you to read these notes once, at the start of the course. There's quite a few notes and so it will take a good few hours, but it will time well spent. There will likely be lots of items that you don't completely follow or don't make sense. Don't dwell on them for too long. Press on and read through everything before starting the labs. This will give you the best starting point. Then, come back to this section at the end of the course and read through it again. After you've done all of the labs, lots of things which you didn't completely follow at first will likely make much more sense. 
+
 
 Links to the other parts of the course:
 
