@@ -9,4 +9,6 @@ A picture of a typical dataframe (here made using the `Polars <https://pola.rs/>
   :align: center
   :alt: An example dataframe shown in interactive Python
 
-We won't consider the details of dataframes in more detail here, we will explore them in the labs instead. 
+We won't consider the details of dataframes in more detail here, we will explore them in the labs instead.
+
+Not every programming languages has the concept of dataframes, and you can always use a 2D list or array or similar in a table-like structure. Nevertheless, when dataframes are available they provide lots of built in functions to help processing data. 

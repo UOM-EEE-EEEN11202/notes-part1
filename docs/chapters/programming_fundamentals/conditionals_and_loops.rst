@@ -46,7 +46,7 @@ The :python:`else` case acts as catch all, the default if none of the other cond
 
 For loops
 ---------
-It's very common that we want to perform the same operation multiple times. For example, maybe we want to add up all of the marks that a student has obtained across in each lab and sum them. What needs to be done is exactly the same each time, we just need to do it to each student in turn.
+It's very common that we want to perform the same operation multiple times. For example, maybe we want to load all of the marks that a student has obtained across the labs and sum them. We need to loop through the marks for each lab and add them to a running total. 
 
 We'll start with an example of a loop using the C programming language, as it helps illustrate the operation. Here, the basic syntax is:
 
@@ -59,6 +59,7 @@ We'll start with an example of a loop using the C programming language, as it he
 such that an overall loop might look like:
 
 .. code-block:: C
+   :linenos:
 
    #define N 10
    int lab_marks[N] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
@@ -67,11 +68,11 @@ such that an overall loop might look like:
        total_mark = total_mark + lab_marks[i]; 
    }
 
-Here :C:`i` is the *loop variable*, the variable used to keep track of which iteration of the loop we are on. Here is it called :C:`i`, but we can use any valid variable name. The first time the for loop is run, :C:`i` is set to 0. The second argument, :C:`i < N`, gives the control statement. The loop will continue to execute while this statement is true. Note that here :C:`N` is 10, and must match the number of entries in lab_marks. The third argument, :C:`i++`, gives the equation for modifying the loop variable at the end of each iteration. :C:`i++` means :C:`i` increases by 1 each time, so the code looks at :C:`lab_marks[0]`, then :C:`lab_marks[1]`, and so on.
+Here :C:`i` is the *loop variable*, the variable used to keep track of which iteration of the loop we are on. Here is it called :C:`i`, but we can use any valid variable name. The first time the for loop is run, :C:`i` is set to 0. The second argument, :C:`i < N`, gives the control statement. The loop will continue to execute while this statement is true. Note that here :C:`N` is 10, and must match the number of entries in lab_marks or you'll get bugs when the program runs. The third argument, :C:`i++`, gives the equation for modifying the loop variable at the end of each iteration. :C:`i++` means :C:`i` increases by 1 each time, so the code looks at :C:`lab_marks[0]`, then :C:`lab_marks[1]`, and so on.
 
-The above works well, and is very common. The main limitation is that you the programmer have to know how many entries are present in the array. In the above we hard coded it to be 10. If we added or removed another lab, the code would have to change. 
+The above works well, and is very common. The main limitation is that you the programmer have to know how many entries are present in the array. In the above example we hard coded it to be 10. If we added or removed another lab, the code would have to change. (Indeed in this example the code would have to change in two places: the value of :C:`N` on line 1, and the number of entries in :C:`lab_marks[N]` on line 2.). 
 
-Wanting to work with all of the elements that are stored is such a common thing to do that Python and Rust provide an improved syntax which means you don't need to look up how many entries are present. They use *iterators* to automatically makes the start/stop/step conditions for us. The same loop in Python would look more like:
+Wanting to work with all of the elements that are stored is such a common thing to do that many other languages provide an improved syntax which means you don't need to look up how many entries are present. They use *iterators* to automatically makes the start/stop/step conditions for us. The same loop in Python would look more like:
 
 .. code-block:: python
 
@@ -82,7 +83,7 @@ Wanting to work with all of the elements that are stored is such a common thing 
 
 (Note that Python also provides a :python:`.sum()` method that we could have used in this case rather than writing our own code.)
 
-:python:`mark` is set in turn to :python:`lab_marks[0]`, :python:`lab_marks[1]` and so on. We won't go into the details of *iterators*, most objects we'll work already made them for us. They simplify writing the loop as we don't need to count ourselves how many entries are present. 
+:python:`mark` is set in turn to :python:`lab_marks[0]`, :python:`lab_marks[1]` and so on. We won't go into the details of *iterators*, most objects we'll work with already make them for us. They simplify writing the loop as we don't need to count ourselves how many entries are present. 
 
 Note that if you need to keep track of how many times the loop has run, you can use
 
@@ -123,8 +124,8 @@ Breaking loops
 --------------
 There are many more functions/possible actions to customize the operation of conditional statements and loops.
 
-- :python:`pass` can be used if you don't want any operation to take place. (Maybe you've not implemented that code yet, or there's a case where no action is needed, but it's simpler to still have the code checking for such a case present.)
+- :python:`pass` can be used if you don't want any operation to take place. (Maybe you've not implemented that code yet, or there's a case where no action is needed, but it's simpler to still have the code checking for such a case being present.)
 - :python:`continue` in a for or while or loop will stop the execution of the current iteration, and jump to the next one. That is, if :python:`i` was 7, it would straight way change it to 8 and jump back to the top of the loop.
 - :python:`break` causes the if statement or for/while loop to stop. The program execution will jump put of the loop and then keep going with whatever comes next. 
 
-There are lots of variations on the above, and the precise syntax can differ between different programming languages, but essentially all have the same basic underlying concepts. We'll practice these in the labs. 
+There are lots of variations on the above, and the precise syntax differs between different programming languages, but essentially all have the same basic underlying concepts. We'll practice these in the labs. 

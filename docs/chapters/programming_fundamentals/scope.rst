@@ -56,7 +56,7 @@ In Python this is done with :python:`import`. Rust has :rust:`use`. For example,
 
    import numpy as np
 
-This brings the :ref:`library <libraries>` :python:`numpy` into scope, and gives it the shorter name :python:`np`. Numpy is commonly used in engineering tasks and we'll see it in the lab. It provides a function sum. We access this as :python:`np.sum()` rather than just :python:`sum()`. :python:`sum()` is a valid Python command, but is different to :python:`np.sum()`. Having the namespace :python:`np.` helps make it explicit which function we want to use. You can think of the namespace as giving an *address* of which function to use.
+This brings the :ref:`library <libraries>` :python:`numpy` into scope, and gives it the shorter name :python:`np`. Numpy is commonly used in engineering tasks and we'll see it in the labs. It provides a function sum. We access this as :python:`np.sum()` rather than just :python:`sum()`. Just :python:`sum()` is a valid Python command, but is different to :python:`np.sum()`. Having the namespace :python:`np.` helps make it explicit which function we want to use. You can think of the namespace as giving an *address* of which function to use.
 
 In languages other than Python it's common to use two colons :rust:`::` to separate steps in the namespace. For example, you might have code such as
 
@@ -64,4 +64,4 @@ In languages other than Python it's common to use two colons :rust:`::` to separ
 
    use std::io;
 
-This bring a wide number of input/output functions, which are part of the :ref:`standard library <standard_library>`, into scope.
+In Rust, this brings a wide number of input/output functions, which are part of the :ref:`standard library <standard_library>`, into scope.

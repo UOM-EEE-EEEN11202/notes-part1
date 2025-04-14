@@ -4,11 +4,11 @@
 Static code analysis
 ====================
 
-Static code analysis refers to checking your code for errors, before you run or compile the code. This can avoid you wasting time trying to run code which has known issues or other reasons why it might not work. Remember, our simple examples will likely run or compile in a few seconds, but real programs with thousands or millions of lines of code might take hours or more to compile, and so failed compilations can be a real time drain.
+Static code analysis refers to checking your code for errors, before you run the code. This can avoid you wasting time trying to run code which has known issues or other reasons why it might not work. Remember, our simple examples will likely run or compile in a few seconds, but real programs with thousands or millions of lines of code might take hours or more to compile, and so failed compilations can be a real time drain.
 
 There are many different types of static code analysis. 
 
-*Linting* is essentially a spell-check of your code. The example below shows Rust program code. It has detected that the variable :rust:`j` (and indeed :rust:`i` in this simple example) is never used. It's checking that this is what you want, because it might indicate a mistake, and suggested using the preferred (but optional) of using :rust:`_j` to indicate it's deliberately not used for some reason. Indeed for a simple error like this offers a *Quick Fix* to automatically correct it for you. 
+*Linting* is essentially a spell-check of your code. The example below shows Rust program code. It has detected that the variable :rust:`j` (and indeed :rust:`i` in this simple example) is never used. It's checking that this is what you want, because it might indicate a mistake. Moreover, it suggests using the preferred (but optional) style of using :rust:`_j` to indicate it's deliberately not used for some reason. Indeed for a simple error like this offers a *Quick Fix* to automatically correct it for you. 
 
 .. figure:: linting.png
   :width: 800

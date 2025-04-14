@@ -4,9 +4,9 @@
 Code reviews
 ============
 
-The previous testing techniques have focused on automated approaches, and on running the code to see what happens. In addition, you can just have another human read your code and give feedback on it! Code reviews are widely used, getting a peer or a manager to look at code in order to improve its quality. 
+The previous testing techniques have focused on automated approaches, and on running the code to see what happens. In addition, you can just have another human read your code and give feedback on it! Code reviews are widely used, getting a peer or a manager to look at code in order to improve its quality. AI code reviews are also increasingly common. Rather than using AI to generate code for you, you still write the code but ask AI for feedback  on it.
 
-Say I gave you some code:
+Say I gave you some Python code:
 
 .. code-block:: python
 

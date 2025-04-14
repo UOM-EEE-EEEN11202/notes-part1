@@ -15,9 +15,9 @@ When discussing :ref:`variables <variables>` we had an example of storing the co
 
 .. code-block:: python 
 
-    piece1_pos = ["A", 3]
+    piece1_pos = ["a", 3]
 
-Let's say our program also has to store the location of the city Manchester. (Maybe there is a chess tournament in Manchester!) This is 53.4808, -2.2426, where these are longitude and latitude numbers. fundamentally, it's still two information items which define the location of the city. We could store these as 
+Let's say our program also has to store the location of the city Manchester. (Maybe there is a chess tournament in Manchester!) This is 53.4808, -2.2426, where these are longitude and latitude numbers. Fundamentally, it's still two information items which define the location of the city. We could store these as 
 
 .. code-block:: python 
 
@@ -47,7 +47,7 @@ These functions would work fine, as long as we always pass the correct variables
 .. code-block:: python 
 
     manchester_pos = [53.4808, -2.2426]
-    manchester_pos = move(manchester_pos, "A", 4)
+    manchester_pos = move(manchester_pos, "a", 4)
 
 will likely run just fine. The code design isn't helping us to avoid strange bugs. This is of course a simple example, but when there's thousands of lines of code, and multiple different people working as part of a team, you want to try and use the code design to avoid mistakes like this. 
 
@@ -58,20 +58,22 @@ Functions of course are widely used as well as object methods; you just need to 
 
 Object basics
 -------------
-You can make an object by either: defining a *class* which has the code for the data and methods you want; or using *inheritance*, that is, using an existing *class* as a starting point and adding or removing functionally from this. We'll see some examples of making classes in the labs, and won't so won't consider it more here. 
+You can make an object by either: defining a *class* which has the code for the data and methods you want; or using *inheritance*, that is, using an existing class as a starting point and adding or removing functionally from this. We'll see some examples of making classes in the labs, and won't so won't consider it more here.
 
-You use a method associated with an object, usually by having dot :python:`.` after the object name, and then the name of method you want to call. In the above examples, you thus might have code along the lines of 
+A class defines the general properties that an object can have. It's kind of like a template An *instance* is then one object that is made to that class template. We could have multiple instances of the same class, such as :python:`piece1_pos`, :python:`piece2_pos`. These instances will have the same methods that can be applied, but will be separate instances that can store different data. 
+
+You use a method associated with an object, usually by having dot :python:`.` after the instance name, and then the name of method you want to call. In the above examples, you thus might have code along the lines of 
 
 .. code-block:: python 
 
-    piece1_pos.move("A",4)
+    piece1_pos.move("a",4)
     manchester_pos.find_population()
 
 Particularly in Python, lots of things are actually objects. For example, :ref:`lists <lists>` and :ref:`dictionaries <dictionaries>` are actually stored as objects, with methods to give them extra functionality. For example
 
 .. code-block:: python 
 
-   piece1_pos_d = {"x": "A", "y": 3}
+   piece1_pos_d = {"x": "a", "y": 3}
    piece1_pos_d.keys()
 
 returns the keys that are used with the dictionary (:python:`"x"` and :python:`"y"` here).
@@ -84,4 +86,4 @@ removes all of the entries in :python:`piece1_pos_d`.
 
 In general, an object has *attributes* which are accessed by having a dot :python:`.` after the object name. Methods are one example of attributes. 
 
-There are many more methods that can be used with common objects, and we'll see some of these in the labs.
+There are many more methods that can be used with common objects. There are also many more rules for how we make and work with classes. We'll see some of these in the labs.

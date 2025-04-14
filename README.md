@@ -12,3 +12,8 @@ This work is licensed under a
 TODO
 ====
 Add more quantification to the programming motivation.
+Add fetch to git
+Add wrappers/Result<T,E> to data types
+Add structs/enums to data types?
+Extend AI tools section with example prompts
+Check all images for dark mode

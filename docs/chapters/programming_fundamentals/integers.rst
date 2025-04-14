@@ -23,9 +23,9 @@ Within the computer memory, data is stored in binary. If we have
 
 The number :console:`2` isn't stored directly, its binary representation is. 
 
-The number of bits used to store an integer varies depending on the operating system of the computer and the architecture of the processor present, and how many bits you ask for. As a default, many computers use 32 bits. In this case, :console:`2` would be stored in the computer memory as :console:`0000 0000 0000 0000 0000 0000 0000 0010`.
+The number of bits used to store an integer varies depending on the operating system of the computer, the architecture of the processor present, and how many bits you ask for. As a default, many computers use 32 bits. In this case, :console:`2` would be stored in the computer memory as :console:`0000 0000 0000 0000 0000 0000 0000 0010`.
 
-Negative numbers are stored using `2's complement format <https://en.wikipedia.org/wiki/Two%27s_complement/>`_, which you'll learn about in Digital Electronics courses. Briefly, the *left-most* bit as we're writing them is used as a sign bit. :console:`0` represents a positive number, while :console:`1` indicates that a negative number is present. As examples:
+Negative numbers are stored using `2's complement format <https://en.wikipedia.org/wiki/Two%27s_complement/>`_, which you'll learn about in digital electronics courses. Briefly, the *left-most* bit as we're writing them is used as a sign bit. :console:`0` represents a positive number, while :console:`1` indicates that a negative number is present. As examples:
 
 - :console:`3` would be stored as :console:`0000 0000 0000 0000 0000 0000 0000 0011`.
 - :console:`-2` would be stored as :console:`1111 1111 1111 1111 1111 1111 1111 1110`.`
@@ -76,6 +76,8 @@ To enter a hex number you preface it with :console:`0x`. To enter a binary numbe
 	j = 0x64
 	k = 0b01100100
 
+All of these represent exactly the same thing, they are just different ways of entering it into the computer.
+
 When working with hex numbers, the letters can be either upper or lower case. 
 
 All of these store exactly the same thing in memory, they are just different ways of entering the same number. Sometimes using one form is simpler than using another, and you can switch between them to use whichever is simplest. 
@@ -90,4 +92,4 @@ If using Windows, you can use the *Programmer* view of the Calculator app to pre
 
 Which should I use
 ------------------
-If you have to specify a type of integer, e.g. in Rust, probably use 32 bits :rust:`i32` as the default starting point. Then think about whether your dealing with numbers which can only be positive, e.g. the number of students in a class. If so, switch to using an unsigned integer :rust:`u32`. Then think about whether you're likely to deal with such large numbers that you might get overflow. If so, take the number of bits used up. This will come at the cost of performance though. Bigger isn't better if you don't need such high numbers.
+If you have to specify a type of integer, e.g. in Rust, probably use 32 bits :rust:`i32` as the default starting point. Then think about whether you're dealing with numbers which can only be positive, e.g. the number of students in a class. If so, switch to using an unsigned integer :rust:`u32`. Then think about whether you're likely to deal with such large numbers that you might get overflow. If so, take the number of bits used up. This will come at the cost of performance though. Bigger isn't better if you don't need such high numbers.

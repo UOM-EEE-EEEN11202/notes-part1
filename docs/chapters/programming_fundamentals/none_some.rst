@@ -19,4 +19,4 @@ because we've not got the exam mark available yet. The blank may be filled in la
 
 In C/C++ :C:`NULL` is used to the same effect.
 
-Rust introduces a :rust:`Some` type. This lets you check that you have got something, without necessarily caring what it is at that point in time. It might be an integer, or a string or something else. :rust:`Some` just lets you represent that you have something present. This can be really helpful when you have multiple data types that a function might work with.
+Rust introduces a :rust:`Some` type. This lets you check that you have got something, without necessarily caring what it is at that point in time. It might be an integer, or a string or something else. :rust:`Some` just lets you represent that you have something present. This can be very helpful when you have multiple data types that a function might work with.

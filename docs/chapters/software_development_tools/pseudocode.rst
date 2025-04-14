@@ -31,7 +31,7 @@ As a lower level example, when considering the profiler we had:
 
 This isn't valid Python code. It won't run if you try to put it in a :console:`.py` file directly. Instead, it is (hopefully) fairly easy to read and understand. It helps you to explain what you want your code to do, before you then go away and write the detailed code. 
 
-You can do a lot of your code design at the pseudocode level, without having to worry about things like: should there be a bracket here?; or is this value initialized correctly?; or other details.
+You can do a lot of your code design at the pseudocode level, without having to worry about things like: should there be a bracket here?; or is this value initialized correctly?; or other details. The details are important, but come later.
 
 Beyond this, there are no rules or standardized syntax around pseudocode, it's whatever you find useful. You might write quite high level pseudocode which just gives the *gist* of what has to be done, or you might write very detailed pseudocode which is very close to actual code. Both have their places. Pseudocode is a way to writing down what you want your code to do, in order to help with the design and documentation phases. 
 

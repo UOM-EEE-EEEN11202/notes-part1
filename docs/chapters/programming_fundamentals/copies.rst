@@ -31,14 +31,14 @@ you'll find that both :python:`a` and :python:`b` have updated. However, if you 
 
    a.append([9, 10, 11])
 
-:python:`b` won't have this added to it. It's the memory locations that :python:`b` copies. :python:`b` won't know where any additional locations in :python:`a` from after the copy was made. This use of memory is illustrated in the figure below.
+:python:`b` won't have this added to it. :python:`b` won't know where any additional locations in :python:`a` from after the copy was made. This use of memory is illustrated in the figure below.
 
 .. figure:: shallow_copy_append.png
   :width: 800
   :align: center
   :alt: Illustration of appending items to a shallow copy
 
-This can lead to some confusing behavior if you're not expecting it. 
+This can lead to some confusing behavior if you're not expecting it! 
 
 If you want two completely independent copies of a piece of data you need to make a *deep copy*. In Python this is done with
 

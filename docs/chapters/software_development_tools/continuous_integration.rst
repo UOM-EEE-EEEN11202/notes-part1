@@ -13,4 +13,4 @@ Common tools include `GitHub Actions <https://github.com/features/actions>`_ and
 
     We won't make use of continuous integration in this course. You don't need to know anything more than what's in these brief notes, unless you want to go further for your own purposes.
 
-    We don't make use of fully continuous integration when making the course materials, but if interested you can view the `GitHub Actions for these notes <https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/.github>`_. GitHub Actions automatically update the dependencies for us, and re-build the lecture notes and automatically update the website each time a new version is checked in to Git. 
+    We don't make use of fully continuous integration when making the course materials, but if interested you can view the `GitHub Actions for these notes <https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/.github>`_. GitHub Actions automatically update the dependencies for us, and re-build the lecture notes and automatically update the website each time a new version is checked into the Git remote repository. 

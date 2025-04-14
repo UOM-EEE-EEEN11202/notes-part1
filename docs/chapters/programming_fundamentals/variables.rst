@@ -27,13 +27,18 @@ Values are put into variables by using the equals :python:`=` operator. The vari
 
 Storing multiple values
 -----------------------
-Generally variables store one thing at a time. This is fine, but we often have data which has more than one *property* which needs to be stored. For example, consider the chess board shown below.
+Generally variables store one thing at a time. This is fine, but we often have data which has more than one *property* which needs to be stored. For example, consider the chess board shown below. (Taken from `Wikipedia <https://en.wikipedia.org/wiki/Algebraic_notation_%28chess%29>`_, re-used under `CC BY-SA license <https://creativecommons.org/licenses/by-sa/3.0/>`_.)
+
+.. figure:: chess_board.svg.png
+  :width: 400
+  :align: center
+  :alt: Illustration of coordinate system used on a chess board
 
 Each piece has both an *x* coordinate, denoted by a letter, and a *y* coordinate, denoted by a number. It doesn't make any conceptual sense for a piece to have an *x* coordinate but not a *y* coordinate. That wouldn't correspond to any valid place for a playing piece to be. Thus, while the below would work
 
 .. code-block:: python 
 
-    piece1_x = "A"
+    piece1_x = "a"
     piece1_y = 3
 
 it probably isn't the best way of doing it. It would be easy to have a single typo, say :python:`piece2_y` and you'll start getting strange behavior.
@@ -47,13 +52,13 @@ A *tuple* groups data together inside round brackets :python:`()` separated by c
 
 .. code-block:: python 
 
-    piece1_pos_t = ("A", 3)
+    piece1_pos_t = ("a", 3)
 
-There are now two pieces of information, and *x* coordinate and a *y* coordinate both fundamentally stored under a single name to help keep them together. 
+There are now two pieces of information, a *x* coordinate and a *y* coordinate both fundamentally stored under a single name to help keep them together. 
 
-The individual *elements* in a list can be accessed by using square brackets :python:`[]` and a number as an *address*. These addresses start at 0. So, :python:`piece1_pos_t[0]` contains :python:`"A"` and :python:`piece1_pos_t[1]` contains :python:`3`.
+The individual *elements* in a list can be accessed by using square brackets :python:`[]` and a number as an *address*. These addresses start at 0. So, :python:`piece1_pos_t[0]` contains :python:`"a"` and :python:`piece1_pos_t[1]` contains :python:`3`.
 
-In this simple example there are only two pieces on information in the tuple. You can of course have much larger tuples if needed to store the different items that you're working with. 
+In this simple example there are only two pieces of information in the tuple. You can of course have much larger tuples if needed to store the different items that you're working with. 
 
 Tuples are *immutable*. Once made the contents can't be changed. 
 
@@ -66,17 +71,17 @@ A *list* groups data together inside square brackets :python:`[]` separated by c
 
 .. code-block:: python 
 
-    piece1_pos_l = ["A", 3]
+    piece1_pos_l = ["a", 3]
 
-The individual elements in a tuple can be accessed by using square brackets :python:`[]` and a number as an *address*. These addresses start at 0. So, :python:`piece1_pos_l[0]` contains :python:`"A"` and :python:`piece1_pos_l[1]` contains :python:`3`.
+The individual elements in a list can be accessed by using square brackets :python:`[]` and a number as an *address*. These addresses start at 0. So, :python:`piece1_pos_l[0]` contains :python:`"a"` and :python:`piece1_pos_l[1]` contains :python:`3`.
 
-In this simple example there are only two pieces on information in the tuple. You can of course have much larger tuples if needed to store the different items that you're working with. 
+In this simple example there are only two pieces of information in the list. You can of course have much larger lists if needed to store the different items that you're working with. 
 
 The main difference from a tuple is that lists are *mutable*. You can use
 
 .. code-block:: python 
 
-   piece1_pos_l[0] = "B"
+   piece1_pos_l[0] = "b"
    piece1_pos_l[1] = "6"
 
 to update or change the values that are stored in the list. There are more commands, which we'll meet in the labs, for adding or removing elements from a list.
@@ -90,13 +95,32 @@ A *dictionary* groups data together inside curly brackets :python:`{}` and in ad
 
 .. code-block:: python 
 
-   piece1_pos_d = {"x": "A", "y": 3}
+   piece1_pos_d = {"x": "a", "y": 3}
 
-The individual elements in a dictionary can be accessed by using square brackets :python:`[]` and the key name. So, :python:`piece1_pos_d["x"]` contains :python:`"A"` and :python:`piece1_pos_d["y"]` contains :python:`3`.
+The individual elements in a dictionary can be accessed by using square brackets :python:`[]` and the key name. So, :python:`piece1_pos_d["x"]` contains :python:`"a"` and :python:`piece1_pos_d["y"]` contains :python:`3`.
 
-In this simple example there are only two pieces on information in the tuple. You can of course have much larger tuples if needed to store the different items that you're working with. 
+In this simple example there are only two pieces of information in the dictionary. You can of course have much larger dictionaries if needed to store the different items that you're working with. 
 
-Dictionaries are mutable. The main difference from tuples and lists is that you use a key, here :python:`"x"` or :python:`"y"` as the *address* of the data, rather than a number. In various cases this might help make the code more readable. 
+Dictionaries are mutable. The main difference from tuples and lists is that you use a key, here :python:`"x"` or :python:`"y"`, as the *address* of the data, rather than a number. In various cases this might help make the code more readable. 
+
+
+Multi-dimensional items
+-----------------------
+The above examples are all one-dimensional. For example we had :python:`piece1_pos_l[0]` and :python:`piece1_pos_l[1]`. We can have multi-dimensional items as well. For example, a 2D list might look like:
+
+.. code-block:: python
+
+   a = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
+
+Here :python:`a[0][0]` contains 0. 
+
+Alternatively, as a second example, you can store tuples in a dictionary:
+
+.. code-block:: python
+
+   a = {'piece1': ("a", 1), 'piece2': ("a", 2)}
+
+By combining variable types, you can build up some quite complicated and multi-dimensional data structures. 
 
 
 Which should I use
@@ -105,7 +129,7 @@ You might find that there are performance differences between the different ways
 
 More generally, you should use whichever fits the type of data/problem that you have to work with, to try and *force* the code to be correct.
 
-For a chess piece, a tuple probably doesn't fit - a chess piece has to move and so it should be stored in a variable type which can be changed and updated. Both a list or a dictionary are probably fine. A dictionary might give more readable code. :python:`piece1_pos_d["x"]` is a bit more clear that it's the *x* location, compared to :python:`piece1_pos_l[0]` where you have to remember 0 represents the *x* coorinate. Remember, with a dictionary you get to pick the key names, and so you can use names that are meaningful to you. 
+For a chess piece, a tuple probably doesn't fit - a chess piece has to move and so it's position should be stored in a variable type which can be changed and updated. Both a list or a dictionary are probably fine. A dictionary might give more readable code. :python:`piece1_pos_d["x"]` is a bit more clear that it's the *x* location, compared to :python:`piece1_pos_l[0]` where you have to remember 0 represents the *x* coorinate. Remember, with a dictionary you get to pick the key names, and so you can use names that are meaningful to you. 
 
 
 Other variable types

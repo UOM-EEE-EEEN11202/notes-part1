@@ -44,9 +44,9 @@ There are a number of common data types, and we'll introduce the properties of s
 
 Dynamically typed vs. statically typed
 --------------------------------------
-In general, Python is *dynamically typed*. That means, it looks at our code for us, and automatically works out which data type to use and this can change on-the-fly. In contrast, Rust is *statically typed*. We have to explicitly say how what data type to use for a piece of data. For our purposes, you may see *weakly typed* and *strongly typed* being used in place of dynamic and static.  
+In general, Python is *dynamically typed*. That means, it looks at our code for us, and automatically works out which data type to use and this can change on-the-fly. In contrast, Rust is *statically typed*. We have to explicitly say what data type to use for a piece of data. For our purposes, you may see *weakly typed* and *strongly typed* being used in place of dynamic and static.  
 
-Being strongly typed makes it more work for the programmer, as you have to enter this information each time you define a new variable (and think about what you want the data type to be!). The resulting program can then run faster, as the computer doesn't have to figure out the data type for you. It can also help avoid mistakes. If you try and put, say, text in a variable expecting a number, this is easy for the computer to automatically spot that there'a bug in the code. 
+Being statically typed makes it more work for the programmer, as you have to enter this information each time you define a new variable (and think about what you want the data type to be!). The resulting program can then run faster, as the computer doesn't have to figure out the data type for you. It can also help avoid mistakes. If you try and put, say, text in a variable expecting a number, this is easy for the computer to automatically spot that there'a bug in the code. 
 
 .. admonition:: Aside
 
@@ -69,8 +69,8 @@ Being strongly typed makes it more work for the programmer, as you have to enter
             return c
     
     Here :python:`a: int` indicates that it's expecting input :python:`a` to be an integer. In contrast, input :python:`b` is expected to be a float.  
-    :python:`-> float` indicates that the output, :python:`c` in this case should be a floating point number. 
+    :python:`-> float` indicates that the output, :python:`c` in this case, should be a floating point number. 
 
     These *hints* are intended for programmers looking at or using the code. Particularly for large code bases or multi-developer teams, they can help people understand the code and use it correctly. There are also automatic tools which can flag if there is a conflict in the types being hinted at.
 
-    As this is an introductory course, we won't look at, or enforce, type hinting any further beyond this aside. For Python coding however, it is generally considered best practice to include type hints in your code. 
+    As this is an introductory course, we won't look at, or enforce, type hinting any further beyond this aside. For Python coding however, it is generally considered good practice to include type hints in your code. 
