@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB" data-content_root="../../">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>6.8. Scope and namespaces &mdash; notes-part1 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
+      <link rel="stylesheet" type="text/css" href="../../_static/uom_custom.css?v=79662979" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-light.css?v=cf22d736" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-dark.css?v=54fad279" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+            <link rel="index" title="Index" href="../../genindex.html" />
+            <link rel="search" title="Search" href="../../search.html" />
+            <link rel="top" title="notes-part1 0.1 documentation" href="#" />
+            <link rel="up" title="6. Programming fundamentals" href="../programming_fundamentals.html" />
+            <link rel="next" title="6.9. Error handling (asserts and exceptions)" href="asserts_and_exceptions.html" />
+            <link rel="prev" title="6.7. Conditionals and loops" href="conditionals_and_loops.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script>
+        try {
+            var font_store = localStorage.getItem('uom-sphinx-font');
+            if (font_store.startsWith('"') && font_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-font', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+        try {
+            var theme_store = localStorage.getItem('uom-sphinx-theme');
+            if (theme_store.startsWith('"') && theme_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-theme', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>   
+    <!-- Set font/code theme before content loads to prevent a flash --> 
+    <script>
+        var html = document.querySelector('html');
+        var body   = document.querySelector('body');
+        var font;
+        try { font = localStorage.getItem('uom-sphinx-font'); } catch(e) { }
+        if (font === null || font === undefined) { font = "font-roboto"; }
+        if (font === "font-opendyslexic") {
+            html.classList.remove('font-alt');
+            body.classList.remove('font-alt');
+        } else {
+            html.classList.add('font-alt');
+            body.classList.add('font-alt');
+        }
+        try { theme = localStorage.getItem('uom-sphinx-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) { theme = "theme-light"; }
+        if (theme === "theme-dark") {
+                html.classList.remove('theme-light');
+                body.classList.remove('theme-light');
+                html.classList.add('theme-dark');
+                body.classList.add('theme-dark');
+            } else {
+                html.classList.remove('theme-dark');
+                body.classList.remove('theme-dark');
+                html.classList.add('theme-light');
+                body.classList.add('theme-light');
+            }
+        </script>
+    <header id="uom_header_title" class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="/"
+                        title="University of Manchester logo"
+                        class="logo navbar-brand"
+                    >
+                        <img src="../../_static/./img/uom_logo_white.png" width="88" alt="University of Manchester logo"
+                            class="logo-img"
+                        />
+                        EEEN11202 course notes
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes part 1" aria-label="Search notes" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../motivation.html">1. Motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/why_programming.html">1.1. Why study programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/language_types.html">1.2. Types of programming language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/our_choices.html">1.3. Our choices for this course</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/requirements_capture.html">4.1. Requirements capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/software_architecture.html">4.2. Software architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/testing_and_debugging.html">4.3. Testing and debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/release.html">4.4. Release, support, maintenance, and bug fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/documentation.html">4.5. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/quality_management.html">4.6. Quality management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/comments.html">5.2. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">5.5. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">5.6. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/version_control.html">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">5.10. Unit and integration testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">5.16. Software licenses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="scripts.html">6.1. Scripts vs. programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">6.2. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutability.html">6.3. Mutable vs. immutable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">6.4. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="objects.html">6.5. Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_types.html">6.6. Data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="booleans.html">6.6.2.1. Booleans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="integers.html">6.6.2.2. Integers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="floating_point_numbers.html">6.6.2.3. Floating point numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text_encoding.html">6.6.2.4. Text encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="none_some.html">6.6.2.5. None/Null and Some</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datetimes.html">6.6.2.6. Datetimes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dataframes.html">6.6.2.7. Dataframes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="conditionals_and_loops.html">6.7. Conditionals and loops</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.8. Scope and namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asserts_and_exceptions.html">6.9. Error handling (asserts and exceptions)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_patterns.html">6.10. Design patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copies.html">6.11. Shallow vs. deep copies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stack_and_heap.html">6.12. Stack and heap memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pointers.html">6.13. Pointers and smart pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifetimes.html">6.14. Lifetimes, borrowing, and “modern” approaches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced_topics.html">6.15. More advanced topics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div><div>
+  <p>
+    <img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo" style="width: 100vw; min-width: 100px;">
+  </p>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header id="uom_header_buttons" class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
+            <li class="breadcrumb-item"><a href="../programming_fundamentals.html"><span class="section-number">6. </span>Programming fundamentals</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">6.8. </span>Scope and namespaces</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+                        <button id="uom_alt_font_button" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="alt-only"><i class="fas fa-strikethrough"></i> Default font</span>
+                            <span class="default-only"><i class="fas fa-font"></i> OpenDyslexic font</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/UOM-EEE-EEEN11202/notes-part1/tree/main/docs/chapters/programming_fundamentals/scope.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="../../_sources/chapters/programming_fundamentals/scope.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="scope-and-namespaces">
+<span id="scope"></span><h1><span class="section-number">6.8. </span>Scope and namespaces<a class="headerlink" href="#scope-and-namespaces" title="Link to this heading">¶</a></h1>
+<p>Our programs will contain a range of data and functions. Best practice is that these have a defined <em>scope</em> for where they can be seen and used. That is, a function can only use data that it in its scope - data that it’s been given access to.</p>
+<p>We don’t want all of our data and functions to be available everywhere: it’s bad practice from a security point of view, and can lead to data accidentally being changed. Say you have a variable <code class="code highlight python docutils literal highlight-python"><span class="n">x1</span></code> in one part of the code, and <code class="code highlight python docutils literal highlight-python"><span class="n">x2</span></code> in another part of the code. If these were available everywhere, a single typo, having a <code class="code highlight python docutils literal highlight-python"><span class="mi">2</span></code> instead of a <code class="code highlight python docutils literal highlight-python"><span class="mi">1</span></code> would mean your function was working with the wrong data. Moreover, it’s common that we want to use the same (or same-ish) names for things in multiple places. Having a local scope lets us do this, re-using variable names without different functions or parts of the program interfering with each other.</p>
+<section id="id1">
+<h2><span class="section-number">6.8.1. </span>Scope<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>In most programming languages a scope block is defined by curly brackets <code class="code highlight rust docutils literal highlight-rust"><span class="p">{}</span></code>. In Python it’s defined by indented white space (usually 4 spaces). To give a Python example, the below has two functions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">c</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">my_substract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">c</span>
+</pre></div>
+</div>
+<p>Both of these use the same variable names internally, and that’s completely fine because the variables are <em>local</em> to each function. When the function finishes running, the variables go <em>out of scope</em> and are no longer accessible.</p>
+<p>So, say you had the code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="linenos">2</span><span class="k">def</span><span class="w"> </span><span class="nf">my_func</span><span class="p">():</span>
+<span class="linenos">3</span>    <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;world&quot;</span>
+<span class="linenos">4</span><span class="n">my_func</span><span class="p">()</span>
+<span class="hll"><span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>What is the value of <code class="code highlight python docutils literal highlight-python"><span class="n">x</span></code> on line 5? It is <code class="code highlight python docutils literal highlight-python"><span class="s2">&quot;Hello&quot;</span></code>. The function <code class="code highlight python docutils literal highlight-python"><span class="n">my_func</span><span class="p">()</span></code> runs on line 4, and sets <code class="code highlight python docutils literal highlight-python"><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;world&quot;</span></code>. However, when the function finshes, and the code moves on to line 5, this defintion of <code class="code highlight python docutils literal highlight-python"><span class="n">x</span></code> goes out of scope, and the earlier definition of <code class="code highlight python docutils literal highlight-python"><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span></code> comes back in to scope.</p>
+<p>There is also a <em>global</em> scope, which everything in the program can see. In general however, for a function to be able to see and interact with data, the data should be provided as an input to the function (possibly via a <a class="reference internal" href="pointers.html#pointers"><span class="std std-ref">pointer</span></a>). Any changed data should be provided as an output (again possibly using <a class="reference internal" href="pointers.html#pointers"><span class="std std-ref">pointers</span></a>).</p>
+</section>
+<section id="namespaces">
+<h2><span class="section-number">6.8.2. </span>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading">¶</a></h2>
+<p><em>Namespaces</em> help us to re-use function names in different parts of a program. Apart from a few core parts of a programming language, and functions we’ve made ourselves in the same code file, functions have to explicitly be brought into scope in order for our program to be able to see and use them.</p>
+<p>In Python this is done with <code class="code highlight python docutils literal highlight-python"><span class="kn">import</span></code>. Rust has <code class="code highlight rust docutils literal highlight-rust"><span class="k">use</span></code>. For example, in Python it’s common to have code such as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<p>This brings the <a class="reference internal" href="../software_development_tools/libraries.html#libraries"><span class="std std-ref">library</span></a> <code class="code highlight python docutils literal highlight-python"><span class="n">numpy</span></code> into scope, and gives it the shorter name <code class="code highlight python docutils literal highlight-python"><span class="n">np</span></code>. Numpy is commonly used in engineering tasks and we’ll see it in the labs. It provides a function sum. We access this as <code class="code highlight python docutils literal highlight-python"><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span></code> rather than just <code class="code highlight python docutils literal highlight-python"><span class="nb">sum</span><span class="p">()</span></code>. Just <code class="code highlight python docutils literal highlight-python"><span class="nb">sum</span><span class="p">()</span></code> is a valid Python command, but is different to <code class="code highlight python docutils literal highlight-python"><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span></code>. Having the namespace <code class="code highlight python docutils literal highlight-python"><span class="n">np</span><span class="o">.</span></code> helps make it explicit which function we want to use. You can think of the namespace as giving an <em>address</em> of which function to use.</p>
+<p>In languages other than Python it’s common to use two colons <code class="code highlight rust docutils literal highlight-rust"><span class="p">::</span></code> to separate steps in the namespace. For example, you might have code such as</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">io</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In Rust, this brings a wide number of input/output functions, which are part of the <a class="reference internal" href="../software_development_tools/libraries.html#standard-library"><span class="std std-ref">standard library</span></a>, into scope.</p>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="conditionals_and_loops.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">6.7. </span>Conditionals and loops
+    </a>
+    <a class="float-right" href="asserts_and_exceptions.html" title="Next">
+        <span class="section-number">6.9. </span>Error handling (asserts and exceptions) <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">6.8. Scope and namespaces</a><ul>
+<li><a class="reference internal" href="#id1">6.8.1. Scope</a></li>
+<li><a class="reference internal" href="#namespaces">6.8.2. Namespaces</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="uom_footer_info" class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://www.manchester.ac.uk/">The University of Manchester</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://online.manchester.ac.uk/">Canvas</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                    &copy; Copyright Alex Casson. <a class="nav-link text-light" href="https://creativecommons.org/licenses/by/4.0/deed.en">Released under CC-BY 4.0 license.</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="../../_static/documentation_options.js?v=818a811f"></script>
+        <script src="../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/translations.js?v=8fd896e3"></script>
+        <script type="text/javascript" src="../../_static/dist/theme.js"></script>
+        <script type="text/javascript" src="../../_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="../../_static/uom_custom.js"></script>
+        <script type="text/javascript" src="../../_static/searchtools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("../../searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>
