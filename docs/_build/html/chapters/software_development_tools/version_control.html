@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB" data-content_root="../../">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>5.8. Version control &mdash; notes-part1 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
+      <link rel="stylesheet" type="text/css" href="../../_static/uom_custom.css?v=79662979" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-light.css?v=cf22d736" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-dark.css?v=54fad279" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+            <link rel="index" title="Index" href="../../genindex.html" />
+            <link rel="search" title="Search" href="../../search.html" />
+            <link rel="top" title="notes-part1 0.1 documentation" href="#" />
+            <link rel="up" title="5. Software development tools fundamentals" href="../software_development_tools.html" />
+            <link rel="next" title="5.9. Environment control" href="environment_control.html" />
+            <link rel="prev" title="5.7. Profiler and computational complexity" href="profiler.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script>
+        try {
+            var font_store = localStorage.getItem('uom-sphinx-font');
+            if (font_store.startsWith('"') && font_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-font', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+        try {
+            var theme_store = localStorage.getItem('uom-sphinx-theme');
+            if (theme_store.startsWith('"') && theme_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-theme', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>   
+    <!-- Set font/code theme before content loads to prevent a flash --> 
+    <script>
+        var html = document.querySelector('html');
+        var body   = document.querySelector('body');
+        var font;
+        try { font = localStorage.getItem('uom-sphinx-font'); } catch(e) { }
+        if (font === null || font === undefined) { font = "font-roboto"; }
+        if (font === "font-opendyslexic") {
+            html.classList.remove('font-alt');
+            body.classList.remove('font-alt');
+        } else {
+            html.classList.add('font-alt');
+            body.classList.add('font-alt');
+        }
+        try { theme = localStorage.getItem('uom-sphinx-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) { theme = "theme-light"; }
+        if (theme === "theme-dark") {
+                html.classList.remove('theme-light');
+                body.classList.remove('theme-light');
+                html.classList.add('theme-dark');
+                body.classList.add('theme-dark');
+            } else {
+                html.classList.remove('theme-dark');
+                body.classList.remove('theme-dark');
+                html.classList.add('theme-light');
+                body.classList.add('theme-light');
+            }
+        </script>
+    <header id="uom_header_title" class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="/"
+                        title="University of Manchester logo"
+                        class="logo navbar-brand"
+                    >
+                        <img src="../../_static/./img/uom_logo_white.png" width="88" alt="University of Manchester logo"
+                            class="logo-img"
+                        />
+                        EEEN1XXX2 course notes
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes part 1" aria-label="Search notes" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../motivation.html">1. Motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/why_programming.html">1.1. Why study programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/language_types.html">1.2. Types of programming language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/our_choices.html">1.3. Our choices for this course</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/requirements_capture.html">4.1. Requirements capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/software_architecture.html">4.2. Software architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/testing_and_debugging.html">4.3. Testing and debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/release.html">4.4. Release, support, maintenance, and bug fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/documentation.html">4.5. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/quality_management.html">4.6. Quality management</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">5.2. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="static_code_analysis.html">5.5. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugger.html">5.6. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiler.html">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automated_testing.html">5.10. Unit and integration testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licensing.html">5.16. Software licenses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/scripts.html">6.1. Scripts vs. programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/functions.html">6.2. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/mutability.html">6.3. Mutable vs. immutable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/variables.html">6.4. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/objects.html">6.5. Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/data_types.html">6.6. Data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/booleans.html">6.6.2.1. Booleans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/integers.html">6.6.2.2. Integers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/floating_point_numbers.html">6.6.2.3. Floating point numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/text_encoding.html">6.6.2.4. Text encoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/none_some.html">6.6.2.5. None/Null and Some</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/datetimes.html">6.6.2.6. Datetimes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/dataframes.html">6.6.2.7. Dataframes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/conditionals_and_loops.html">6.7. Conditionals and loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/scope.html">6.8. Scope and namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/design_patterns.html">6.9. Design patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/asserts_and_exceptions.html">6.10. Error handling (asserts and exceptions)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/copies.html">6.11. Shallow vs. deep copies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/stack_and_heap.html">6.12. Stack and heap memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/pointers.html">6.13. Pointers and smart pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/lifetimes.html">6.14. Lifetimes, borrowing, and “modern” approaches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/advanced_topics.html">6.15. More advanced topics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a></li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div><div>
+  <p>
+    <img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo" style="width: 100vw; min-width: 100px;">
+  </p>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header id="uom_header_buttons" class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
+            <li class="breadcrumb-item"><a href="../software_development_tools.html"><span class="section-number">5. </span>Software development tools fundamentals</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">5.8. </span>Version control</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+                        <button id="uom_alt_font_button" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="alt-only"><i class="fas fa-strikethrough"></i> Default font</span>
+                            <span class="default-only"><i class="fas fa-font"></i> OpenDyslexic font</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/docs/chapters/software_development_tools/version_control.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="../../_sources/chapters/software_development_tools/version_control.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="version-control">
+<span id="id1"></span><h1><span class="section-number">5.8. </span>Version control<a class="headerlink" href="#version-control" title="Link to this heading">¶</a></h1>
+<p>It’s very common to have more than one version of a piece of software or set of files. Generally, more features are added over time, or bugs are fixed. Often when writing a program, you may make one part of the code work and then move on to the next part. When working on this next part, you don’t want to break the things that already work! This is known as <em>regression</em>. It means you have to spend time correcting things that once worked, and you’ve (presumably) accidentally broken.</p>
+<p>To avoid this, whenever we have a working piece of code, we usually <em>commit</em> it to a version control system. The version control system keeps track of the different versions of each file and it’s easy to roll-back to a previous version if you have to, or to get a display of what has changed between different versions. Generally, we use the version control system to keep track of different versions of the same file, we don’t make a copy ourselves and call it (say) <code class="code highlight console docutils literal highlight-console"><span class="go">my_work-backup.py</span></code>.</p>
+<p>Version control is also widely used when working in teams. Multiple people can be working on the code in one repository at the same time, and use the version control system to keep the code in sync with one another and to pass code between one another.</p>
+<p>There are a wide number of version control tools that can be used. Historically, CVS, and then subversion, were very popular. Today, git is widely used. Git is a separate tool to install, but the VSCode GUI then provides an interface to it. Alternatively, you can use git at the command line.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/version_control.png"><img alt="The version control GUI button" src="../../_images/version_control.png" style="width: 800px;" />
+</a>
+</figure>
+<p>We’ll see git in the labs. To briefly introduce it, the usage model is shown below. The core flow is shown in green. More optional, and more advanced, functions are shown in orange. The terminology used is:</p>
+<ul class="simple">
+<li><p><em>Remote repository</em>. This is the shared space where multiple people can place and view the code. The code might be available publicly, or only available to people who are given permission. We typically use <a class="reference external" href="https://github.com/">GitHub</a>, although <a class="reference external" href="https://about.gitlab.com/">GitLab</a> is also popular, and indeed the remote repository can be essentially anywhere. You can view my work repositories <a class="reference external" href="https://github.com/Non-Invasive-Bioelectronics-Lab">here</a>, and the files for this course at <a class="reference external" href="https://github.com/UOM-EEE-EEEN1XXX2">the main repository</a>.</p></li>
+<li><p><em>Clone</em>. Cloning is the process of making a local copy, on your computer, of a remote repository. You can clone a blank repository, or one which already has a number of files in it. Often the first step when using git is to either clone an existing repository, or to make a blank repository on <a class="reference external" href="https://github.com/">GitHub</a> (say) and then to clone this.</p></li>
+<li><p><em>Local repository</em>. This is your copy of the code files, stored on your computer. These are the files that you edit and do your development with.</p></li>
+<li><p><em>Commit</em>. When you have files that are working, or some version that you want to log, you commit these to the local repository. This marks the versions that you want to keep a copy of. Sometimes this is also known as <em>checking-in</em> the code.</p></li>
+<li><p><em>Staging</em>. Before committing files, you have to tell git which files you want to commit. This is known as staging the changes. For simple projects, you probably just want to stage and commit all of the files. For more complex projects, there may be files which are specific to one computer and so don’t want to be sent to a remote repository. There may be secrets such as security keys which shouldn’t be shared. Staging and the <code class="code highlight console docutils literal highlight-console"><span class="go">.gitignore</span></code> file allow control of what gets logged.</p></li>
+<li><p><em>Push</em>. When you want to, you push your files to the remote repository (assuming you have permissions to do this). This will update the code that others can see. Until you do a push, only your local files will have been updated with any changes. You can do a push after every commit, or just every-so-often, whatever is best for you. You might get a <em>conflict</em>, say if two people have been working on the exact same piece of code at the same time. You’ll be asked to resolve this before the push can complete.</p></li>
+<li><p><em>Pull</em>. A pull will update your repository with the latest version from a different repository. This will let you get updates from others.</p></li>
+<li><p><em>Fork</em>. A fork is making a copy of existing code, so that you can work on it separately. This is typically done when you’re starting a new project, but want to start from an existing one. So, you’re not modifying the existing project, you’re modifying your copy, or fork, of it.</p></li>
+<li><p><em>Branch</em>. Sometimes you want or need more than one copy of some files in your repository. Maybe you’re actively working on Version 2, but it’s not ready yet and so Version 1 needs to be present too. You can make a branch for developing Version 2 in. This keeps it separate from the other code, with the ability to merge it in later.</p></li>
+<li><p><em>Reset</em> or <em>Revert</em>. You can switch between different committed versions of the code, if you want to roll-back to a previous version, or if you want to compare the changes that have been made.</p></li>
+</ul>
+<p>This workflow is summarized in the figure below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/git_workflow.png"><img alt="Illustration of the git workflow" src="../../_images/git_workflow.png" style="width: 800px;" />
+</a>
+</figure>
+<p>Overall, having both local and remote repositories is very powerful for team working. It allows you to work on your copy of the code, keeping it in version control so you can track any changes and/or roll-back if you need to. When ready, you can then synchronize the local and the remote repository. This updates your code with any updates from others, but only when you’re ready and do a <em>pull</em>. Equally, your local changes are only sent out to others when you’re ready and do a <em>push</em>.</p>
+<p>There are git commands with all of the different terms introduced above. You can run git at the command line to get full control of the options present. For example, to clone a remote repository and get a copy on your computer (assuming this is where you want to put it):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt; cd P:\Desktop\my_copy</span>
+<span class="go">&gt; git clone https://github.com/ALEX-CASSON-LAB/uom_msc_dissertation_word_template</span>
+</pre></div>
+</div>
+<p>To commit changes you’ve made to the files:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt; git commit -m &quot;Brief description of what&#39;s changed&quot;</span>
+</pre></div>
+</div>
+<p>Use:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt; git --help</span>
+</pre></div>
+</div>
+<p>to see a full list of the available commands.</p>
+<div class="admonition-this-course admonition">
+<p class="admonition-title">This course</p>
+<p>Knowledge of version control is a learning outcome from the course. We’ll use git extensively in the labs and expect you to be familiar with it.</p>
+</div>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="profiler.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">5.7. </span>Profiler and computational complexity
+    </a>
+    <a class="float-right" href="environment_control.html" title="Next">
+        <span class="section-number">5.9. </span>Environment control <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="uom_footer_info" class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://www.manchester.ac.uk/">The University of Manchester</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://online.manchester.ac.uk/">Canvas</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                    &copy; Copyright Alex Casson. <a class="nav-link text-light" href="https://creativecommons.org/licenses/by/4.0/deed.en">Released under CC-BY 4.0 license.</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="../../_static/documentation_options.js?v=818a811f"></script>
+        <script src="../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/translations.js?v=8fd896e3"></script>
+        <script type="text/javascript" src="../../_static/dist/theme.js"></script>
+        <script type="text/javascript" src="../../_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="../../_static/uom_custom.js"></script>
+        <script type="text/javascript" src="../../_static/searchtools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("../../searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>

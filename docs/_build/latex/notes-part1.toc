@@ -1,0 +1,143 @@
+\babel@toc {british}{}\relax 
+\contentsline {chapter}{\numberline {1}Motivation}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Why study programming}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Types of programming language}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Markup languages}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Interpreted languages}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Compiled languages}{4}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Our choices for this course}{5}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Python and Rust}{5}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Shell scripting and C/C++}{5}{subsection.1.3.2}%
+\contentsline {chapter}{\numberline {2}Computer hardware}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Computer software}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Major operating systems}{9}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Windows}{9}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}macOS}{10}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Linux}{10}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Real\sphinxhyphen {}time operating systems}{12}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}No operating system}{12}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}User interfaces: graphical and the command line}{12}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Graphical User Interfaces}{12}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Command Line Interfaces}{14}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Files, folders, and filesystems}{15}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Files}{15}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Folders}{15}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}File systems}{16}{subsection.3.3.3}%
+\contentsline {subsubsection}{Windows}{16}{subsubsection*.3}%
+\contentsline {subsubsection}{macOS and Linux}{16}{subsubsection*.4}%
+\contentsline {subsubsection}{Cloud storage}{18}{subsubsection*.5}%
+\contentsline {subsubsection}{Absolute vs. relative addresses}{19}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {3.3.4}Best practices}{19}{subsection.3.3.4}%
+\contentsline {subsubsection}{Where should I put my files?}{19}{subsubsection*.7}%
+\contentsline {subsubsection}{How much filing to do}{19}{subsubsection*.8}%
+\contentsline {chapter}{\numberline {4}Software lifecycle}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Requirements capture}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Software architecture}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Testing and debugging}{22}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Release, support, maintenance, and bug fixes}{23}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Documentation}{23}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Quality management}{23}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Software development tools fundamentals}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Integrated Development Environments (IDEs)}{25}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Comments}{26}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Docstrings and doctests}{27}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Documentation tools}{28}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Static code analysis}{28}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Debugger}{29}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Profiler and computational complexity}{31}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Profiler}{31}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Computational complexity}{31}{subsection.5.7.2}%
+\contentsline {section}{\numberline {5.8}Version control}{32}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Environment control}{34}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Unit and integration testing}{35}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}General principles}{35}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Unit tests}{36}{subsection.5.10.2}%
+\contentsline {subsection}{\numberline {5.10.3}Integration tests}{36}{subsection.5.10.3}%
+\contentsline {section}{\numberline {5.11}Continuous integration}{36}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Formatters}{37}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Code reviews}{37}{section.5.13}%
+\contentsline {section}{\numberline {5.14}Buddy programming}{38}{section.5.14}%
+\contentsline {section}{\numberline {5.15}Modules, libraries, and similar}{38}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Standard library}{39}{subsection.5.15.1}%
+\contentsline {subsection}{\numberline {5.15.2}Packages from online repositories}{39}{subsection.5.15.2}%
+\contentsline {subsection}{\numberline {5.15.3}Code from online sites such as GitHub}{39}{subsection.5.15.3}%
+\contentsline {subsection}{\numberline {5.15.4}Important considerations}{39}{subsection.5.15.4}%
+\contentsline {section}{\numberline {5.16}Software licenses}{40}{section.5.16}%
+\contentsline {section}{\numberline {5.17}Pseudocode}{41}{section.5.17}%
+\contentsline {section}{\numberline {5.18}Co\sphinxhyphen {}pilot and other AI tools}{42}{section.5.18}%
+\contentsline {chapter}{\numberline {6}Programming fundamentals}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Scripts vs. programs}{43}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Functions}{44}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Fundaments}{44}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}The main function}{45}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Closures}{45}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Mutable vs. immutable}{45}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Variables}{46}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Single variables}{46}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Storing multiple values}{46}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Tuples}{47}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Lists}{47}{subsection.6.4.4}%
+\contentsline {subsection}{\numberline {6.4.5}Dictionaries}{47}{subsection.6.4.5}%
+\contentsline {subsection}{\numberline {6.4.6}Multi\sphinxhyphen {}dimensional items}{48}{subsection.6.4.6}%
+\contentsline {subsection}{\numberline {6.4.7}Which should I use}{48}{subsection.6.4.7}%
+\contentsline {subsection}{\numberline {6.4.8}Other variable types}{48}{subsection.6.4.8}%
+\contentsline {section}{\numberline {6.5}Objects}{48}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Example motivating objects}{48}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Object basics}{49}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Data types}{50}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Overview}{50}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Common data types}{50}{subsection.6.6.2}%
+\contentsline {subsubsection}{Booleans}{51}{subsubsection*.9}%
+\contentsline {subsubsection}{Integers}{51}{subsubsection*.10}%
+\contentsline {paragraph}{How the computer stores them}{51}{paragraph*.11}%
+\contentsline {paragraph}{Consequences of this storage}{51}{paragraph*.12}%
+\contentsline {paragraph}{Number representations}{52}{paragraph*.13}%
+\contentsline {paragraph}{Which should I use}{52}{paragraph*.14}%
+\contentsline {subsubsection}{Floating point numbers}{52}{subsubsection*.15}%
+\contentsline {paragraph}{How the computer stores them}{54}{paragraph*.16}%
+\contentsline {paragraph}{Consequences of this storage}{54}{paragraph*.17}%
+\contentsline {paragraph}{Number representations}{55}{paragraph*.18}%
+\contentsline {paragraph}{Which should I use}{55}{paragraph*.19}%
+\contentsline {subsubsection}{Text encoding}{55}{subsubsection*.20}%
+\contentsline {paragraph}{ASCII}{55}{paragraph*.21}%
+\contentsline {paragraph}{Latin\sphinxhyphen {}I}{56}{paragraph*.22}%
+\contentsline {paragraph}{Unicode and UTF\sphinxhyphen {}8 (and similar)}{56}{paragraph*.23}%
+\contentsline {paragraph}{Which should I use}{57}{paragraph*.24}%
+\contentsline {paragraph}{ASCII encoding table}{57}{paragraph*.25}%
+\contentsline {subsubsection}{None/Null and Some}{59}{subsubsection*.26}%
+\contentsline {subsubsection}{Datetimes}{59}{subsubsection*.27}%
+\contentsline {subsubsection}{Dataframes}{59}{subsubsection*.28}%
+\contentsline {subsection}{\numberline {6.6.3}Dynamically typed vs. statically typed}{60}{subsection.6.6.3}%
+\contentsline {section}{\numberline {6.7}Conditionals and loops}{61}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}If/else statements}{61}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}For loops}{62}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.3}While loops}{63}{subsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.7.4}Breaking loops}{63}{subsection.6.7.4}%
+\contentsline {section}{\numberline {6.8}Scope and namespaces}{63}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Scope}{63}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Namespaces}{64}{subsection.6.8.2}%
+\contentsline {section}{\numberline {6.9}Error handling (asserts and exceptions)}{64}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Assert statements}{64}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Exceptions}{65}{subsection.6.9.2}%
+\contentsline {section}{\numberline {6.10}Design patterns}{66}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Flow charts}{67}{subsection.6.10.1}%
+\contentsline {subsection}{\numberline {6.10.2}State machines}{68}{subsection.6.10.2}%
+\contentsline {section}{\numberline {6.11}Shallow vs. deep copies}{68}{section.6.11}%
+\contentsline {section}{\numberline {6.12}Stack and heap memory}{70}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Stack memory}{70}{subsection.6.12.1}%
+\contentsline {subsection}{\numberline {6.12.2}Heap memory}{71}{subsection.6.12.2}%
+\contentsline {section}{\numberline {6.13}Pointers and smart pointers}{71}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}What is a pointer}{71}{subsection.6.13.1}%
+\contentsline {subsection}{\numberline {6.13.2}How to work with raw pointers}{72}{subsection.6.13.2}%
+\contentsline {subsection}{\numberline {6.13.3}Pointer arithmetic}{73}{subsection.6.13.3}%
+\contentsline {subsection}{\numberline {6.13.4}Smart pointers}{73}{subsection.6.13.4}%
+\contentsline {section}{\numberline {6.14}Lifetimes, borrowing, and “modern” approaches}{75}{section.6.14}%
+\contentsline {section}{\numberline {6.15}More advanced topics}{76}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Line endings}{76}{subsection.6.15.1}%
+\contentsline {subsection}{\numberline {6.15.2}Anonymous functions}{76}{subsection.6.15.2}%
+\contentsline {subsection}{\numberline {6.15.3}Decorators}{78}{subsection.6.15.3}%
+\contentsline {subsection}{\numberline {6.15.4}Iterators and generators}{78}{subsection.6.15.4}%
+\contentsline {chapter}{\numberline {7}Wider factors to consider}{79}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Security and risk}{79}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Sustainability}{79}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Equality, Diversity, Inclusion and Accessibility}{80}{section.7.3}%
