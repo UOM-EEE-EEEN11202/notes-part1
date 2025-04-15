@@ -4,7 +4,7 @@
 Formatters
 ==========
 
-We mentioned `style guides previously <https://uom-eee-eeen1xxx2.github.io/chapters/useful_information/style_guide.html>`_. There are lots of choices for how we layout code. For example, do we use AAAA or aaaa as a variable name? These choices don't necessarily affect what the code does, but when working as part of a team if everyone's code is formatted the same way, it makes it easier to share code and to read code written by others. 
+We mentioned `style guides previously <https://uom-eee-eeen11202.github.io/chapters/useful_information/style_guide.html>`_. There are lots of choices for how we layout code. For example, do we use AAAA or aaaa as a variable name? These choices don't necessarily affect what the code does, but when working as part of a team if everyone's code is formatted the same way, it makes it easier to share code and to read code written by others. 
 
 To help with this, there are automatic formatting tools, such as `Ruff <https://docs.astral.sh/ruff/>`_ for Python, and `rustfmt <https://github.com/rust-lang/rustfmt>`_  for Rust. These will re-layout your code automatically to try and keep it correctly on a specified style. 
 
