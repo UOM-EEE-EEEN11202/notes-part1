@@ -25,7 +25,7 @@ html_theme_path = ['./theme']
 html_theme = 'uom_sphinx_wagtail_theme'
 html_static_path = ['_static']
 html_theme_options = dict(
-    project_name = "EEEN1XXX2 course notes",
+    project_name = "EEEN11202 course notes",
     searchbox_text = "Search notes part 1",
     breadcrumb_home = "Part 1",
     logo_alt = "University of Manchester logo",
@@ -35,7 +35,7 @@ html_theme_options = dict(
         "The University of Manchester|https://www.manchester.ac.uk/",
         "Canvas|https://online.manchester.ac.uk/",
     ]),
-    github_url = "https://github.com/UOM-EEE-EEEN1XXX2/notes-part1/tree/main/docs/",
+    github_url = "https://github.com/UOM-EEE-EEEN11202/notes-part1/tree/main/docs/",
 )
 html_show_copyright = True
 html_show_sphinx = False
@@ -47,7 +47,7 @@ notfound_urls_prefix = "/"
 
 # Allow cross-references to other Sphinx sites
 #intersphinx_mapping = {
-#    'part1': ('https://uom-eee-eeen1xxx2.github.io/notes-part1/', None),
+#    'part1': ('https://uom-eee-eeen11202.github.io/notes-part1/', None),
 #}
 
 # All external links are set here to ease checking of whether they are still the correct version

@@ -30,10 +30,10 @@ In general, we would advise you to read these notes once, at the start of the co
 
 Links to the other parts of the course:
 
-- `Part 0 on course administration <https://uom-eee-eeen1xxx2.github.io/>`_. 
+- `Part 0 on course administration <https://uom-eee-eeen11202.github.io/>`_. 
 
-- `Part 1 (this part) on underlying theory of how computers operate <https://uom-eee-eeen1xxx2.github.io/notes-part1/>`_. 
+- `Part 1 (this part) on underlying theory of how computers operate <https://uom-eee-eeen11202.github.io/notes-part1/>`_. 
 
-- `Part 2 on general purpose computing, mainly with Python <https://uom-eee-eeen1xxx2.github.io/notes-part2/>`_. 
+- `Part 2 on general purpose computing, mainly with Python <https://uom-eee-eeen11202.github.io/notes-part2/>`_. 
 
-- `Part 3 on higher performance computing, mainly with Rust <https://uom-eee-eeen1xxx2.github.io/notes-part3/>`_.
+- `Part 3 on higher performance computing, mainly with Rust <https://uom-eee-eeen11202.github.io/notes-part3/>`_.
