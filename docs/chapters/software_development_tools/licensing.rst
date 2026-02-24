@@ -11,7 +11,7 @@ Just because your code is open source doesn't mean that you can't make money fro
 
 If writing open source code, the worst thing you can do is *just stick it on the Internet*. This doesn't give any potential users information on what they need to do to use the code legitimately. What is the author of the code responsible for, vs. the person that uses it in their project? What acknowledgement or recognition needs to be given to the original author? All open code should be accompanied by a *license*, which says what the code can and can't be used for, and any restrictions or requirements for its use. 
 
-If you set up a new repository at (say) `GitHub <https://github.com/>`_, it will ask you what license you want to attach to the code. There are many different licenses you might choose between. Briefly, some major ones with a brief summary from me (but you should check these for yourself before using in case your interpretation is different, the below is not formal guidance):
+If you set up a new repository at (say) `GitHub <https://github.com/>`_, it will ask you what license you want to attach to the code. There are many different licenses you might choose between. Briefly, some major ones with a brief summary from me (but you should check these for yourself before using in case your interpretation is different, the below is not formal or legal guidance):
 
 - MIT license. This is a very permissive license. You have to include a copyright statement saying who wrote the code. Otherwise you're largely free to use the code as you wish.
 
