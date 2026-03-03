@@ -9,7 +9,7 @@ In the UK, there are laws which govern how some information has to be kept secur
 
 Poor programming can give many attack vectors for hackers and other malicious actors to exploit. For the small projects we consider in this course, attacks on the code likely won't be a major concern, but they may be a substantial design constraint in bigger real-world projects. 
 
-When discussing :ref:`using code from the Internet <code_security>` we already highlighted that you should take care when downloading and running external code. A key :ref:`motivation <motivation>` for introducing Rust is to set you on a path to producing code with fewer memory safety issues which could lead to security vulnerabilities. 
+When discussing :ref:`using code from the Internet <code_security>` we already highlighted that you should take care when downloading and running external code. A key :ref:`motivation <motivation>` for introducing Rust in addition to C/C++ is to set you on a path to producing code with fewer memory safety issues which could lead to security vulnerabilities. 
 
 
 Sustainability
@@ -18,7 +18,7 @@ Environmental and financial sustainability is very important. All of our compute
 
 It is estimated that about `10% of the world's electricity is used on Information and Communications Technologies <https://doi-org.manchester.idm.oclc.org/10.1145/3613207>`_. Each query on ChatGPT is (roughly) equivalent to `keeping a light on for 5 minutes <https://medium.com/@zodhyatech/how-much-energy-does-chatgpt-consume-4cba1a7aef85>`_. Data centres also use a lot of water for cooling. In addition to the environmental impact, electricity costs money, as does cooling to manage the temperature of computers. 
 
-There's then the electronic waste impact. Code which can run using only very few resources will likely be able to run on older harder, keeping it in service for longer and reducing how much we have to throw away. In programming there's often more than one way to achieve the same function. We'll touch briefly on computational complexity, but for big projects you might need to dig deeper and look at how to optimize the run time, or other resource requirements, of your code with an eye on the sustainability impact. 
+There's then the electronic waste impact. Code which can run using only very few resources will likely be able to run on older hardware, keeping it in service for longer and reducing how much we have to throw away. In programming there's often more than one way to achieve the same function. We'll touch briefly on computational complexity, but for big projects you might need to dig deeper and look at how to optimize the run time, or other resource requirements, of your code with an eye on the sustainability impact. 
 
 In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet, and ensure prosperity for all. Being a fundamental technology with many applications, there are likely examples of computer programs which contribute towards all 17 goals. 
 
