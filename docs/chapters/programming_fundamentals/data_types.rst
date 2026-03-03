@@ -44,7 +44,7 @@ There are a number of common data types, and we'll introduce the properties of s
 
 Dynamically typed vs. statically typed
 --------------------------------------
-In general, Python is *dynamically typed*. That means, it looks at our code for us, and automatically works out which data type to use and this can change on-the-fly. In contrast, Rust is *statically typed*. We have to explicitly say what data type to use for a piece of data. For our purposes, you may see *weakly typed* and *strongly typed* being used in place of dynamic and static.  
+In general, Python is *dynamically typed*. That means, it looks at our code for us, and automatically works out which data type to use and this can change on-the-fly. In contrast, C/C++/Rust are *statically typed*. We have to explicitly say what data type to use for a piece of data. For our purposes, you may see *weakly typed* and *strongly typed* being used in place of dynamic and static.  
 
 Being statically typed makes it more work for the programmer, as you have to enter this information each time you define a new variable (and think about what you want the data type to be!). The resulting program can then run faster, as the computer doesn't have to figure out the data type for you. It can also help avoid mistakes. If you try and put, say, text in a variable expecting a number, this is easy for the computer to automatically spot that there'a bug in the code. 
 

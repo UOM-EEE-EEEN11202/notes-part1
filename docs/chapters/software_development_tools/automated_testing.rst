@@ -50,4 +50,4 @@ To help with the above, there are *testing frameworks* such as `pytest <https://
 
 .. admonition:: This course
 
-    We will spend some time in the labs looking at unit testing in both Python and Rust.
+    We will spend some time in the labs looking at unit testing.

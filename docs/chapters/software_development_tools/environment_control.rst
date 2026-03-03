@@ -8,7 +8,7 @@ Version control is for keeping track of the code and documentation files that we
 
 Often there might be a wide range of other files or information that are needed to make your code work, beyond the main code files themselves. In particular, there is the *version* of the programming language and tools (IDE, operating system, etc.) that you use. 
 
-Python has lots of different versions (e.g. 3.7, 3.10, 3.14), changing as new features are added. A new version is released each year, which then has active support for 2 years, and security support for 5 years. Rust is released in *editions* every 3 years and also has versions released more frequently. We'll also find it's common to load external code as part of a Python or Rust program. Each one of these *modules* or *libraries* will also have a version, which changes over time. 
+Python has lots of different versions (e.g. 3.7, 3.10, 3.14), changing as new features are added. A new version is released each year, which then has active support for 2 years, and security support for 5 years. New versions of C/C++ don't have fixed schedule. It's common to use C99, but there are newer versions too. We'll also find it's common to load external code as part of a program. Each one of these *modules* or *libraries* will also have a version, which changes over time. 
 
 Environment control helps us lock the development environment, ensuring that you're using a fixed, known set of versions for everything. If there are multiple people all working on the same project, environment control also helps ensure everyone is using the same versions. 
 
@@ -22,7 +22,7 @@ There are several parts to environment control:
 
 #. (Python only.) There is a *virtual environment* which defines the specific version of Python and the various modules being used. You may have multiple virtual environments if you have code that needs different versions of Python to run. Typically we have one virtual environment per *project*, and it's up to the user to define how big or small each project is. Generally it's bad practice to just have one global virtual environment for all of your work. You'll probably quickly find you have conflicts in which versions of modules are needed in order for different parts of the code to work. 
 
-#. There is a *configuration file* setting up the project, listing its *dependencies*. That is, what version of the programming language is being used; and whether there are any external modules that are being used to add functionality, and if so whether there are any constraints on which versions can be used. In Python, there are a number of options, but these would generally be listed in a :console:`pyproject.toml` file (or a :console:`requirements.txt` file in older projects). In Rust, the configuration is kept in a :console:`Cargo.toml` file. 
+#. There is a *configuration file* setting up the project, listing its *dependencies*. That is, what version of the programming language is being used; and whether there are any external modules that are being used to add functionality, and if so whether there are any constraints on which versions can be used. In Python, there are a number of options, but these would generally be listed in a :console:`pyproject.toml` file (or a :console:`requirements.txt` file in older projects). With C/C++ `CMakeLists.txt` is used if using :console:`cmake`. In Rust, the configuration is kept in a :console:`Cargo.toml` file. 
 
 .. admonition:: This course
 

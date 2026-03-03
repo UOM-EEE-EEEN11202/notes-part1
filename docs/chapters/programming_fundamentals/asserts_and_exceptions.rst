@@ -4,9 +4,6 @@
 .. role:: console(code)
    :language: console
 
-.. role:: rust(code)
-   :language: rust
-
 Error handling (asserts and exceptions)
 =======================================
 
@@ -73,19 +70,6 @@ Commonly the above Python syntax isn't used directly. *try-except* (also known a
             f.write("world")
 
 The above is an example of a *recoverable* error. If the file to use doesn't exist, it switches to making a new file instead. You can also have *unrecoverable* errors, where it's not meaningful for the program to keep going. Here the program just needs to stop (first closing any open files, or network connections, or similar) and then pass an error message to the user.  
-
-Rust separates between *recoverable* and *unrecoverable* errors more than Python does. It has a dedicated error handling data type :rust:`Result<T, E>`. This gives an object, which contains the successful output, :rust:`T` here; and any errors produced, called :rust:`E` here. You can then check whether the result was :rust:`Ok` in which case you perform one action, or whether the result contained an error, in which case you carry out a different action. For example:
-
-.. code-block:: rust
-
-   let file_result = File::open("file.txt");
-
-   let file = match file_result {
-       Ok(file) => file,
-       Err(error) => panic!("Problem opening the file: {error:?}"),
-    };
-
-Here the aim is to set :rust:`file` to be the opened :rust:`"file.txt"`. Rather than just doing this in a single line of code, to allow us to check for errors (such as the file not existing) :rust:`File::open("file.txt")` returns a :rust:`Result<>` data type into an intermediate variable called :rust:`file_result`. There is then a :rust:`match` function. If the contents of :rust:`file_result` indicate the operation worked, :rust:`Ok()`, :rust:`file` is set as was wanted. If they indicate that an error occurred, :rust:`Err()`, :rust:`panic!()` is called. :rust:`panic!()` causes the program to terminate, and in this case display an error message. More generally this gives you a place for any *error handling code* to determine what to do if an error occurs.
 
 It's up to you as the program designer to decide how much error handling you want to do. This is an important part of the overall program design - we can't assume that actions are always successful, particularly when they involve interacting with the outside world. We may want to open a file, but have the filename wrong. We may want to access a resource on the Internet, but our network connection isn't working. For all of these type of cases you likely want to add some error handling code that the program terminates gracefully rather than just crashing. 
 

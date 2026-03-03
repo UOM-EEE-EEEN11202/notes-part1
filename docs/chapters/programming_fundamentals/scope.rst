@@ -1,6 +1,12 @@
 .. role:: python(code)
    :language: python
 
+.. role:: c(code)
+   :language: c
+
+.. role:: cpp(code)
+   :language: cpp
+
 .. role:: rust(code)
    :language: rust
 
@@ -15,7 +21,7 @@ We don't want all of our data and functions to be available everywhere: it's bad
 
 Scope
 -----
-In most programming languages a scope block is defined by curly brackets :rust:`{}`. In Python it's defined by indented white space (usually 4 spaces). To give a Python example, the below has two functions:
+In most programming languages a scope block is defined by curly brackets :c:`{}`. In Python it's defined by indented white space (usually 4 spaces). To give a Python example, the below has two functions:
 
 .. code-block:: python
 
@@ -50,7 +56,7 @@ Namespaces
 ----------
 *Namespaces* help us to re-use function names in different parts of a program. Apart from a few core parts of a programming language, and functions we've made ourselves in the same code file, functions have to explicitly be brought into scope in order for our program to be able to see and use them.
 
-In Python this is done with :python:`import`. Rust has :rust:`use`. For example, in Python it's common to have code such as
+In Python this is done with :python:`import`. C/C++ have :c:`#include`, and C++ :cpp:`using namespace`. Rust has :rust:`use`. For example, in Python it's common to have code such as
 
 .. code-block:: python
 
@@ -60,8 +66,10 @@ This brings the :ref:`library <libraries>` :python:`numpy` into scope, and gives
 
 In languages other than Python it's common to use two colons :rust:`::` to separate steps in the namespace. For example, you might have code such as
 
-.. code-block:: rust
+.. code-block:: cpp
+   #include <iostream>
 
-   use std::io;
+   ... 
+   std::cout << "Hello world" << std::endl;
 
-In Rust, this brings a wide number of input/output functions, which are part of the :ref:`standard library <standard_library>`, into scope.
+This brings a wide number of input/output functions, which are part of the :ref:`standard library <standard_library>`, into scope.

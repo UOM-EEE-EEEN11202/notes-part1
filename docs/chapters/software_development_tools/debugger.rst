@@ -6,7 +6,7 @@
 Debugger
 ========
 
-The debugger is for analyzing your code, while it is running. It puts the code into a special state which lets you look at (say) the value of a variable. This makes the code slower to execute, as everything needs to be logged, but is very useful for examining what's going on when things aren't working as expected. Most debuggers then let you then step through the code, say line-by-line, to let you pin-point errors and, hopefully, fix them. An example in Rust is shown below.
+The debugger is for analyzing your code, while it is running. It puts the code into a special state which lets you look at (say) the value of a variable. This makes the code slower to execute, as everything needs to be logged, but is very useful for examining what's going on when things aren't working as expected. Most debuggers then let you then step through the code, say line-by-line, to let you pin-point errors and, hopefully, fix them. An example is shown below.
 
 .. figure:: debugger.png
   :width: 800

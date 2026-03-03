@@ -1,8 +1,8 @@
 .. role:: console(code)
    :language: console
 
-.. role:: rust(code)
-   :language: rust
+.. role:: c(code)
+   :language: c
 
 
 Integers
@@ -94,4 +94,4 @@ If using Windows, you can use the *Programmer* view of the Calculator app to pre
 
 Which should I use
 ------------------
-If you have to specify a type of integer, e.g. in Rust, probably use 32 bits :rust:`i32` as the default starting point. Then think about whether you're dealing with numbers which can only be positive, e.g. the number of students in a class. If so, switch to using an unsigned integer :rust:`u32`. Then think about whether you're likely to deal with such large numbers that you might get overflow. If so, take the number of bits used up. This will come at the cost of performance though. Bigger isn't better if you don't need such high numbers.
+If you have to specify a type of integer, :c:`int` if probably the default starting point. Then think about whether you're dealing with numbers which can only be positive, e.g. the number of students in a class. If so, switch to using an unsigned integer :c:`uint`. For more advanced programs, there are more data types that let you specify exactly how many bits to use. We'll see some of these in the labs. 

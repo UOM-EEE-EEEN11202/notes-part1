@@ -53,7 +53,7 @@ How strings are stored in a computer is a little more complex than numbers. We'v
 
 Consequences of this storage
 ----------------------------
-Working with strings can be a bit harder than you might expect, particularly with lower level languages such as C/C++ or Rust. There are two core drivers of this:
+Working with strings can be a bit harder than you might expect, particularly with lower level languages. There are two core drivers of this:
 
 - Different text encodings might be used. C, for example pre-dates UTF-8 and so defaults to ASCII. There are :ref:`libraries <libraries>` that add suitable support for additional characters. 
 - We don't necessarily know how long a string is in advance. There may be different numbers of characters (say in a name), and different characters may need different numbers of types to store them. This makes it harder to allocate memory for strings.

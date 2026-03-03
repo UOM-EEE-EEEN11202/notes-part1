@@ -69,8 +69,3 @@ For Python, but not other languages, a bit of additional code is actually needed
 The :python:`if __name__ == "__main__":` is just part of the *boilerplate* code that we need to make things work. This example is specific to Python. It's not needed in other programming languages, they will pick up the main function automatically. Although, other languages may well need their own boilerplate code in different places to make things work. 
 
 In general, best practice is to put as little as possible into the :python:`main` function. It's better to do whatever setup is needed in :python:`main`, but then use other functions that you've made yourself to carry out the main body of work. This fits in better with our testing strategy - each your your functions can be made and tested with :ref:`unit tests <unit_testing>`, and then the more complicated integration tests only need to focus on when everything comes together to in :python:`main`, and :python:`main` is kept very short to help with this. 
-
-
-Closures
---------
-*Closures* are a special type of function, fairly common in Rust programming. We won't cover them more here, but will meet them when we get to those parts of the labs. We'll cover the theory of them then, once you've got a bit more hands on experience of ordinary functions. 

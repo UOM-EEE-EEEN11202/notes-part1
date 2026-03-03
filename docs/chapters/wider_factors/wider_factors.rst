@@ -9,7 +9,7 @@ In the UK, there are laws which govern how some information has to be kept secur
 
 Poor programming can give many attack vectors for hackers and other malicious actors to exploit. For the small projects we consider in this course, attacks on the code likely won't be a major concern, but they may be a substantial design constraint in bigger real-world projects. 
 
-When discussing :ref:`using code from the Internet <code_security>` we already highlighted that you should take care when downloading and running external code. A key :ref:`motivation <motivation>` for our focus on Rust, with a smaller portion of C/C++, is to set you on a path to producing code with fewer memory safety issues which could lead to security vulnerabilities. 
+When discussing :ref:`using code from the Internet <code_security>` we already highlighted that you should take care when downloading and running external code. A key :ref:`motivation <motivation>` for introducing Rust is to set you on a path to producing code with fewer memory safety issues which could lead to security vulnerabilities. 
 
 
 Sustainability

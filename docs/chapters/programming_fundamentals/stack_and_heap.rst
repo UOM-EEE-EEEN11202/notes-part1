@@ -2,7 +2,7 @@
 
 Stack and heap memory
 =====================
-As you move to more advanced programming, as we will in the second half of the course when we consider Rust and brief introductions to C/C++ a lot of the focus is on *memory management*. You get high performance code you have to help manually manage the memory that the computer has. We thus need to know a bit about how the memory is organized and accessed. 
+As you move to more advanced programming, as we will in the second half of the course a lot of the focus is on *memory management*. You get high performance code you have to help manually manage the memory that the computer has. We thus need to know a bit about how the memory is organized and accessed. 
 
 Inside a computer, memory is divided into two parts: *stack* memory and *heap* memory. These are *software level* concepts, it's how the computer chooses to organise it's memory, rather than reflecting how the memory is physically present. These two different types of memory work, and are optimized, in different ways. For lower level programming, such as in C, C++, and Rust, making suitable use of the stack vs. the heap is an important part of programming. 
 
@@ -38,6 +38,6 @@ In contrast, the heap is a larger memory area that your program can request to u
 
 Heap memory is also available to other threads on the computer, and so important to use when writing multi-threaded programs. 
 
-As soon as you move beyond small simple programs in languages such as C, C++, and Rust, you probably want to be working with heap memory. Each language has its own commands for requesting and interacting with heap memory, generally via :ref:`pointers or smart pointers <pointers>`. We will see how to do this in the labs.  
+As soon as you move beyond small simple programs in languages such as C, C++, and Rust, you probably want to be working with heap memory. Each language has its own commands for requesting and interacting with heap memory, generally via :ref:`pointers or smart pointers <pointers>`. 
 
 The disadvantage of heap memory is that it is slow compared to stack memory. For example, there is overhead in searching for available memory space, whereas the stack just uses the next memory location along. Frequent allocation and deallocation of memory can also lead to fragmentation, where things are stored in small, non-contiguous blocks, and this decreases the performance of getting things from memory. If you want to increase the size of an object, but the next memory location up is already being used to store something else, there can be a lot of overhead in finding a new memory location that's big enough and moving everything to that location. When feasible, you probably want to avoid dynamically growing items on the heap. Instead, reserve as much memory as you need in advance, or reserve large-ish (whatever that means for your program size) blocks in advance rather than doing lots of small requests.

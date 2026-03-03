@@ -4,9 +4,6 @@
 .. role:: python(code)
    :language: python
 
-.. role:: rust(code)
-   :language: rust
-
 .. _libraries:
 
 Modules, libraries, and similar
@@ -25,7 +22,7 @@ Standard library
 ----------------
 Most programming languages only have a very limited number of commands enabled by default. This helps keep the resulting programs small and limits the potential attack vector for security bugs and similar. 
 
-The *standard library* is installed automatically, whenever you set up your programming tools/environment, and so it always available for your code to use. To use functions in the standard library you need need to add :python:`import` or :rust:`use`, or similar, the parts that you want. That is, you have to explicitly say which parts you want to use.
+The *standard library* is installed automatically, whenever you set up your programming tools/environment, and so it always available for your code to use. To use functions in the standard library you need need to add :python:`import` or similar, the parts that you want. That is, you have to explicitly say which parts you want to use.
 
 For example, in Python you might add
 
@@ -39,7 +36,15 @@ to add maths functions to the code. In Rust you might add
 
    use std::io;
 
-to add functions for reading input from the command line, and displaying output back to the terminal. 
+to add functions for reading input from the command line, and displaying output back to the terminal.
+
+It is similar in C++. In C you typically add a *header file* to get access to the standard library functions. For example, you might add
+
+.. code-block:: c
+
+   #include <stdio.h>
+
+to get access to the standard library functions for input and output.
 
 There are lots of functions available in the standard library. We won't cover them all here, but you will encounter lots as you move through the course.
 
@@ -50,9 +55,9 @@ There are many libraries available on the Internet to extend the functionality o
 
 For Python, `PyPi <https://pypi.org/>`_ is a common repository for packages. Indeed it is likely the default one used unless you change your Python configuration. At the command line there is a Python tool called :console:`pip` which you can use to install additional modules from the Internet. You add these to your code with an :python:`import` command. We'll see examples of doing this in the labs. 
 
-For Rust, `crates.io <https://crates.io/>`_ will be the default repository for packages. In Rust, you list :rust:`[dependencies]` in the :console:`Cargo.toml` project configuration file and add these to your code with the :rust:`use` command. Again, we'll see examples of doing this in the labs. 
-
 For C/C++, `vcpkg <https://vcpkg.io/en/>`_ is commonly used. 
+
+For Rust, `crates.io <https://crates.io/>`_ will be the default repository for packages.
 
 
 Code from online sites such as GitHub

@@ -4,6 +4,9 @@
 .. role:: rust(code)
    :language: rust
 
+.. role:: c(code)
+   :language: c
+
 .. _docstrings:
 
 Docstrings and doctests
@@ -24,9 +27,9 @@ In Python docstrings are blocks of text inside three apostrophes :python:`'''`, 
 	...
 	# This is a comment. It won't be included in automatically generated documentation. 
     
-In Rust the equivalent uses three forward slashes :rust:`///`
+In C/C++/Rust the equivalent uses three forward slashes :c:`///`, although not all tools recognize this syntax. 
 
-.. code-block:: rust
+.. code-block:: c
 
 	/// This is a docstring.
 	/// Text and code in this block will be included in documentation.
@@ -35,11 +38,11 @@ In Rust the equivalent uses three forward slashes :rust:`///`
 
 In this type of documentation for the user, it's often useful to give some examples. Of course it's important that these examples are correct! *doctests* are a type of :ref:`unit testing <unit_testing>` where the code given inside a docstring is tested to see whether it works (as opposed to testing the code in the main file). 
 
-In Rust, blocks of code which are inside three apostrophes :rust:`'''`, and also inside a docstring, can be tested using doctest tools. An example in Rust code might be
+In Rust, but not the other languages we'll look at, blocks of code which are inside three apostrophes :rust:`'''`, and also inside a docstring, can be tested using doctest tools. An example in Rust code might be
 
 .. code-block:: rust
 
-    /// This is a dockstring.
+    /// This is a docstring.
     /// Text and code in this block will be included in documentation.
     /// ```
     /// let i = 0;
@@ -48,4 +51,4 @@ In Rust, blocks of code which are inside three apostrophes :rust:`'''`, and also
 
 .. admonition:: This course
 
-   We will have examples of docstrings and and a handful of doctests. We expect you to know that they exist, and to use them where appropriate. 
+   We will have examples of docstrings, but no doctests. We expect you to know that docstrings exist, and to use them where appropriate. 

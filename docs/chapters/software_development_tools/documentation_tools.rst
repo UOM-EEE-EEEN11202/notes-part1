@@ -16,6 +16,6 @@ The different tools available each have their own syntax and detailed methods of
 
    For this course, we don't expect you to use, or have any specific knowledge on these types of documentation tools. 
    
-   If interested, for these notes, Parts 0, 1 and 2 are written using `Sphinx <https://www.sphinx-doc.org/en/master/>`_. These are the more Python parts of the notes, and so the documentation is using Sphinx as a tool written in Python. Part 3, focusing more on Rust, is written using `mdBook <https://rust-lang.github.io/mdBook/>`_, a documentation tool written in Rust. 
+   If interested, for these notes, Parts 0, 1 and 2 are written using `Sphinx <https://www.sphinx-doc.org/en/master/>`_. These are the more Python parts of the notes, and so the documentation is using Sphinx as a tool written in Python. Part 3 is written using `mdBook <https://rust-lang.github.io/mdBook/>`_, a documentation tool written in Rust. 
    
    For all parts of the notes you can click on the GitHub (:fab:`github`) icon at the top of the page if you want to see the source code for how we've made use of these tools. 

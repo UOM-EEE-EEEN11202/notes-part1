@@ -26,11 +26,6 @@ In C/C++ :C:`NULL` is used to the same effect.
 It's useful to have a dedicated data type to represent missing data, rather than using something like :python:`0` or an empty string :python:`""`.
 
 
-Some
-----
-Rust introduces a :rust:`Some` type. This lets you check that you have got something, without necessarily caring what it is at that point in time. It might be an integer, or a string or something else. :rust:`Some` just lets you represent that you have something present. This can be very helpful when you have multiple data types that a function might work with.
-
-
 NaN
 ---
 NaN stands for *Not a Number*. This is a special floating point value defined in the IEEE 754 floating point standard. It is used to represent missing or undefined numerical data. For example, if we try and compute :math:`0/0`, the result is :python:`NaN`. If you're doing a sum, and the result isn't value for some reason, you'll often get :python:`NaN` as the result.
