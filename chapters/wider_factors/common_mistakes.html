@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB" data-content_root="../../">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>7.1. Common mistakes &mdash; notes-part1 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/dist/fontawesome.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dist/theme.css?v=310cf088" />
+      <link rel="stylesheet" type="text/css" href="../../_static/uom_custom.css?v=79662979" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-light.css?v=5c77cf45" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments-theme-dark.css?v=54fad279" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+            <link rel="index" title="Index" href="../../genindex.html" />
+            <link rel="search" title="Search" href="../../search.html" />
+            <link rel="top" title="notes-part1 0.1 documentation" href="#" />
+            <link rel="up" title="7. Wider factors to consider" href="../wider_factors.html" />
+            <link rel="next" title="7.2. Security and risk" href="wider_factors.html" />
+            <link rel="prev" title="7. Wider factors to consider" href="../wider_factors.html" />
+    </head>
+<body>
+    <script type="text/javascript" src="../../_static/dist/blocking.js"></script>
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script>
+        try {
+            var font_store = localStorage.getItem('uom-sphinx-font');
+            if (font_store.startsWith('"') && font_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-font', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+        try {
+            var theme_store = localStorage.getItem('uom-sphinx-theme');
+            if (theme_store.startsWith('"') && theme_store.endsWith('"')) {
+                localStorage.setItem('uom-sphinx-theme', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>   
+    <!-- Set font/code theme before content loads to prevent a flash --> 
+    <script>
+        var html = document.querySelector('html');
+        var body   = document.querySelector('body');
+        var font;
+        try { font = localStorage.getItem('uom-sphinx-font'); } catch(e) { }
+        if (font === null || font === undefined) { font = "font-roboto"; }
+        if (font === "font-opendyslexic") {
+            html.classList.remove('font-alt');
+            body.classList.remove('font-alt');
+        } else {
+            html.classList.add('font-alt');
+            body.classList.add('font-alt');
+        }
+        try { theme = localStorage.getItem('uom-sphinx-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) { theme = "theme-light"; }
+        if (theme === "theme-dark") {
+                html.classList.remove('theme-light');
+                body.classList.remove('theme-light');
+                html.classList.add('theme-dark');
+                body.classList.add('theme-dark');
+            } else {
+                html.classList.remove('theme-dark');
+                body.classList.remove('theme-dark');
+                html.classList.add('theme-light');
+                body.classList.add('theme-light');
+            }
+        </script>
+    <header id="uom_header_title" class="container-fluid bg-primary">
+        <a class="btn btn-sm btn-light skip-to-content-link" href="#main">Skip to content</a>
+        <div class="container-fluid">
+            <div class="navbar navbar-expand-lg navbar-dark font-weight-bold">
+                    <a href="/"
+                        title="University of Manchester logo"
+                        class="logo navbar-brand"
+                    >
+                        <img src="../../_static/./img/uom_logo_white.png" width="88" alt="University of Manchester logo"
+                            class="logo-img"
+                        />
+                        EEEN11202 course notes
+                    </a>
+                
+                
+                <button class="navbar-toggler btn btn-primary d-lg-none" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-12 col-lg-3 sidebar-container">
+                <div id="collapseSidebar" class="collapse sticky-top d-lg-block pt-5 pr-lg-4">
+<div id="searchbox" class="searchbox mb-6 px-1" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get" role="search">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text border-right-0 bg-white py-3 pl-3 pr-2"><span class="fas fa-search"></span></div>
+            </div>
+            <input class="form-control py-3 pr-3 pl-1 h-100 border-left-0" type="search" name="q" placeholder="Search notes part 1" aria-label="Search notes" id="searchinput" />
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div><div class="site-toc">
+    <nav class="toc mt-3" aria-label="Main menu">
+        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">0. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../motivation.html">1. Motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/why_programming.html">1.1. Why study programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/language_types.html">1.2. Types of programming language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motivation/our_choices.html">1.3. Our choices for this course</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_hardware.html">2. Computer hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer_software.html">3. Computer software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/major_operating_systems.html">3.1. Major operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/gui_and_cli.html">3.2. User interfaces: graphical and the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computer_software/files_and_folders.html">3.3. Files, folders, and filesystems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_lifecycle.html">4. Software lifecycle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/requirements_capture.html">4.1. Requirements capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/software_architecture.html">4.2. Software architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/testing_and_debugging.html">4.3. Testing and debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/release.html">4.4. Release, support, maintenance, and bug fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/documentation.html">4.5. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_lifecycle/quality_management.html">4.6. Quality management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../software_development_tools.html">5. Software development tools fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ide.html">5.1. Integrated Development Environments (IDEs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/comments.html">5.2. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/docstrings.html">5.3. Docstrings and doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/documentation_tools.html">5.4. Documentation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/static_code_analysis.html">5.5. Static code analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/debugger.html">5.6. Debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/profiler.html">5.7. Profiler and computational complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/version_control.html">5.8. Version control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/environment_control.html">5.9. Environment control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/automated_testing.html">5.10. Unit and integration testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/continuous_integration.html">5.11. Continuous integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/formatters.html">5.12. Formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/code_reviews.html">5.13. Code reviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/buddy_programming.html">5.14. Buddy programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/libraries.html">5.15. Modules, libraries, and similar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/licensing.html">5.16. Software licenses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/pseudocode.html">5.17. Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software_development_tools/ai_tools.html">5.18. Co-pilot and other AI tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../programming_fundamentals.html">6. Programming fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/scripts.html">6.1. Scripts vs. programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/functions.html">6.2. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/mutability.html">6.3. Mutable vs. immutable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/variables.html">6.4. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/objects.html">6.5. Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/data_types.html">6.6. Data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/booleans.html">6.6.2.1. Booleans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/integers.html">6.6.2.2. Integers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/floating_point_numbers.html">6.6.2.3. Floating point numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/strings.html">6.6.2.4. Strings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../programming_fundamentals/text_encoding.html">6.6.2.4.3.1. Text encoding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../programming_fundamentals/working_with_strings.html">6.6.2.4.5.1. Special characters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../programming_fundamentals/working_with_strings.html#escape-sequences">6.6.2.4.5.2. Escape sequences</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../programming_fundamentals/working_with_strings.html#raw-strings">6.6.2.4.5.3. Raw strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../programming_fundamentals/working_with_strings.html#number-formatting">6.6.2.4.5.4. Number formatting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/none_some.html">6.6.2.5. Null data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/datetimes.html">6.6.2.6. Datetimes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming_fundamentals/dataframes.html">6.6.2.7. Dataframes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/conditionals_and_loops.html">6.7. Conditionals and loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/scope.html">6.8. Scope and namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/asserts_and_exceptions.html">6.9. Error handling (asserts and exceptions)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/design_patterns.html">6.10. Design patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/copies.html">6.11. Shallow vs. deep copies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/memory_management.html">6.12. Memory management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/stack_and_heap.html">6.13. Stack and heap memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/pointers.html">6.14. Pointers and smart pointers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/lifetimes.html">6.15. Lifetimes, borrowing, and “modern” approaches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming_fundamentals/advanced_topics.html">6.16. More advanced topics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../wider_factors.html">7. Wider factors to consider</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.1. Common mistakes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wider_factors.html">7.2. Security and risk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wider_factors.html#sustainability">7.3. Sustainability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wider_factors.html#equality-diversity-inclusion-and-accessibility">7.4. Equality, Diversity, Inclusion and Accessibility</a></li>
+</ul>
+</li>
+</ul>
+
+    </nav>
+    <template data-toggle-item-template>
+        <button class="btn btn-sm btn-link toctree-expand" type="button">
+            <span class="sr-only">Toggle menu contents</span>
+        </button>
+    </template>
+</div><div>
+  <p>
+    <img src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="University of Manchester logo" style="width: 100vw; min-width: 100px;">
+  </p>
+</div>
+                    <div class="d-lg-none border-bottom">
+                        
+                    </div>
+                </div>
+            </aside>
+            <div class="col-12 col-lg-9 pt-5">
+                <header id="uom_header_buttons" class="row align-items-baseline">
+                    <div class="col">
+                        <nav aria-label="breadcrumb">
+    <ol class="breadcrumb m-0 p-0 bg-transparent">
+        <li class="breadcrumb-item"><a href="../../index.html">Part 1</a></li>
+            <li class="breadcrumb-item"><a href="../wider_factors.html"><span class="section-number">7. </span>Wider factors to consider</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><span class="section-number">7.1. </span>Common mistakes</li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-auto mt-3 mt-lg-3">
+                        <noscript>
+                            <p>JavaScript is required to toggle light/dark mode..</p>
+                        </noscript>
+                        <button id="wagtail-theme" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="dark-only"><i class="fas fa-sun"></i> Light mode</span>
+                            <span class="light-only"><i class="fas fa-moon"></i> Dark mode</span>
+                        </button>
+                        <button id="uom_alt_font_button" class="btn btn-sm btn-light text-decoration-none" type="button">
+                            <span class="alt-only"><i class="fas fa-strikethrough"></i> Default font</span>
+                            <span class="default-only"><i class="fas fa-font"></i> OpenDyslexic font</span>
+                        </button>
+    <a class="btn btn-sm btn-light text-decoration-none" href="https://github.com/UOM-EEE-EEEN11202/notes-part1/tree/main/docs/chapters/wider_factors/common_mistakes.rst" rel="nofollow">
+        <span class="btn-icon"><span class="fab fa-github"></span></span>
+        <span class="btn-text">Edit on GitHub</span>
+    </a>
+    <a class="btn btn-sm btn-light text-decoration-none" href="../../_sources/chapters/wider_factors/common_mistakes.rst.txt" rel="nofollow">
+        <span class="btn-icon"><span class="fas fa-code"></span></span>
+        <span class="btn-text">View source</span>
+    </a>
+                        
+                    </div>
+                </header>
+                <div class="row" >
+                    <div class="col-12">
+                        <hr class="w-100 my-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-9 order-last order-lg-first rst-content">
+                        <main role="main" id="main">
+    <section id="common-mistakes">
+<h1><span class="section-number">7.1. </span>Common mistakes<a class="headerlink" href="#common-mistakes" title="Link to this heading">¶</a></h1>
+<p>We’ve been teaching programming to first year undergraduates for a number of years now, and so have seen some of the common early mistakes that people tend to make. Here we’ve listed a few.</p>
+<p>This course is intended to take about 200 hours in total. I would tend to think of programming as a 10,000 hour skill. To become an expert takes a long time, and some of the below tend to creep into code because they make it quicker and easier to write in the short term, at the possible cost of building in problems for the future. A challenge in a short course like this is that it’s short, you don’t get to that future point when these things matter more.</p>
+<p>Indeed, you’ll see some examples of the below in different places in these notes. For hard coding, for example, sometimes we’re giving just a snippet of code, and it’s easier to hard code values into this rather than making you remember the value of something you read a while ago. Similarly, we won’t do lots of input validation in the code examples, as it makes the code examples longer harder to see the core concepts. These are shortcuts, but its easy for shortcuts to become habits.</p>
+<section id="hard-coding">
+<h2><span class="section-number">7.1.1. </span>Hard coding<a class="headerlink" href="#hard-coding" title="Link to this heading">¶</a></h2>
+<p>Hard coding is when a raw value is used, rather than being put into a variable with a meaningful name. For example, say we have a program to calculate the area of a circle. In Python a hard coded version might look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="n">area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The area of the circle is </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here the radius of the circle, 5, is hard coded into the formula. If we want to change this later, we’ve go to remember to change both appearances of 5. Here they’re on the same line and so it’s easy to spot that the 5 is present twice, but in longer code the instances could be hundred or thousands of lines apart, and indeed the 5 might appear many times. More robust code will be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="n">radius</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The area of the circle is </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now, if the variable <code class="code highlight python docutils literal highlight-python"><span class="n">radius</span></code> needs to change, we only need to change it in one place. The code is also more readable, as it’s clear what the 5 represents.</p>
+<p>A variant on this is duplicate code. Continuing the above example, say we wanted to calculate the area of two circles. A hard coded version might be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="n">radius</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The area of the circle is </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">radius</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The area of the circle is </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here we have the same equation present twice. If we wanted to change the formula later, we’d have to remember to change it in both places. A better approach is to put the code into a <a class="reference internal" href="../programming_fundamentals/functions.html#functions"><span class="std std-ref">function</span></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span>
+
+<span class="n">area</span> <span class="o">=</span> <span class="n">circle_area</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The area of the circle is </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">area</span> <span class="o">=</span> <span class="n">circle_area</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The area of the circle is </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In general, the rule (taken from David Thomas and A. Hunt, “The pragmatic programmer,” 2nd edition, Addison-Wesley, Boston, 2019) is <em>don’t repeat yourself</em>. If you’re using the same value more than once, put it in a variable. If you’re using the same code more than once, put it in a function. This reduces the chance of mistakes, and makes code easier to read and maintain.</p>
+<p>A last variant on the above is hard coded file paths. For example, we might have some code like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\alex\OneDrive - The University of Manchester\work\github\UOM-EEE-EEEN11202\uom-eee-eeen11202-labs-labs\lab-c\frequencies.txt&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Here <code class="code highlight python docutils literal highlight-python"><span class="n">filename</span></code> is perfectly valid, <em>on my computer</em>. If someone else tries to run the code on their computer, or I get a new computer in the future, the location <code class="code highlight console docutils literal highlight-console"><span class="go">C:\Users\alex\OneDrive - The University of Manchester\</span></code> may well not exist and the code will fail. This is because it’s an <a class="reference internal" href="../computer_software/files_and_folders.html#absolute-vs-relative-addresses"><span class="std std-ref">absolute address</span></a> specific to my user name. A better approach is to use a <a class="reference internal" href="../computer_software/files_and_folders.html#absolute-vs-relative-addresses"><span class="std std-ref">relative address</span></a>, for example: <code class="code highlight python docutils literal highlight-python"><span class="o">./</span><span class="n">data</span><span class="o">/</span><span class="n">frequencies</span><span class="o">.</span><span class="n">txt</span></code>, which is relative to the location of the code itself, but still relies on the data being put in the correct place relative to the code. It might be preferable to store the data location in a settings file which the code loads in. That way, the code can stay the same in all cases, and if the data location changes, only the settings file needs to be updated. The settings file can contain anything that it user configurable/changeable.</p>
+</section>
+<section id="data-models">
+<h2><span class="section-number">7.1.2. </span>Data models<a class="headerlink" href="#data-models" title="Link to this heading">¶</a></h2>
+<p>In early code, it’s common to have lots of variables.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_1</span><span class="p">,</span> <span class="n">v_1</span> <span class="o">=</span> <span class="n">make_example_signal</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">tau</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">time_2</span><span class="p">,</span> <span class="n">v_2</span> <span class="o">=</span> <span class="n">make_example_signal</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">tau</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">student1_name</span> <span class="o">=</span> <span class="s2">&quot;Alex&quot;</span>
+<span class="n">student1_id</span> <span class="o">=</span> <span class="s2">&quot;12345&quot;</span>
+<span class="n">student2_name</span> <span class="o">=</span> <span class="s2">&quot;Caitlin&quot;</span>
+<span class="n">student2_id</span> <span class="o">=</span> <span class="s2">&quot;24601&quot;</span>
+</pre></div>
+</div>
+<p>This code will work, and is fine for small cases, but is very repetitive, and prone to errors. A single typo, <code class="code highlight python docutils literal highlight-python"><span class="mi">1</span></code> instead of <code class="code highlight python docutils literal highlight-python"><span class="mi">2</span></code>, and suddenly we’re mixing up data. A better approach is to think about the data model, and use a suitable data structure to group related data together.</p>
+<p>For <code class="code highlight python docutils literal highlight-python"><span class="n">v_1</span></code> and <code class="code highlight python docutils literal highlight-python"><span class="n">v_2</span></code>, these are both time series. <code class="code highlight python docutils literal highlight-python"><span class="n">time_1</span></code> and <code class="code highlight python docutils literal highlight-python"><span class="n">time_2</span></code> might have different actual times in them, but they’re representing the same thing - time. A time of 1 s probably means the same thing in both cases. For these, a <a class="reference internal" href="../programming_fundamentals/dataframes.html#dataframes"><span class="std std-ref">dataframe</span></a> might be suitable (particularly if time is actual clock time), or just grouping them into a dictionary or similar.</p>
+<p>For <code class="code highlight python docutils literal highlight-python"><span class="n">student1_name</span></code> and <code class="code highlight python docutils literal highlight-python"><span class="n">student1_id</span></code>, these are related pieces of data about a student. These might be better grouped into a custom <a class="reference internal" href="../programming_fundamentals/objects.html#objects"><span class="std std-ref">object</span></a>, thinking about what data and methods we want to store for each student. You’ll see how to make these in <a class="reference external" href="https://uom-eee-eeen11202.github.io/notes-part2/chapters/week5/lab_g_stage_1.html">Lab G</a>.</p>
+</section>
+<section id="input-output-validation">
+<h2><span class="section-number">7.1.3. </span>Input/output validation<a class="headerlink" href="#input-output-validation" title="Link to this heading">¶</a></h2>
+<p>When we load things in from the outside world we can’t always trust that the data is in the format we expect! Usually this means user input, or information data file. Once the data has been loaded, there will need to be a number of checks to make sure that the data is valid. These are usually skipped in short introduction code that you get in a course like this, we just let the code fail if the data isn’t valid. This is fine when learning, but probably not for anything more critical.</p>
+<p>Most input validation refers to when we get data from the outside world, but remember that for any function, the outside work is anything not in that function. Most functions will have inputs, and will need to have some checks that the input is valid before the function continues.</p>
+</section>
+<section id="error-handling">
+<h2><span class="section-number">7.1.4. </span>Error handling<a class="headerlink" href="#error-handling" title="Link to this heading">¶</a></h2>
+<p>Following on from the above, a program just crashing when something unexpected happens is fine when it just you as the user. If someone else is using the code, they probably want some more helpful information on what went wrong and why. We’ll look at error handling briefly in <a class="reference external" href="https://uom-eee-eeen11202.github.io/notes-part2/chapters/week5/lab_h_stage_1.html">Lab H</a>. As your code gets more complicated, you probably spend more time on input validation, error handling, and other factors than on the core logic of the program itself.</p>
+</section>
+<section id="testing">
+<h2><span class="section-number">7.1.5. </span>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h2>
+<p>We’ll learn about <a class="reference internal" href="../software_development_tools/automated_testing.html#automated-testing"><span class="std std-ref">unit testing</span></a> as part of the course. We mention it here as often early code is made with no tests. It is tested <em>by inspection</em>, i.e. <em>it seems to do the right thing</em>.</p>
+</section>
+<section id="documentation">
+<h2><span class="section-number">7.1.6. </span>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h2>
+<p>Like the above this is more of a reminder. Early code often has little or no <a class="reference internal" href="../software_development_tools/documentation_tools.html#documentation-tools"><span class="std std-ref">documentation</span></a>. It might have some <a class="reference internal" href="../software_development_tools/comments.html#comments"><span class="std std-ref">comments</span></a> or <a class="reference internal" href="../software_development_tools/docstrings.html#docstrings"><span class="std std-ref">docstrings</span></a>, but these are often sparse and not very helpful. This is a topic which typically isn’t covered in a course like this, but the more you write down about what the code is intended to do, and how it goes about does it, the easier it will be for you (or someone else) to understand it later.</p>
+</section>
+</section>
+
+</main>
+                        <nav aria-label="Page navigation" class="py-4 my-5 clearfix font-weight-bold border-top">
+    <a class="float-left" href="../wider_factors.html" title="Previous">
+        <span aria-hidden="true">←&nbsp;</span><span class="section-number">7. </span>Wider factors to consider
+    </a>
+    <a class="float-right" href="wider_factors.html" title="Next">
+        <span class="section-number">7.2. </span>Security and risk <span aria-hidden="true">&nbsp;→</span>
+    </a>
+</nav>
+                    </div>
+                    
+                    <nav class="col-12 col-lg-3 pb-4">
+                        <div class="sticky-top toc page-toc" aria-labelledby="page-toc-heading">
+                            <p class="font-weight-bold" id="page-toc-heading">Page contents</p>
+                            <ul>
+<li><a class="reference internal" href="#">7.1. Common mistakes</a><ul>
+<li><a class="reference internal" href="#hard-coding">7.1.1. Hard coding</a></li>
+<li><a class="reference internal" href="#data-models">7.1.2. Data models</a></li>
+<li><a class="reference internal" href="#input-output-validation">7.1.3. Input/output validation</a></li>
+<li><a class="reference internal" href="#error-handling">7.1.4. Error handling</a></li>
+<li><a class="reference internal" href="#testing">7.1.5. Testing</a></li>
+<li><a class="reference internal" href="#documentation">7.1.6. Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="uom_footer_info" class="container-fluid bg-primary text-light">
+        <div class="container">
+            <div class="row">
+        <div class="col p-4">
+            
+                <nav aria-label="Footer">
+                    <ul class="nav justify-content-center mb-2">
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://www.manchester.ac.uk/">The University of Manchester</a></li>
+                        
+                            
+                            
+                            <li class="nav-item"><a class="nav-link text-light"  href="https://canvas.manchester.ac.uk/">Canvas</a></li>
+                        
+                    </ul>
+                </nav>
+            
+            <div class="text-center">
+                    &copy; Copyright 2026 The University of Manchester. <a class="nav-link text-light" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Released under CC-BY-NC-ND 4.0 license.</a> <a class="nav-link text-light" href="https://uom-eee-eeen11202.github.io/chapters/about/copyright.html">Course copyright statement.</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </footer>
+        <script src="../../_static/documentation_options.js?v=818a811f"></script>
+        <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+        <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+        <script src="../../_static/translations.js?v=8fd896e3"></script>
+        <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
+        <script>quizdown.init({"quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
+        <script type="text/javascript" src="../../_static/dist/theme.js"></script>
+        <script type="text/javascript" src="../../_static/dist/vendor.js"></script>
+        <script type="text/javascript" src="../../_static/uom_custom.js"></script>
+        <script type="text/javascript" src="../../_static/searchtools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() { Search.loadIndex("../../searchindex.js"); });
+        </script>
+        <script type="text/javascript" id="searchindexloader"></script>
+    </body>
+</html>
