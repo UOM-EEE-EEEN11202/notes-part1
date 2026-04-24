@@ -32,14 +32,11 @@ In general, we would advise you to read these notes once, at the start of the co
 
 Links to the other parts of the course:
 
-- `Part 0 on course administration <https://uom-eee-eeen11202.github.io/>`_. 
-
-- `Part 1 (this part) on underlying theory of programming and software engineering <https://uom-eee-eeen11202.github.io/notes-part1/>`_. 
-
-- `Part 2 on general purpose computing <https://uom-eee-eeen11202.github.io/notes-part2/>`_. 
-
 .. raw:: html
 
    <ul>
+      <li><a href="https://uom-eee-eeen11202.github.io/notes-part0/">Part 0 on course administration</a>.</li>
+      <li><a href="https://uom-eee-eeen11202.github.io/notes-part1/">Part 1 on underlying theory of programming and software engineering</a>.</li>
+      <li><a href="https://uom-eee-eeen11202.github.io/notes-part2/">Part 2 on general purpose computing</a>.</li>
       <li><a href="https://canvas.manchester.ac.uk/courses/45995/files/15464159/download" rel="noopener" data-api-endpoint="https://canvas.manchester.ac.uk/api/v1/courses/45995/files/15464159" data-api-returntype="File">Part 3 on higher performance computing</a>.</li>
    </ul>
