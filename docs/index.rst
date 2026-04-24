@@ -38,4 +38,8 @@ Links to the other parts of the course:
 
 - `Part 2 on general purpose computing <https://uom-eee-eeen11202.github.io/notes-part2/>`_. 
 
-- `Part 3 on higher performance computing <https://uom-eee-eeen11202.github.io/notes-part3/>`_.
+.. raw:: html
+
+   <ul>
+      <li><a href="https://canvas.manchester.ac.uk/courses/45995/files/15464159/download" rel="noopener" data-api-endpoint="https://canvas.manchester.ac.uk/api/v1/courses/45995/files/15464159" data-api-returntype="File">Part 3 on higher performance computing</a>.</li>
+   </ul>

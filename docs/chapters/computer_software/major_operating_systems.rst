@@ -54,7 +54,7 @@ The above operating systems are are complex, multi-tasking operating systems. Th
 
 There is also a class of operating system known as *real-time operating systems* (RTOS). These are used, mainly with more embedded platforms than a standard desktop/laptop type device, when there are time critical constraints present. They are relatively common for low power sensor nodes, and Internet-of-Things devices which have a fixed, limited, set of tasks to undertake and also need to be able to respond to external inputs in a guaranteed timely manner.
 
-`FreeRTOS <https://www.freertos.org/>`_ and `Zephyr <https://zephyrproject.org/>`_ are widely used examples. There is also Real-time Linux, for example `Real-time Ubunutu <https://ubuntu.com/real-time>`_.
+`FreeRTOS <https://www.freertos.org/>`_ and `Zephyr <https://zephyrproject.org/>`_ are widely used examples. There is also Real-time Linux, for example `Real-time Ubuntu <https://ubuntu.com/real-time>`_.
 
 We won't make use of an ROTSs in this course, but mention them here for completeness. RTOSs can be very useful for the types of project undertaken by Electrical and Electronic Engineering students where power/size constraints mean a full desktop/laptop isn't suitable, and where a full desktop-like operating system wouldn't necessarily be fast enough to respond to user input in a timely manner due to background tasks also being run.
 

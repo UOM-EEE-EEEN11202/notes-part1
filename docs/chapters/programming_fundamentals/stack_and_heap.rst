@@ -11,7 +11,7 @@ Stack memory
 ------------
 When a program starts, typically it is allocated some memory on the stack. Usually a few Megabytes on a desktop/laptop type device. This is enough for getting most programs started, and may be enough for some small programs in their entirity. It's not enough for putting everything on though, particularly if you're working with large datasets. It's not intended to be enough - it should get you started and then after that you the programmer need to think about the memory management. 
 
-Memory in the stack is *contiguous*. That means that all of the memory locations are next to each other, in a stack. It in fact operates as first in, first out buffer. The *stack pointer* stores where the next free memory location is. Each time a new variable (or similar) is made, it's put on the top of the stack. The computer thus doesn't have to search for a suitable memory location, it just puts the next item on top of the big pile of items that it already has. Variables on the stack are automatically deleted when they go out of scope, say when a function exits. This is illustrated below.
+Memory in the stack is *contiguous*. That means that all of the memory locations are next to each other, in a stack. It in fact operates as first in, last out buffer (or last in, first out). The *stack pointer* stores where the next free memory location is. Each time a new variable (or similar) is made, it's put on the top of the stack. The computer thus doesn't have to search for a suitable memory location, it just puts the next item on top of the big pile of items that it already has. Variables on the stack are automatically deleted when they go out of scope, say when a function exits. This is illustrated below.
 
 .. figure:: stack.png
   :width: 800
