@@ -56,7 +56,7 @@ Namespaces
 ----------
 *Namespaces* help us to re-use function names in different parts of a program. Apart from a few core parts of a programming language, and functions we've made ourselves in the same code file, functions have to explicitly be brought into scope in order for our program to be able to see and use them.
 
-In Python this is done with :python:`import`. C/C++ have :c:`#include`, and C++ :cpp:`using namespace`. Rust has :rust:`use`. For example, in Python it's common to have code such as
+In Python this is done with :python:`import`. C/C++ have :c:`#include`, and C++ :cpp:`using`. Rust has :rust:`use`. For example, in Python it's common to have code such as
 
 .. code-block:: python
 
@@ -64,7 +64,7 @@ In Python this is done with :python:`import`. C/C++ have :c:`#include`, and C++ 
 
 This brings the :ref:`library <libraries>` :python:`numpy` into scope, and gives it the shorter name :python:`np`. Numpy is commonly used in engineering tasks and we'll see it in the labs. It provides a function sum. We access this as :python:`np.sum()` rather than just :python:`sum()`. Just :python:`sum()` is a valid Python command, but is different to :python:`np.sum()`. Having the namespace :python:`np.` helps make it explicit which function we want to use. You can think of the namespace as giving an *address* of which function to use.
 
-In languages other than Python it's common to use two colons :rust:`::` to separate steps in the namespace. For example, you might have code such as
+In languages other than Python it's common to use two colons :cpp:`::` to separate steps in the namespace. For example, you might have C++ code such as
 
 .. code-block:: cpp
    #include <iostream>
@@ -72,4 +72,14 @@ In languages other than Python it's common to use two colons :rust:`::` to separ
    ... 
    std::cout << "Hello world" << std::endl;
 
-This brings a wide number of input/output functions, which are part of the :ref:`standard library <standard_library>`, into scope.
+To use the :cpp:`cout` function in the :ref:`standard library <standard_library>`, rather than any other function which might also be caleld :cpp:`cout`. You can have:
+
+.. code-block:: cpp
+
+   #include <iostream>
+   using std::cout, std::endl;
+
+   ...
+   cout << "Hello world" << endl;
+
+to use this :cpp:`cout` directly withouth having to enter the full namespace :cpp:`std::cout` every time. 
