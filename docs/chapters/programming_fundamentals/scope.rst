@@ -67,6 +67,7 @@ This brings the :ref:`library <libraries>` :python:`numpy` into scope, and gives
 In languages other than Python it's common to use two colons :cpp:`::` to separate steps in the namespace. For example, you might have C++ code such as
 
 .. code-block:: cpp
+   
    #include <iostream>
 
    ... 

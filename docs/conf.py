@@ -24,7 +24,7 @@ extensions = [
 
 # Theme settings
 html_theme_path = ["./theme"]
-html_theme = "uom_sphinx_wagtail_theme"
+html_theme = "uom-sphinx-theme"
 html_static_path = ["_static"]
 html_theme_options = {
     "project_name": "EEEN11202 course notes",

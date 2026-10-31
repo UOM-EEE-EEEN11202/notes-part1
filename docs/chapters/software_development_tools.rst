@@ -27,6 +27,7 @@ For each sub-topic we'll give some information on the extent to which we're goin
    software_development_tools/automated_testing
    software_development_tools/continuous_integration
    software_development_tools/code_style
+   software_development_tools/formatters
    software_development_tools/code_reviews
    software_development_tools/buddy_programming
    software_development_tools/libraries
