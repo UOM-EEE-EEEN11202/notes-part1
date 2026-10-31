@@ -12,3 +12,5 @@ wheels/
 uv.lock
 
 docs/_build
+
+**/.DS_Store
