@@ -41,7 +41,7 @@ html_show_sphinx = False
 
 
 # 404 settings - note this won't display correctly locally, but will on github
-notfound_urls_prefix = "/"
+notfound_urls_prefix = "/notes-part1/"
 
 
 # Allow cross-references to other Sphinx sites
