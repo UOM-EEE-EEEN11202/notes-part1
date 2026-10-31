@@ -31,7 +31,7 @@ html_theme_options = {
     "searchbox_text": "Search notes part 1",
     "breadcrumb_home": "Part 1",
     "logo_alt": "University of Manchester logo",
-    "logo_url": "/",
+    "logo_url": "/notes-part1/",
     "logo_width": 88,
     "footer_links": "The University of Manchester|https://www.manchester.ac.uk/,Canvas|https://canvas.manchester.ac.uk/",
     "github_url": "https://github.com/UOM-EEE-EEEN11202/notes-part1/tree/main/docs/",
@@ -40,7 +40,7 @@ html_show_copyright = True
 html_show_sphinx = False
 
 
-# 404 settings - note this won't display correctly locally, but will on github
+# 404 settings
 notfound_urls_prefix = "/notes-part1/"
 
 
