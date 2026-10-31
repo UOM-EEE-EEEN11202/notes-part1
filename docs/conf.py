@@ -1,6 +1,6 @@
 # General project setup
 project = "notes-part1"
-copyright = "2026-2027 The University of Manchester"
+copyright = '2026-2027 The University of Manchester <a class="nav-link text-light" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Released under CC-BY-NC-ND 4.0 license</a> <a class="nav-link text-light" href="https://uom-eee-eeen11202.github.io/chapters/about/copyright.html">Course copyright statement</a>'
 author = "Alex Casson"
 release = "0.2"
 templates_path = ["_templates"]
@@ -33,7 +33,7 @@ html_theme_options = {
     "logo_alt": "University of Manchester logo",
     "logo_url": "/",
     "logo_width": 88,
-    "footer_links": "The University of Manchester|https://www.manchester.ac.uk/,Canvas|https://canvas.manchester.ac.uk/,Released under CC-BY-NC-ND 4.0 license|https://creativecommons.org/licenses/by-nc-nd/4.0/,Course copyright statement|https://uom-eee-eeen11202.github.io/notes-part1/copyright.html",
+    "footer_links": "The University of Manchester|https://www.manchester.ac.uk/,Canvas|https://canvas.manchester.ac.uk/",
     "github_url": "https://github.com/UOM-EEE-EEEN11202/notes-part1/tree/main/docs/",
 }
 html_show_copyright = True
