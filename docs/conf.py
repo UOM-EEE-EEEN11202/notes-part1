@@ -1,6 +1,6 @@
 # General project setup
 project = "notes-part1"
-copyright = '2026-2027 The University of Manchester <a class="nav-link text-light" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Released under CC-BY-NC-ND 4.0 license</a> <a class="nav-link text-light" href="https://uom-eee-eeen11202.github.io/chapters/about/copyright.html">Course copyright statement</a>'
+copyright = '2026-2027 The University of Manchester <a class="nav-link text-light" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Released under CC-BY-NC-ND 4.0 license</a> <a class="nav-link text-light" href="https://uom-eee-eeen11202.github.io/notes-part1/copyright.html">Course copyright statement</a>'
 author = "Alex Casson"
 release = "0.2"
 templates_path = ["_templates"]
