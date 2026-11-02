@@ -13,13 +13,13 @@ The debugger is for analyzing your code, while it is running. It puts the code i
   :align: center
   :alt: Example of debugging in VSCode
 
-  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/about/copyright>`_.
 
-Here, a *break point* has been added, by clicking next to the line number. When compiled and run, the program executes up to the break point, and then pauses. Debug information is then displayed and can be used to help you fix the program. For example, you can change the value of a variable by hand, and then continue the execution to see what happens. 
+Here, a *break point* has been added, by clicking next to the line number. When run, the program executes up to the break point, and then pauses. Debug information is then displayed and can be used to help you fix the program. For example, you can change the value of a variable by hand, and then continue the execution to see what happens.
 
-In the example above, the error is probably a typo. Line 4 should probably be :rust:`i+1` rather than :rust:`1+1`. Static code analysis struggles to spot this, as :rust:`1+1` is perfectly valid code, just probably not what's wanted in this case. (Also :rust:`i` is used later on in the code, so static analysis can't detect that it's not being used.)
+In the example above, the error is probably a typo. Line 4 should probably be :rust:`i+1` rather than :rust:`1+1`. :ref:`Static code analysis <static_code_analysis>`  struggles to spot this, as :rust:`1+1` is perfectly valid code, just probably not what's wanted in this case. (Also :rust:`i` is used later on in the code, so static analysis can't detect that it's not being used.)
 
-It's worth spending some time exploring the debugger as it's an incredibly powerful tool for identifying and fixing issues with your code. For example, you can add conditional break points, which will only trigger the program to pause execution if certain conditions are met.
+It's worth spending some time exploring the debugger as it's an incredibly powerful tool for identifying and fixing issues with your code. For example, you can add *conditional break points*, which will only trigger the program to pause execution if certain conditions are met.
 
 .. admonition:: This course
 

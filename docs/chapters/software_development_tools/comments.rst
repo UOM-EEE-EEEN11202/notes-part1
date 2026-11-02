@@ -10,11 +10,36 @@
 Comments
 ========
 
-Comments allow you to add non-executable information into your code. The are intended for the developer (you or another team member working on making, supporting or updating the code). Generally they are used for explaining what the code is doing and why, to keep track of what this unit of code is for, and to explain anything which might not be obvious. Sometimes they are used to deactivate code that you have written, but don't want to be part of the program at the moment for whatever reason.
+Comments allow you to add non-executable information into your code. The are intended for the developer (you or another team member working on making, supporting or updating the code). Generally they are used for explaining what the code is doing and why, to keep track of what this unit of code is for, and to explain anything which might not be obvious. Sometimes they are used to *deactivate* code that you have written. That is, code you want to keep in the file but don't want to be part of the program that runs at the moment for whatever reason.
 
-Typically comments represent `about 20% of the lines of code that are actually written <https://ieeexplore.ieee.org/abstract/document/5070980>`_. The form a substantial part of any program. Comments aren't a substitute for good documentation though. They can usually only be text (no diagrams or similar) and they sit at a particular place in your code and so generally explain what's happening only there, rather than giving the big picture. Nevertheless, comments are an essential part of any code.
+Typically comments represent `about 20% of the lines of code that are actually written <https://ieeexplore.ieee.org/abstract/document/5070980>`_. They thus form a substantial part of any program. Comments aren't a substitute for good documentation though. Comments can usually only be text (no diagrams or similar) and they sit at a particular place in your code and so generally explain what's happening only there, rather than giving the big picture. Nevertheless, comments are an essential part of any code.
 
-In Python, lines that start with a hash :python:`#` are comments. In C/C++/Rust, lines that start with two forward slashes :c:`//` are comments. Comments can start at any point during a line of code. You can also have multi-line comments in C/C++ that start with :c:`/*` and end with :c:`*/`, but we won't make use of these.
+In Python, lines that start with a hash :python:`#` are comments. In C/C++/Rust, lines that start with two forward slashes :c:`//` are comments. Comments can start at any point during a line of code. You can also have multi-line comments in C/C++ that start with :c:`/*` and end with :c:`*/`, but we won't make use of these in our materials.
+
+Examples of Python comments might be:
+
+.. code-block:: python
+
+    # This is a comment at the start of the file.
+    # We usually include some lines at the top of a file
+    # to explain what the code is for, what it's trying to do.
+    # This usually includes who wrote it, a license
+    # a copyright statement, and so on.
+
+    def main():
+        i = 0  # comment in-line with code. 
+                # This code is run, the
+                # comment helps explain what it does 
+
+        # i = 1  # this code is commented out 
+                  # It won't run
+
+        print(i)
+
+
+    if __name__ == "__main__":
+        main()
+
 
 Examples of C comments might be:
 
@@ -25,7 +50,9 @@ Examples of C comments might be:
     // to explain what the code is for, what it's trying to do.
     // This usually includes who wrote it, a license
     // a copyright statement, and so on.
-    
+    #include <stdio.h>
+    #include <stdlib.h>
+
     int main(void) {
         int i = 0;  // comment in-line with code. 
                     // This code is run, the
@@ -34,9 +61,11 @@ Examples of C comments might be:
         // int i = 1; // this code is commented out 
                       // It won't run
 
-        return 0;
+        printf("%d", i);
+
+        return EXIT_SUCCESS;
     }
 
 .. admonition:: This course
 
-   We'll expect you to use suitable comments to document and explain your code. You might lose marks in the lab tasks and/or in the exam if you don't have any comments present.
+   We'll expect you to use suitable comments to document and explain your code. You might lose marks in assignments and/or in the exam if you don't have any comments present.

@@ -22,7 +22,7 @@ We also spend some time on a newer language called Rust. This is due to *memory 
 
 The `National Cyber Security Centre <https://www.ncsc.gov.uk/>`_, and international counterparts, have called for code to have a `roadmap towards being memory safe <https://media.defense.gov/2023/Dec/06/2003352724/-1/-1/0/THE-CASE-FOR-MEMORY-SAFE-ROADMAPS-TLP-CLEAR.PDF>`_. Indeed they state "*Organizations should signal their demand for developers trained in security and memory safety to colleges, universities, and educational institutions.*" `Google estimate <https://security.googleblog.com/2024/09/eliminating-memory-safety-vulnerabilities-Android.html/>`_ that in 2024 24% of security vulnerabilities in Android were due to memory safety issues. (Down from 76% in 2019 due to their increased such of techniques such as switching to Rust.)
 
-Rust as a programming language has been designed to help minimize memory safety issues. We'll thus spend some time looking in to this. 
+Rust as a programming language has been designed to help minimize memory safety issues. We'll thus spend some time looking in to this. Understanding memory safe code in Rust should also help us understand how to write memory safe code in C and C++. 
 
 
 Shell scripting

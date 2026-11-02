@@ -20,7 +20,7 @@ You'll learn how to use VSCode in detail in the labs, but the screenshot below s
   :align: center
   :alt: Screenshot of VSCode
 
-  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
 
 Note that there's a terminal built in to this GUI. You don't have to start a separate one. That is, when you start VSCode it will automatically give you a command line for entering commands into.
@@ -29,4 +29,4 @@ Remember that the VSCode environment is very configurable, and exactly what is d
 
 .. admonition:: This course
 
-   We're going to use VSCode. We'll expect you to know how to use this, including in the exam. You're welcome to use a different IDE if you would like, but it will limit the extent to which we'll be able to help - we don't know every detail about every IDE that's out-there, and haven't tested the course notes against them. 
+   We're going to use VSCode. We'll expect you to know how to use this, including in the exam. You're welcome to use a different IDE if you would like, but it will limit the extent to which we'll be able to help - we don't know every detail about every IDE that's out-there, and haven't tested the course materials against them. 

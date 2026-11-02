@@ -1,3 +1,5 @@
+.. _memory_management:
+
 Memory management
 =================
 We noted in :ref:`computer hardware <computer_hardware>` that memory is often the first bottleneck in a computer system that we run into as we move to writing higher performance code. This motivates some of the choices we make in this course.

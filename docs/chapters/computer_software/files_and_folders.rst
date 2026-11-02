@@ -6,7 +6,7 @@
 Files, folders, and filesystems
 ===============================
 
-Code files can be very long! The labs for this course are intended to take 2-3 hours each, and so we're constrained to looking at relatively small programs. Typically a hundred lines of code or so. Real programming projects have much more than this. For example, the Chrome web browser is estimated to have `6-7 million lines of code <https://interestingengineering.com/lists/whats-the-biggest-software-package-by-lines-of-code>`_. When having so much code, its important to keep it organized. To do this, we split the code into *files* and store files in *folders*.
+Code files can be very long! The labs for this course are intended to take 2-3 hours each, and so we're constrained to looking at relatively small programs. Typically a hundred lines of code or so. Real programming projects have much more than this. For example, the Chrome web browser is estimated to have `6-7 million lines of code <https://interestingengineering.com/lists/whats-the-biggest-software-package-by-lines-of-code>`_. When having so much code, it's important to keep it organized. To do this, we split the code into *files* and store files in *folders*.
 
 .. admonition:: Aside
    :class: dropdown
@@ -22,25 +22,25 @@ The basic unit of storing a document on a computer is a *file*. Each file has a 
 
 	my_file_name.txt
 
-Here my_file_name is the *basename*, what you want to call the file. Hopefully this is something meaningful to you as the user. The .txt is the *extension*. This tells the computer what type of file is present. This is also known as the *format*. A file can be perfectly valid even if no extension is present, but an extension helps tell the computer, and you, what kind of information is in the file. 
+Here :console:`my_file_name` is the *basename*, what you want to call the file. Hopefully this is something meaningful to you as the user. The :console:`.txt` is the *extension*. This tells the computer what type of file is present. This is also known as the file *format*. A file can be perfectly valid even if no extension is present, but an extension helps tell the computer, and you, what kind of information is in the file. 
 
-For example, .docx indicates this file is for a Word document. .png indicates it contains a picture. There are lots of different file types, and not every program can open every type of file. Note that sometimes the extension is hidden by default. It may be present, but the interface just doesn't display it unless you change the settings. (This is the default behavior in the Windows GUI.)
+For example, :console:`.docx` indicates this file is for a Word document. :console:`.png` indicates it contains a picture. There are lots of different file types, and not every program can open every type of file. Note that sometimes the extension is hidden by default. It may be present, but the interface just doesn't display it unless you change the settings. (This is the default behavior in the Windows GUI.)
 
-When programming, we often use files with a .sh, .py, .rs, .c, .cpp, extension, to indicate which programming language is being used for the code in that file.
+When programming in this course, we often use files with a :console:`.sh`, :console:`.py`, :console:`.rs`, :console:`.c`, or :console:`.cpp`, extension, to indicate which programming language is being used for the code in that file.
 
 
 Folders
 +++++++
-For any practical project, you probably need several different files to store all of the information that's needed. For example, when writing a report you may have a .docx Word file that actually contains the report. You may have several .png or .jpg pictures that you took and need to be included in the report to show your work. You may also have a spreadsheet document in .xlsx or .csv format that stores the results from an experiment. 
+For any practical project, you probably need several different files to store all of the information that's needed. For example, when writing a report you may have a :console:`.docx` Word file that actually contains the report. You may have several :console:`.png` or :console:`.jpg` pictures that you took and need to be included in the report to show your work. You may also have a spreadsheet document in :console:`.xlsx` or :console:`.csv` format that stores the results from an experiment. 
 
-The basic organizational unit for storing files is a *folder*. Folders are also known as *directories*. Files are stored in folders. You can also put folders into folders to help organize things into different levels. For example, the figure below shows the files and folders used for these notes (which you can view if you click the GitHub (:fab:`github`) icon at the top of the page). There is a folder called notes-part1. In here are several folders (.github, .venv, docs). The notes are stores in files with .rst extensions within the chapters folder.
+The basic organizational unit for storing files is a *folder*. Folders are also known as *directories*. Files are stored in folders. You can also put folders into folders to help organize things into different levels. For example, the figure below shows the files and folders used for these notes (which you can view if you click the GitHub (:fab:`github`) icon at the top of the page). There is a folder called :console:`notes-part1`. In here are several folders (:console:`.github`, :console:`.venv`, :console:`docs`). The notes are stores in files with :console:`.rst` extensions within the chapters folder.
 
 .. figure:: tree_view.png
   :width: 300
   :align: center
   :alt: Tree view of files and folders
 
-  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
 
 File systems
@@ -55,19 +55,19 @@ Addresses begin with a letter, followed by a colon :console:`:`. Folders are sep
 
 	C:\Users\alex\hello_world.py
 
-We can also see this location (C:\\Users\\alex\\) if we use the File Explorer GUI. It contains a file called hello_world.py. 
+We can also see this location (:console:`C:\\Users\\alex\\`) if we use the File Explorer GUI. It contains a file called :console:`hello_world.py`. 
 
 .. figure:: file_explorer.png
   :width: 800
   :align: center
   :alt: The Windows file explorer
 
-  Screenshot of an example Windows file explorer, software from `Microsoft <https://www.microsoft.com/en-gb/windows>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of an example Windows file explorer, software from `Microsoft <https://www.microsoft.com/en-gb/windows>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
 
-By convention, the letter :console:`C:\\` refers to the hard drive in the computer being used. You may see other letters being used. For example, students logged in to computers at the University of Manchester also have a :console:`P:\\` drive. This is a *network drive*. The :console:`P:\\` drive storage isn't on the computer being used, it's connected via the Internet and so given a different address letter. 
+By convention, the letter :console:`C:\\` refers to the hard drive in the computer being used. You may see other letters being used. For example, students logged in to computers at the University of Manchester may also have a :console:`P:\\` drive. This is a *network drive*. The :console:`P:\\` drive storage isn't on the computer being used, it's connected via the Internet and so given a different address letter. 
 
-This arrangement is very common for shared computers, although different places may use different letters. For shared devices, you want files to be accessible no matter which computer you log in to. You can't do this if the files are only stored on the one physical computer. If you plug in a USB thumb drive, it will be given another letter, which may vary from computer to computer.
+This arrangement is very common for shared computers, although different places may use different letters. For shared devices, you want files to be accessible no matter which computer you log in to. You can't do this if the files are only stored on the one physical computer. If you plug in a USB thumb drive, it will be given another letter, often :console:`D:\\`, which may vary from computer to computer.
 
 Using a drive letter is a form of *physical addressing*. It forces you to think about *where* you are storing the files. Is it on this computer, a thumb drive, or on a network computer, and so on.
 
@@ -83,7 +83,7 @@ or with forward slashes :console:`/` as
 
 	C:/Users/alex/hello_world.py
 
-These aren't how Windows represents a path, it uses a single backslash, but may be the syntax needed in a programming file to represent the same thing. 
+These aren't how Windows represents a path, it uses a single backslash, it can be the syntax needed in a programming file to represent the same thing. 
 
 
 macOS and Linux
@@ -133,7 +133,7 @@ or similar. (There will be similar locations on macOS and Linux, but we'll only 
 
 At the same time, OneDrive will automatically copy the files to the Cloud. This means that they are backed up automatically, and so if anything happens to your computer you'll still have all of your work. It also means that the files will be automatically available on any computer which has access to your OneDrive account. 
 
-(There's also the option of having the file online by default. That is, Windows sees the file in the :console:`C:\\` drive as usual, but to save disk space it isn't actually kept on the computer. It's kept on the Cloud and downloaded when needed.)
+(There's also the option of having the file online by default. That is, Windows sees the file in the :console:`C:\\` drive as usual, but to save disk space the file isn't actually kept on the computer. It's kept on the Cloud and only downloaded when needed.)
 
 You can access files in OneDrive using the same :console:`C:\\` address as you would for any other file.
 
@@ -166,7 +166,7 @@ Showing the same *tree view* of the files/folders for these notes that we saw ea
   :align: center
   :alt: Tree view of files and folders
 
-  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
 
 from :console:`files_and_folders.rst`, :console:`gui_and_cli.rst` is in the same folder and so can be accessed with the relative address
@@ -175,7 +175,7 @@ from :console:`files_and_folders.rst`, :console:`gui_and_cli.rst` is in the same
 
 	./gui_and_cli.rst
 
-:console:`our_choices.rst` is up one level, and then in a different folder called motivation. From :console:`files_and_folders.rst`, our_choices.rst can be accessed with the relative address
+:console:`our_choices.rst` is up one level, and then in a different folder called motivation. From :console:`files_and_folders.rst`, :console:`our_choices.rst` can be accessed with the relative address
 
 .. code-block:: console
 
@@ -190,7 +190,7 @@ Where should I put my files?
 
 The short answer is in your University provided OneDrive. This will ensure that the files will be automatically backed up, and automatically available on any computer which has access to your OneDrive account.
 
-You may find that some, mainly older, programs don't like files which are stored in OneDrive. Your second choice location should be your :console:`P:\\` drive. This is a network drive, and the storage is maintained for you by IT. That means it's automatically backed up, and available on any University computer. 
+You may find that some, mainly older, programs don't like files which are stored in OneDrive. Your second choice location should be your :console:`P:\\` drive if you have one. This is a network drive, and the storage is maintained for you by IT. That means it's automatically backed up, and available on any University computer. 
 
 The :console:`C:\\` drive should be the location of last resort. Files here are only on the computer you're using at the time. If you switch to a different computer, or you lose/damage the computer, your files will be lost (unless you've taken some other steps to back them up).
 

@@ -5,7 +5,7 @@ Types of programming language
 
 A Computer Science purist might debate the details of the below slightly, but broadly there are 3 types of programming language. There are:
 
-- Markup languages. Such as HTML (the ML stands for Markup Language), XML, LaTeX, Markdown, JSON, yaml. 
+- Markup languages. Such as HTML (the ML stands for Markup Language), XML, LaTeX, Markdown, JSON, yaml, toml. 
 - Scripted (interpreted) languages. Such as Python, Matlab, PHP, PowerShell, Bash. 
 - Compiled languages. Such as C, C++, C#, Java, Rust.
 
@@ -27,12 +27,12 @@ as display "some text" in bold. In LaTeX, the markup for the same thing has a di
 
    \textbf{some text}
 
-JSON, yaml, and similar are for passing data around. For example, JSON stores key-value pairs as: 
+JSON, yaml, toml and similar are for passing data around or storing configuration information. For example, JSON stores key-value pairs as: 
 
 .. code-block:: JSON
 
    {"name": "Alex", 
-    "office number": 4.018, 
+    "office number": 34, 
     "wears glasses": true} 
 
 which a receiving programme or person can interpret as appropriate. Markup languages are thus very useful for formatting the inputs and outputs of programs in a way that other computer systems know how to use.
@@ -41,7 +41,7 @@ which a receiving programme or person can interpret as appropriate. Markup langu
 Interpreted languages
 ---------------------
 
-Interpreted languages run code by working through a series of commands, one line at a time. That is, they execute one line of code, get the results, then the next line, and so on. They're widely used for tasks where there's a fixed order to do things in. For example, in data analysis, first you load the data, then you do some filtering on the data to remove noise and outliers, then you transform the data to highlight the points of interest, then you plot the data, and so on. 
+Interpreted languages run code by working through a series of commands, one line at a time. That is, they execute one line of code, get the results, then run the next line, and so on. They're widely used for tasks where there's a fixed order to do things in. For example, in data analysis, first you load the data, then you do some filtering on the data to remove noise and outliers, then you transform the data to highlight the points of interest, then you plot the data, and so on. 
 
 These sorts of programs are generally quick and easy to write, but slow to run. It's thus a trade-off. They are also relatively sensitive to having run-time errors that the user sees. If there's a mistake on (say) line 50 of the code, the first 49 lines may run fine, and the code only errors out once it gets to line 50. 
 
@@ -51,7 +51,13 @@ Compiled languages
 
 Compiled languages convert commands into a format the computer can execute, for the entire program, before the code is executed. This process is known as compilation. It means that the code can be optimized, automatically, by the compiler before it is ever run. 
 
-The code thus tends to run more quickly than scripted code does. The compiler also checks for errors while it's compiling. So, if line 50 is missing a "}", the compilation fails and you have to fix the issue and compile it again before the code can be run. In turn, this means that the code doesn't fail while the user is running the program, and so the user never sees that there was an issue there. 
+The code thus tends to run more quickly than scripted code does. The compiler also checks for errors while it's compiling. So, if line 50 is missing a "}", the compilation fails and you have to fix the issue and compile it again before the code can be run. In turn, this means that the code doesn't fail while the user is running the program, and so the user never sees that there was an issue there.
+
+We'll cover :ref:`memory management <memory_management>` later. Compiled languages can be further sub-divided into languages where the computer memory is automatically managed for you (such as Java and Go), and languages where the programmer is responsible for managing memory (such as C, C++ and Rust). The latter is generally more work, but gives the programmer more control over the program's behavior.
+
+
+Overall
+-------
 
 In practice it's common to use all of these together. Often we use a scripting language such as Python, which is relatively fast to write but slow to execute, to *glue* together computationally complex tasks which are written in a higher performance language. This gets the best of both worlds. Simple tasks can be done in a quick to write language like Python, while tasks that take a long time to run are written in a more highly optimized language. 
 

@@ -18,7 +18,7 @@ Pressing the start button brings up a list of programs that are available to run
   :align: center
   :alt: The Windows desktop
 
-  Screenshot of an example Windows desktop, software from `Microsoft <https://www.microsoft.com/en-gb/windows>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of an example Windows desktop, software from `Microsoft <https://www.microsoft.com/en-gb/windows>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
 
 macOS
@@ -30,21 +30,21 @@ macOS is descended from a different operating system, known as BSD. In turn, BSD
 
 Linux
 -----
-Linux is really refers to a family of operating systems rather than an individual one. There are many different Linux *distributions*, each of which is a slightly different operating system. Ubuntu, Debian, and Red Hat are well known distributions, although there are many more. 
+Linux really refers to a family of operating systems rather than an individual one. There are many different Linux *distributions*, each of which is a slightly different operating system. Ubuntu, Debian, and Red Hat are well known distributions, although there are many more. 
 
 Linux is generally open source and free to download and install. It is the least common of the major desktop/laptop operating systems, but is very widely used in high performance computing and in computer servers. It's thus very common to encounter when programming. It's also the underlying operating system present in Chromebooks. 
 
-Linux is extremely configurable, and there are many different distributions, and so it can look very different depending on which desktop environment is being used. The figure below is for Mint Linux (which is based upon Ubuntu, which in turn is based upon Debian). This interface is conceptually very similar to Windows, with a taskbar. 
+Linux is extremely configurable, and there are many different desktop environments, and so it can look very different depending on exactly what is being used. The figure below is for Mint Linux (which is based upon Ubuntu, which in turn is based upon Debian). This interface is conceptually very similar to Windows, with a taskbar. 
 
 .. figure:: linux_desktop.png
   :width: 700
   :align: center
   :alt: An example Linux desktop
 
-  Screenshot of an example Linux desktop, software from `Linux Mint <https://linuxmint.com/>`_.
+  Screenshot of an example Linux desktop, software from `Linux Mint <https://linuxmint.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
 
-This course is intended to be cross-platform. Apart from a few cases where the behavior is unavoidably different, it shouldn't matter whether you are using Windows, macOS, or Linux. For Linux though, we will give instructions assuming a Debian based distribution. For a Red Hat based distribution (e.g. CentOS, Fedora, Rocky) the commands to install programs will be different. Our tools (the dockerfile, the autograder, and similar) use Ubuntu. 
+This course is intended to be cross-platform. Apart from a few cases where the behavior is unavoidably different, it shouldn't matter whether you are using Windows, macOS, or Linux. For Linux though, we will give instructions assuming a Debian based distribution. For a Red Hat based distribution (e.g. CentOS, Fedora, Rocky) the commands to install programs will be different. Our tools (the devcontainer, Gradescope, and similar) use Ubuntu. 
 
 
 
@@ -56,13 +56,13 @@ There is also a class of operating system known as *real-time operating systems*
 
 `FreeRTOS <https://www.freertos.org/>`_ and `Zephyr <https://zephyrproject.org/>`_ are widely used examples. There is also Real-time Linux, for example `Real-time Ubuntu <https://ubuntu.com/real-time>`_.
 
-We won't make use of an ROTSs in this course, but mention them here for completeness. RTOSs can be very useful for the types of project undertaken by Electrical and Electronic Engineering students where power/size constraints mean a full desktop/laptop isn't suitable, and where a full desktop-like operating system wouldn't necessarily be fast enough to respond to user input in a timely manner due to background tasks also being run.
+We won't make use of an ROTSs in this course, but mention them here for completeness. RTOSs can be very useful for the types of project undertaken by Electrical and Electronic Engineering students where power/size constraints mean a full desktop/laptop isn't suitable, and where a full desktop-like operating system wouldn't necessarily be fast enough to respond to user input in a timely manner due to background tasks also being run. Different RTOSs approaches are defined by either being *tick* based or *tickless* depending on how they manage the timing of tasks. Tickless RTOSs are generally more efficient, but can be more complex to implement.
 
 
-No operating system
--------------------
+No operating system (bare metal)
+--------------------------------
 
-If working with a low power micro-controller such as an `STM32 <https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html>`_ or `MSP430 <https://www.ti.com/microcontrollers-mcus-processors/msp430-microcontrollers/overview.html>`_, rather than a desktop/laptop computer, you might find that no operating system is present. These kinds of platform can run an RTOS, or they can be set to just run a code file directly. For example, they might have code such as
+If working with a low power micro-controller such as an `STM32 <https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html>`_ or `MSP430 <https://www.ti.com/microcontrollers-mcus-processors/msp430-microcontrollers/overview.html>`_, rather than a desktop/laptop computer, you might find that no operating system is present. This is known as running on *bare metal*. They can be set to just run a code file directly. For example, they might have code such as
 
 .. code-block:: C
 
@@ -79,4 +79,8 @@ If working with a low power micro-controller such as an `STM32 <https://www.st.c
 .. role:: C(code)
    :language: C
 
-The precise syntax of this isn't important at the moment. The :C:`while{}` loop will run continuously, executing :C:`command1()`, then :C:`command2()`, and then :C:`command3()` (and any others which are present), before returning to the start and running :C:`command1()` again, and so on. This make multi-tasking difficult, there's no operating system to help manage doing more than one task at the same time. However, it is low overhead and simple for low complexity, low power, situations.
+The precise syntax of this isn't important at the moment. The :C:`while{}` loop will run continuously, executing :C:`command1()`, then :C:`command2()`, and then :C:`command3()` (and any others which are present), before returning to the start and running :C:`command1()` again, and so on. 
+
+This makes multi-tasking difficult, there's no operating system to help manage doing more than one task at the same time. Guaranteeing precise timing of when things happen can also be difficult. For example if :C:`command1()` takes a long time to run because it waits for some external event, then :C:`command2()` and :C:`command3()` will be delayed. 
+
+Nevertheless, bare metal programming is low overhead and simple for low complexity, low power, situations.

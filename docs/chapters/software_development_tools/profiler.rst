@@ -28,7 +28,7 @@ More generally, you might install a profiler outside of the IDE environment and 
 
 Computational complexity
 ------------------------
-In addition to analyzing the code you actually have, it's common to think *conceptually* about what the computational complexity is. We won't focus too much on this, but it is often useful to think about how well an algorithm, or code implementing that algorithm, will scale as more data is passed to it.
+In addition to analyzing the code you actually have, it's common to think *conceptually* about what the complexity is. It is often useful to think about how well an algorithm, or code implementing that algorithm, will scale as more data is passed to it.
 
 In :ref:`pseudocode <pseudocode>`, if you have an algorithm:
 
@@ -47,4 +47,6 @@ Different code could be :math:`O(n^2)`. Here, doubling the elements from 5 to 10
 
 .. admonition:: This course
 
-   In terms of this course, computational complexity is a relatively advanced topic. It's more something to be aware of than something we'll use lots. It affects the design stage of code, possibly more than the implementation stage where you can use the profiler. If your code is going to take a long time to run, at the design stage you need to consider both the software architecture, and the potential computational complexity of the approach. Even if it's just a rough estimate, it can help you discount some potential approaches early on. We won't look at this in depth though.
+   In terms of this course, computational complexity is a relatively advanced topic. It's more something we expect you to be aware of rather than something we'll use lots. We see it again towards the end of the course.
+   
+   Computational complexity affects the design stage of code, possibly more than the implementation stage where you can use the profiler. If your code is going to take a long time to run, at the design stage you need to consider both the software architecture, and the potential computational complexity of the approach. Even if it's just a rough estimate, it can help you discount some potential approaches early on.
