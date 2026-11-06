@@ -9,6 +9,6 @@ It might sound a bit odd to have an immutable variable, variable implies it can 
 
 This is actually quite common in programming - we can use it to help force us write code which is error free. 
 
-Say I have some code which loads in the list of students taking the course, and their marks. This data is variable - when the course is run next year there will be a different list of students taking the course. On any individual run of the code though the list of students is immutable - I don't want to accidentally add or delete any students from the class roster! By marking the data as immutable it makes it easier for the built in tools to detect whether the code has any errors which means it tries to change data that should be fixed. 
+Say I have some code which loads in the list of students taking the course, and their marks. This data is variable - when the course is run next year there will be a different list of students taking the course. On any individual run of the code though the list of students is immutable - I don't want to accidentally add or delete any students from the class roster! By marking the data as immutable it makes it easier for the :ref:`static analysis tools <static_code_analysis>` to detect whether the code has any errors which means the code tries to change data that should be fixed. 
 
 In our programming it's quite common that we want to take steps like this, using our knowledge of the problem to restrict the code, to help ensure the code is correct. 

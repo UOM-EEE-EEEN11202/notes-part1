@@ -34,3 +34,4 @@ For each sub-topic we'll give some information on the extent to which we're goin
    software_development_tools/licensing
    software_development_tools/pseudocode
    software_development_tools/ai_tools
+   software_development_tools/agentic

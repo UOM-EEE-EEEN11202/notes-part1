@@ -1,3 +1,5 @@
+.. _ide:
+
 Integrated Development Environments (IDEs)
 ==========================================
 

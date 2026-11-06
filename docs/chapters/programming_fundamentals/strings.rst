@@ -34,7 +34,7 @@ Strings can also be built up dynamically. There are lots of different ways of do
    last_name = "Casson"
    full_name = first_name + " " + last_name  # note the space in between the two names
    
-You can also substitute :ref:`variables <single_variables>` into strings. The syntax for this varies between programming languages. In Python, one way of doing this is using *f-strings*, which we'll meet in the Labs. A brief example is
+You can also substitute :ref:`variables <single_variables>` into strings. The syntax for this varies between programming languages. In Python, one way of doing this is using *f-strings*, which we'll meet in the labs. A brief example is
 
 .. code-block:: python 
 
@@ -53,15 +53,15 @@ How strings are stored in a computer is a little more complex than numbers. We'v
 
 Consequences of this storage
 ----------------------------
-Working with strings can be a bit harder than you might expect, particularly with lower level languages. There are two core drivers of this:
+Working with strings can be a bit harder than you might expect, particularly with lower level languages such as C. There are two core drivers of this:
 
 - Different text encodings might be used. C, for example pre-dates UTF-8 and so defaults to ASCII. There are :ref:`libraries <libraries>` that add suitable support for additional characters. 
-- We don't necessarily know how long a string is in advance. There may be different numbers of characters (say in a name), and different characters may need different numbers of types to store them. This makes it harder to allocate memory for strings.
+- We don't necessarily know how long a string is in advance. There may be different numbers of characters (say in a name), and different characters may need different numbers of bytes to store them. This makes it harder to allocate memory for strings.
 
 
 Working with strings
 --------------------
-We'll work with strings a lot in the Labs and so will gain hands on experience of how they work. There are some other factors to take into account:
+We'll work with strings a lot in the labs and so will gain hands on experience of how they work. There are some other factors to take into account:
 
 .. toctree::
    :maxdepth: 1

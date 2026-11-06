@@ -3,7 +3,7 @@
 
 Security and risk
 =================
-Cyber security and the hacking of computer systems are major concerns for many organizations which handle sensitive data. Which is basically every organization, no one wants their private data to be stolen.
+Cyber security and the hacking of computer systems are major concerns for many organizations which handle sensitive data. Which is basically every organization. No one wants their private data to be stolen.
 
 In the UK, there are laws which govern how some information has to be kept securely. If data is stolen, it has to be reported to the `Information Commissioner's Office <https://ico.org.uk/>`_, and potentially there can be fines and other sanctions if suitable procedures are not followed. Organizations routinely rate cyber attacks as one of the highest impact, and most probable, risks that they face and have to take actions to mitigate against. 
 
@@ -18,7 +18,7 @@ Environmental and financial sustainability is very important. All of our compute
 
 It is estimated that about `10% of the world's electricity is used on Information and Communications Technologies <https://doi-org.manchester.idm.oclc.org/10.1145/3613207>`_. Each query on ChatGPT is (roughly) equivalent to `keeping a light on for 5 minutes <https://medium.com/@zodhyatech/how-much-energy-does-chatgpt-consume-4cba1a7aef85>`_. Data centres also use a lot of water for cooling. In addition to the environmental impact, electricity costs money, as does cooling to manage the temperature of computers. 
 
-There's then the electronic waste impact. Code which can run using only very few resources will likely be able to run on older hardware, keeping it in service for longer and reducing how much we have to throw away. In programming there's often more than one way to achieve the same function. We'll touch briefly on computational complexity, but for big projects you might need to dig deeper and look at how to optimize the run time, or other resource requirements, of your code with an eye on the sustainability impact. 
+There's then the electronic waste impact. Code which can run using only very few resources will likely be able to run on older hardware, keeping it in service for longer and reducing how much we have to throw away. In programming there's often more than one way to achieve the same function. We'll touch briefly on :ref:`computational complexity <computational_complexity>`, but for big projects you might need to dig deeper and look at how to optimize the run time, or other resource requirements, of your code with an eye on the sustainability impact. 
 
 In 2015, UN member states agreed to 17 global Sustainable Development Goals (SDGs) to end poverty, protect the planet, and ensure prosperity for all. Being a fundamental technology with many applications, there are likely examples of computer programs which contribute towards all 17 goals. 
 
@@ -27,12 +27,12 @@ For example, code to analyze medical data and produce a summary report might con
 
 Equality, Diversity, Inclusion and Accessibility
 ================================================
-Essentially, everybody uses and needs access to computers and the results of computer code. Equality, diversity, inclusion and accessibility are thus important to consider, and there are many places where they interact with the code that we write. We'll briefly list a few examples below, but there are many more.
+Everybody uses and needs access to computers and the results of computer code. Equality, diversity, inclusion and accessibility are thus important to consider, and there are many places where they interact with the code that we write. We'll briefly list a few examples below, but there are many more.
 
 Our code is fundamentally written in English. Commands such as :python:`print` to display something to the screen, assume familiarity with written English. We've discussed :ref:`text encoding <text_encoding>` previously. While modern code and programs will nearly all support UTF-8 and having non-English characters, for example with accents and similar, it's not super-uncommon to still run into programs that struggle with non-ASCII characters.
 
 In our programs, needing to store a person's name is fairly common. Here's an example list of `falsehoods programmers believe about names <https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/>`_. Without care and thought, and inclusive co-design, it's easy to accidentally make code that some people can't put their name into.
 
-We're going to use Git a lot for our version control. We noted that Git can have *branches*, allowing multiple copies of the same code to be developed in parallel. Today the default branch is called *main*. Historically it was called *master*. The implication being that there were slave branches.
+We're going to use Git a lot for our :ref:`version control <version_control>`. We noted that Git can have *branches*, allowing multiple copies of the same code to be developed in parallel. Today the default branch is called *main*. Historically it was called *master*. The implication being that there were slave branches.
 
-We've tried to make these notes as inclusive and as accessible as possible. They have a dark mode, and a mode using a Dyslexia accessible font. Many of the tools we're going to use, such as VSCode, are very customizable. They can be set up to use colors, contrasts, and fonts that the user prefers. It is generally up to the user to change the default settings though. 
+We've tried to make these notes as inclusive and as accessible as possible. They have a dark mode, and a mode using a Dyslexia accessible font. Many of the tools we're going to use, such as VSCode, are very customizable. They can be set up to use colors, contrasts, and fonts that the user prefers. It is generally up to the user to change the default settings though.

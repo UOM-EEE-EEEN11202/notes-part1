@@ -47,7 +47,9 @@ So, say you had the code
    my_func()
    print(x)
 
-What is the value of :python:`x` on line 5? It is :python:`"Hello"`. The function :python:`my_func()` runs on line 4, and sets :python:`x = "world"`. However, when the function finshes, and the code moves on to line 5, this defintion of :python:`x` goes out of scope, and the earlier definition of :python:`x = "Hello"` comes back in to scope. 
+What is the value of :python:`x` on line 5? 
+
+It is :python:`"Hello"`. The function :python:`my_func()` runs on line 4, and sets :python:`x = "world"`. However, when the function finshes, and the code moves on to line 5, this defintion of :python:`x` goes out of scope, and the earlier definition of :python:`x = "Hello"` comes back in to scope. 
 
 There is also a *global* scope, which everything in the program can see. In general however, for a function to be able to see and interact with data, the data should be provided as an input to the function (possibly via a :ref:`pointer <pointers>`). Any changed data should be provided as an output (again possibly using :ref:`pointers <pointers>`). 
 
@@ -62,7 +64,7 @@ In Python this is done with :python:`import`. C/C++ have :c:`#include`, and C++ 
 
    import numpy as np
 
-This brings the :ref:`library <libraries>` :python:`numpy` into scope, and gives it the shorter name :python:`np`. Numpy is commonly used in engineering tasks and we'll see it in the labs. It provides a function sum. We access this as :python:`np.sum()` rather than just :python:`sum()`. Just :python:`sum()` is a valid Python command, but is different to :python:`np.sum()`. Having the namespace :python:`np.` helps make it explicit which function we want to use. You can think of the namespace as giving an *address* of which function to use.
+This brings the :ref:`library <libraries>` :python:`numpy` into scope, and gives it a custom name :python:`np`. Numpy is commonly used in engineering tasks and we'll see it in the labs. It provides a function :python:`sum`. We access this as :python:`np.sum()` rather than just :python:`sum()`. Just :python:`sum()` is a valid Python command, but is different to :python:`np.sum()`. Having the namespace :python:`np.` helps make it explicit which function we want to use. You can think of the namespace as giving an *address* of which function to use.
 
 In languages other than Python it's common to use two colons :cpp:`::` to separate steps in the namespace. For example, you might have C++ code such as
 

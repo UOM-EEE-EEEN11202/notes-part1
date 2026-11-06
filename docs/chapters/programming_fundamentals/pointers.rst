@@ -120,62 +120,58 @@ Here we'll use a C++ example to demonstrate this. You could make a raw pointer, 
 
 .. code-block:: cpp
 
-   void my_func()
-   {
-   // Using a raw pointer -- not recommended
-   int *ptr = new int(77);
+   void my_func() {
+       // Using a raw pointer -- not recommended
+       int *ptr = new int(77);
 
-   // Code goes here
-   // ...
+       // Code goes here
+       // ...
 
-   // Delete the pointer to free up memory when finished with it
-   delete ptr;   
+       // Delete the pointer to free up memory when finished with it
+       delete ptr;   
    }
 
 Here it's up to you the programmer to remember to delete :cpp:`ptr` once you no longer need it. Otherwise you have a *memory leak*. That is, you risk your program using more and more memory over time (until it eventually crashes) as you're claiming memory each time the function is called, but not releasing it once you've finished using it. It can be hard to spot memory leaks. For example, say the code was now
 
 .. code-block:: cpp
 
-   void my_func()
-   {
-   // Using a raw pointer -- not recommended
-   int *ptr = new int(77);
-   int x = 15;
+   void my_func() {
+       // Using a raw pointer -- not recommended
+       int *ptr = new int(77);
+       int x = 15;
 
-   // Code goes here
-   // ...
+       // Code goes here
+       // ...
 
-   // Then have a check
-   if (x == 0)
-   {
-       return; // causes the function to exit
-   } 
+       // Then have a check
+       if (x == 0) {
+           return; // causes the function to exit
+       } 
 
-   // Delete the pointer to free up memory when finished with it
-   delete ptr;   
+       // Delete the pointer to free up memory when finished with it
+       delete ptr;   
    }
 
 The :cpp:`return` command in the if statement causes the function to stop, in this case if :cpp:`x` is 0. However, this will mean the :cpp:`delete ptr` line never runs! You remembered to delete the pointer at the end of the function, but not for every possible case in the code and so there's still a potential memory leak present. 
 
-Smart pointers will automatically check and delete the pointer for you when its no longer needed (it goes *out of scope*). In C++ there are several ways of making a smart pointer, with different properties. :cpp:`std::unique_ptr` is for when you only have one pointer to a piece of memory. The above example could be written as 
+Smart pointers will automatically check and delete the pointer for you when its no longer needed (it goes *out of :ref:`scope <scope>`*). In C++ there are several ways of making a smart pointer, with different properties. :cpp:`std::unique_ptr` is for when you only have one pointer to a piece of memory. The above example could be written as 
 
 .. code-block:: cpp
 
-   void my_func()
-   {
-   std::unique_ptr<int> prt(new int(77));
-   int x = 15;
+   void my_func() {
+       // Make a smart point sprt, storing integer 77
+       std::unique_ptr<int> sprt(new int(77));
+       int x = 15;
 
-   // Code goes here
-   // ...
+       // Code goes here
+       // ...
 
-   // Then have a check
-   if (x == 0)
-   {
-       return;
+       // Then have a check
+       if (x == 0) {
+           return;
+       }
    }
-   }
 
-You, the programmer, don't have to remember to do all of the pointer management by hand. The code above won't have a memory leak, as the smart pointer will automatically delete the pointer for you when the function finishes. 
+You, the programmer, don't have to remember to do all of the pointer management by hand. The code above won't have a memory leak, as the smart pointer will automatically delete the pointer for you when the function finishes, whichever route the execution takes. 
 
 The general rule of thumb would be to always use a smart pointer if you can, rather than a raw pointer. They just help you avoid common pointer errors. 

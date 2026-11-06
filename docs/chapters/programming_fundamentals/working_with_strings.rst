@@ -3,7 +3,7 @@
 
 Special characters
 ------------------
-In addition to representing text (e.g. letters and numbers), there can be other things that we want to include in strings. By far the most common that you'll encounter early is new line. This is entered with :python:`\\n`. :python:`\\n` doesn't display :python:`\\` and then :python:`n` literally. Instead, it enters a new line. So:
+In addition to representing text (e.g. letters and numbers), there can be other things that we want to include in strings. By far the most common that you'll encounter early on is *new line*. This is entered with :python:`\\n`. :python:`\\n` doesn't display :python:`\\` and then :python:`n` literally. Instead, it enters a new line. So:
 
 .. code-block:: python
 
@@ -32,7 +32,7 @@ Otherwise, the first quote symbol would be mis-interpreted by Python as the end 
 
 There are a number of characters that need to be escaped this way and you might encounter in your work. For example, to include a backslash :python:`\\` in a string you need to escape it as :python:`\\\\`.
 
-Using the backslash :python:`\\` before the wanted symbol is known as an *escape sequence*. In most cases a backslash before a character means that the following character is to be treated specially. Sometimes other symbols are used as the escape character, such as a curly brace :python:`{` or percentage symbol :python:`%`.
+Using a backslash :python:`\\` before the wanted symbol is known as an *escape sequence*. In most cases a backslash before a character means that the following character is to be treated specially. Sometimes other symbols are used as the escape character, such as a curly brace :python:`{` or percentage symbol :python:`%`.
 
 
 Raw strings

@@ -13,7 +13,7 @@ Null data types
 
 None/NULL
 ---------
-Many programming languages, but not all, have a data type of :python:`None`. This is the equivalent of *blank* entry. We might have code along the lines of
+Many programming languages, but not all, have a data type of :python:`None`. This is the equivalent of a *blank* entry. We might have code along the lines of
 
 .. code-block:: python
 

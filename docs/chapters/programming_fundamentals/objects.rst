@@ -17,7 +17,7 @@ When discussing :ref:`variables <variables>` we had an example of storing the co
 
     piece1_pos = ["a", 3]
 
-Let's say our program also has to store the location of the city Manchester. (Maybe there is a chess tournament in Manchester!) This is 53.4808, -2.2426, where these are longitude and latitude numbers. Fundamentally, it's still two information items which define the location of the city. We could store these as 
+Let's say our program also has to store the location of the city Manchester. (Maybe there is a chess tournament in Manchester!) Manchester has a location which can be represnted as numbers: 53.4808, -2.2426, where these are longitude and latitude numbers. Fundamentally, it's still two information items which define the location of the city. We could store these as 
 
 .. code-block:: python 
 
@@ -38,7 +38,7 @@ We could write functions to do both of these. We'll switch to :ref:`pseudocode <
         return item_to_move
 
     def find_population(location):
-        area = draw_10mile_circle_centred_on(location[0],location[1])
+        area = draw_10mile_circle_centred_on(location[0], location[1])
         population = search_for_population_in(area)
         return population
 
@@ -49,20 +49,20 @@ These functions would work fine, as long as we always pass the correct variables
     manchester_pos = [53.4808, -2.2426]
     manchester_pos = move(manchester_pos, "a", 4)
 
-will likely run just fine. The code design isn't helping us to avoid strange bugs. This is of course a simple example, but when there's thousands of lines of code, and multiple different people working as part of a team, you want to try and use the code design to avoid mistakes like this. 
+will likely run just fine. The code design thus isn't helping us to avoid strange bugs. This is of course a simple example, but when there's thousands of lines of code, and multiple different people working as part of a team, you want to try and use the code design to avoid mistakes like this. 
 
-*Objects* are like a *super variable*, they store data, and functions that apply to that data. In these cases, the functions are known as *methods*. In the example above, :python:`move` could be a method for a :python:`chess_piece` object, while :python:`find_population` a method for a :python:`city_location` object. Only chess pieces would be allowed to call :python:`move`, and city locations call :python:`find_population`, and so it prevents people doing incorrect things with data. 
+*Objects* are like a *super variable*, they store data, and functions that apply to that data. In these cases, the functions are known as *methods*. In the example above, :python:`move` could be a method for a :python:`chess_piece` object, while :python:`find_population` a method for a :python:`city_location` object. Only chess pieces would be allowed to call :python:`move`, and city locations call :python:`find_population`, and so the code design prevents people doing incorrect things with the data. 
 
-Functions of course are widely used as well as object methods; you just need to think whether the operations are general for whatever input might be provided (make a function), or whether they're specific to a particular data arrangement that you're working with (make an object and method). 
+Functions of course are widely used as well as object methods, you just need to think whether the operations are general for whatever input might be provided (make a function), or whether the wanted operations are specific to a particular data arrangement that you're working with (make an object and method). 
 
 
 Object basics
 -------------
-You can make an object by either: defining a *class* which has the code for the data and methods you want; or using *inheritance*, that is, using an existing class as a starting point and adding or removing functionally from this. We'll see some examples of making classes in the labs, and won't so won't consider it more here.
+You can make an object by either: defining a *class* which has the code for the data and methods you want, or using *inheritance*, that is, using an existing class as a starting point and adding or removing functionally from this. We'll see some examples of making classes in the labs, and won't so won't consider it more here.
 
-A class defines the general properties that an object can have. It's kind of like a template An *instance* is then one object that is made to that class template. We could have multiple instances of the same class, such as :python:`piece1_pos`, :python:`piece2_pos`. These instances will have the same methods that can be applied, but will be separate instances that can store different data. 
+A class defines the general properties that an object can have. It's kind of like a template. An *instance* is then one object that is made to that class template. We could have multiple instances of the same class, such as :python:`piece1_pos`, :python:`piece2_pos`. These instances will have the same methods that can be applied, but will be separate instances that can store different data. 
 
-You use a method associated with an object, usually by having dot :python:`.` after the instance name, and then the name of method you want to call. In the above examples, you thus might have code along the lines of 
+You use a method associated with an object, usually by having a dot :python:`.` after the instance name, and then the name of method you want to call. In the above examples, you thus might have code along the lines of 
 
 .. code-block:: python 
 

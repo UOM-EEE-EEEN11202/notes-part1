@@ -4,6 +4,8 @@
 .. role:: c(code)
    :language: c
 
+.. _our_style_guide:
+
 Our code style guide
 --------------------
 For writing our materials we will use our own style, broadly following conventions common. In particular:

@@ -6,7 +6,7 @@
 
 Conditionals and loops
 ======================
-Once you have data, stored in a variable or an object, and ways to manipulate or modify or interact with that data via functions or methods, the main art of programming is plumbing together the different steps that are needed in order to achieve the required overall functionality. There are several more common programming concepts to help you achieve this.
+Once you have data, stored in a variable or an object, and ways to manipulate or modify or interact with that data via functions or methods, the main art of programming is plumbing together the different steps that are needed in order to achieve the required overall functionality. There are several common programming concepts to help you achieve this.
 
 
 If/else statements
@@ -72,7 +72,7 @@ Here :C:`i` is the *loop variable*, the variable used to keep track of which ite
 
 The above works well, and is very common. The main limitation is that you the programmer have to know how many entries are present in the array. In the above example we hard coded it to be 10. If we added or removed another lab, the code would have to change. (Indeed in this example the code would have to change in two places: the value of :C:`N` on line 1, and the number of entries in :C:`lab_marks[N]` on line 2.). 
 
-Wanting to work with all of the elements that are stored is such a common thing to do that many other languages provide an improved syntax which means you don't need to look up how many entries are present. They use *iterators* to automatically makes the start/stop/step conditions for us. The same loop in Python would look more like:
+Wanting to work with all of the elements that are stored is such a common thing to do that many programming languages provide an improved syntax which means you don't need to look up how many entries are present. They use *iterators* to automatically make the start/stop/step conditions for us. The same loop in Python would look more like:
 
 .. code-block:: python
 
@@ -83,7 +83,7 @@ Wanting to work with all of the elements that are stored is such a common thing 
 
 (Note that Python also provides a :python:`.sum()` method that we could have used in this case rather than writing our own code.)
 
-:python:`mark` is set in turn to :python:`lab_marks[0]`, :python:`lab_marks[1]` and so on. We won't go into the details of *iterators*, most objects we'll work with already make them for us. They simplify writing the loop as we don't need to count ourselves how many entries are present. 
+:python:`mark` is automaticall set in turn to :python:`lab_marks[0]`, :python:`lab_marks[1]` and so on. We won't go into the details of *iterators*, most objects we'll work with automatically make them for us. They simplify writing the loop as we don't need to count ourselves how many entries are present. 
 
 Note that if you need to keep track of how many times the loop has run, you can use
 

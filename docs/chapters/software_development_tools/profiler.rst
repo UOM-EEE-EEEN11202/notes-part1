@@ -1,6 +1,8 @@
 .. role:: console(code)
    :language: console
 
+.. _profiler:
+
 Profiler and computational complexity
 =====================================
 
@@ -25,6 +27,8 @@ More generally, you might install a profiler outside of the IDE environment and 
    
    We're not going to make use of profilers, but you might like to remember they're a tool you can investigate and make use of if you find your code takes too long to run or is too resource intensive.
 
+
+.. _computational_complexity:
 
 Computational complexity
 ------------------------

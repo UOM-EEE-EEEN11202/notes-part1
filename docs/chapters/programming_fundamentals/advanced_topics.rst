@@ -19,14 +19,14 @@ VSCode in fact displays which line endings it's using, as shown in the figure be
   :align: center
   :alt: Line endings display in the VSCode editor
 
-  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
 If you get a code file which doesn't look to be displaying correctly, you may want to try changing the line endings used to see whether it fixes the issue.
 
 
 Anonymous functions
 -------------------
-When we discussed functions, they always had a *signature* line giving the same of the function and the inputs. For example, we had 
+When we discussed functions, they always had a *signature* line giving the name of the function and the inputs. For example, we had 
 
 .. code-block:: python
 
@@ -49,7 +49,7 @@ We won't make use of anonymous functions in this course. They are useful, for ex
 
 Decorators
 ----------
-*Decorators* are items that go around an existing function, like a wrapper, to change its behavior. They can thus act as a shorthand to change the behavior of functions. Say for example, it was common that we wanted to run functions multiple times. Rather than changing the function, making it more complicated, we could add a decorator to change the behavior of a more simple function. In Python decorators use the :python:`@` symbol. For example in Python we might write
+*Decorators* are items that go around an existing function, like a wrapper, to change its behavior. They can thus act as a shorthand to change the behavior of functions. Say for example, it was common that we wanted to run a function multiple times. Rather than changing the function, making it more complicated, we could add a decorator to change the behavior of a more simple function. In Python decorators use the :python:`@` symbol. For example in Python we might write
 
 .. code-block:: python
 
@@ -60,14 +60,13 @@ Decorators
 
 :python:`@run_multiple_times(3)` is a decorator which will change the behavior of the following function. It takes an input argument, :python:`3` in this case. This can help give more readable code compared to changing the function itself, particularly if we have lots of different functions which all need the same behavior.
 
-We won't go into how to make our own decorators here. They are commonly encountered when performing :ref:`unit testing <unit_testing>` to define how the test works, and so it's important to mention them briefly here. We'll see how to use pre-defined decorators when we cover unit testing in the lab. 
-
+We won't go into how to make our own decorators here. They are commonly encountered when performing :ref:`unit testing <unit_testing>` to define how the test works, and so it's important to mention them briefly here.
 
 Iterators and generators
 ------------------------
 We mentioned iterators briefly when considering :ref:`for loops <for_loops>`. Lots of objects have an iterator method built in which tells the computer how many items are stored in the object, and which comes next in sequence. It can then loop through each one of these in turn, we don't have to count ourselves how many items are in a list (say). Again, we didn't go into how to make an iterator. You can do, but we'll just use the built in ones.
 
-In Python it's common to hear about *generators* as well. A generator is like an iterator, but just generates a sequence to use later, rather than actually iterating through all of the items. You can use a generator to get a list of a sequence, and put it in a variable to be used later.
+In Python it's common to hear about *generators* as well. A generator is like an iterator, but generates a sequence to use later, rather than actually iterating through all of the items. You can use a generator to get a list of a sequence, and put it in a variable to be used later.
 
 For example, maybe you have code such as
 
@@ -81,4 +80,4 @@ For example, maybe you have code such as
 
 This lets us separate out where we make the list of items, and where we actually iterate through them. Importantly, a generator is only actually evaluated when it's used, not when it's defined. It's thus almost like we're putting the code into :python:`my_generator` rather than the list of items. This is very useful when you have a very large list you want to define at a particular point in the code, but not necessarily keep in memory until later. 
 
-We won't particularly use generators in this course, but they're common in Python and so important to know that they exist so that you can read about them if you need to. 
+We won't use generators in this course, but they're common in Python and so important to know that they exist so that you can read about them if you need to. 

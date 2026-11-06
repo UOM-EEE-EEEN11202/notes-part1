@@ -6,11 +6,11 @@
 
 Common mistakes
 ===============
-We've been teaching programming to first year undergraduates for a number of years now, and so have seen some of the common early mistakes that people tend to make. Here we've listed a few.
+I've been teaching programming to first year undergraduates for a number of years now, and so have seen some of the common early mistakes that people tend to make. Here I've listed a few.
 
-This course is intended to take about 200 hours in total. I would tend to think of programming as a 10,000 hour skill. To become an expert takes a long time, and some of the below tend to creep into code because they make it quicker and easier to write in the short term, at the possible cost of building in problems for the future. A challenge in a short course like this is that it's short, you don't get to that future point when these things matter more. 
+This course is intended to take about 200 hours in total. I would tend to think of programming as a *10,000 hour skill*. To become an expert takes a long time, and some of the below tend to creep into code because they make it quicker and easier to write in the short term, at the possible cost of building in problems for the future. A challenge in a short course like this is that it's short; you don't get to that future point when these things matter more. 
 
-Indeed, you'll see some examples of the below in different places in these notes. For hard coding, for example, sometimes we're giving just a snippet of code, and it's easier to hard code values into this rather than making you remember the value of something you read a while ago. Similarly, we won't do lots of input validation in the code examples, as it makes the code examples longer harder to see the core concepts. These are shortcuts, but its easy for shortcuts to become habits.
+Indeed, you'll see some examples of the below in different places in these notes. For hard coding, for example, sometimes we're giving just a snippet of code, and it's easier to hard code values into this rather than making you remember the value of something you read a while ago. Similarly, we won't do lots of input validation in the code examples, as it makes the code examples longer harder to see the core concepts. These are shortcuts, but its easy for shortcuts to become poor practice.
 
 
 Hard coding
@@ -34,7 +34,7 @@ Here the radius of the circle, 5, is hard coded into the formula. If we want to 
    area = math.pi * radius * radius
    print(f"The area of the circle is {area}")
 
-Now, if the variable :python:`radius` needs to change, we only need to change it in one place. The code is also more readable, as it's clear what the 5 represents.
+Now, if the variable :python:`radius` needs to change, we only need to change it in one place. The code is also more readable, as it's clear what the 5 represents. It's also easier to see that the formula for :python:`area` is correct.
 
 A variant on this is duplicate code. Continuing the above example, say we wanted to calculate the area of two circles. A hard coded version might be:
 
@@ -71,16 +71,16 @@ A last variant on the above is hard coded file paths. For example, we might have
 
 .. code-block:: python
 
-   filename = r"C:\Users\alex\OneDrive - The University of Manchester\work\github\UOM-EEE-EEEN11202\uom-eee-eeen11202-labs-labs\lab-c\frequencies.txt"
+   filename = r"C:\Users\alex\eeen11202\lab-c\data\frequencies.txt"
    with open(filename, "r") as f:
        data = f.read().splitlines()
 
-Here :python:`filename` is perfectly valid, *on my computer*. If someone else tries to run the code on their computer, or I get a new computer in the future, the location :console:`C:\\Users\\alex\\OneDrive - The University of Manchester\\` may well not exist and the code will fail. This is because it's an :ref:`absolute address <absolute_vs_relative_addresses>` specific to my user name. A better approach is to use a :ref:`relative address <absolute_vs_relative_addresses>`, for example: :python:`./data/frequencies.txt`, which is relative to the location of the code itself, but still relies on the data being put in the correct place relative to the code. It might be preferable to store the data location in a settings file which the code loads in. That way, the code can stay the same in all cases, and if the data location changes, only the settings file needs to be updated. The settings file can contain anything that it user configurable/changeable. 
+Here :python:`filename` is perfectly valid, *on my computer*. If someone else tries to run the code on their computer, or I get a new computer in the future, the location :console:`C:\\Users\\alex\\` may well not exist and the code will fail. This is because it's an :ref:`absolute address <absolute_vs_relative_addresses>` specific to my user name. A better approach is to use a :ref:`relative address <absolute_vs_relative_addresses>`, for example: :python:`.\\data\\frequencies.txt`, which is relative to the location of the code itself, but still relies on the data being put in the correct place relative to the code. It might be preferable to store the data location in a settings file which the code loads in. That way, the code can stay the same in all cases, and if the data location changes, only the settings file needs to be updated. The settings file can contain anything that it user configurable/changeable. 
 
 
 Data models
 -----------
-In early code, it's common to have lots of variables. 
+In early code, it's common to have lots of variables. For example,
 
 .. code-block:: python
 
@@ -92,28 +92,30 @@ In early code, it's common to have lots of variables.
    student2_name = "Caitlin"
    student2_id = "24601"
 
-This code will work, and is fine for small cases, but is very repetitive, and prone to errors. A single typo, :python:`1` instead of :python:`2`, and suddenly we're mixing up data. A better approach is to think about the data model, and use a suitable data structure to group related data together. 
+This code will work, and is fine for small cases, but is very repetitive, and prone to errors. A single typo, :python:`v_1` instead of :python:`v_2`, and suddenly we're mixing up data. A better approach is to think about the data model, and use a suitable data structure to group related data together. 
 
 For :python:`v_1` and :python:`v_2`, these are both time series. :python:`time_1` and :python:`time_2` might have different actual times in them, but they're representing the same thing - time. A time of 1 s probably means the same thing in both cases. For these, a :ref:`dataframe <dataframes>` might be suitable (particularly if time is actual clock time), or just grouping them into a dictionary or similar.
 
-For :python:`student1_name` and :python:`student1_id`, these are related pieces of data about a student. These might be better grouped into a custom :ref:`object <objects>`, thinking about what data and methods we want to store for each student. You'll see how to make these in `Lab G <https://uom-eee-eeen11202.github.io/notes-part2/chapters/week5/lab_g_stage_1.html>`_. 
+For :python:`student1_name` and :python:`student1_id`, these are related pieces of data about a student. These might be better grouped into a custom :ref:`object <objects>`, thinking about what data and methods we want to store for each student. You'll see how to make these in Python in Lab G. 
 
 
 Input/output validation
 -----------------------
-When we load things in from the outside world we can't always trust that the data is in the format we expect! Usually this means user input, or information data file. Once the data has been loaded, there will need to be a number of checks to make sure that the data is valid. These are usually skipped in short introduction code that you get in a course like this, we just let the code fail if the data isn't valid. This is fine when learning, but probably not for anything more critical. 
+When we load things in from the outside world we can't always trust that the data is in the format we expect! Once the data has been loaded, there will need to be a number of checks to make sure that the data is valid. For example, if you are expecting an email address, there must be an @ character present, and a domain. 
+
+Input validation checks are often skipped in short introduction code that you get in a course like this, we just let the code fail if the data isn't valid. This is fine when learning, but probably not for anything more critical. 
 
 Most input validation refers to when we get data from the outside world, but remember that for any function, the outside work is anything not in that function. Most functions will have inputs, and will need to have some checks that the input is valid before the function continues.
 
 
 Error handling
 --------------
-Following on from the above, a program just crashing when something unexpected happens is fine when it just you as the user. If someone else is using the code, they probably want some more helpful information on what went wrong and why. We'll look at error handling briefly in `Lab H <https://uom-eee-eeen11202.github.io/notes-part2/chapters/week5/lab_h_stage_1.html>`_. As your code gets more complicated, you probably spend more time on input validation, error handling, and other factors than on the core logic of the program itself.
+Following on from the above, a program just crashing when something unexpected happens is often fine when it just you as the user. If someone else is using the code, they probably want some more helpful information on what went wrong and why! We'll look at error handling briefly in Lab H. As your code gets more complicated, you may spend more time on input validation, error handling, and other factors than on the core logic of the program itself.
 
 
 Testing
 -------
-We'll learn about :ref:`unit testing <automated_testing>` as part of the course. We mention it here as often early code is made with no tests. It is tested *by inspection*, i.e. *it seems to do the right thing*. 
+We'll learn about :ref:`unit testing <automated_testing>` as part of the course. We mention it here as often early code is made with no tests. It is tested *by inspection*, i.e. you look at it and run it a few times and *it seems to do the right thing*. Formal testing methods go far beyond this to thoroughly exercise the code. 
 
 
 Documentation

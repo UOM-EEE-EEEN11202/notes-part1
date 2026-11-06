@@ -18,16 +18,16 @@ Pseudocode is a detailed, but readable, description of what you want your progra
     Get tram to Manchester Piccadilly station
     Get on train
 
-This a long way from actual code that gets a robot to take a train(!), but is a start towards some of the key functional blocks that are going to be needed.
+This a long way from actual code that (say) gets a robot to take a train(!), but is a start towards some of the key functional blocks that are going to be needed.
 
-As a lower level example, when considering the profiler we had:
+As a lower level example, earlire when considering the :ref:`profiler <profiler>` we had:
 
 .. code-block:: python
 
-	count = 0
-	elements = [1, 2, 3, 4, 5]
-	for each element in elements
-	    count = count + value_of_current_element
+   count = 0
+   elements = [1, 2, 3, 4, 5]
+   for each element in elements
+       count = count + value_of_current_element
 
 This isn't valid Python code. It won't run if you try to put it in a :console:`.py` file directly. Instead, it is (hopefully) fairly easy to read and understand. It helps you to explain what you want your code to do, before you then go away and write the detailed code. 
 

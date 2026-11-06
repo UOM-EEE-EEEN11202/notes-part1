@@ -43,14 +43,14 @@ Each piece has both an *x* coordinate, denoted by a letter, and a *y* coordinate
     piece1_x = "a"
     piece1_y = 3
 
-it probably isn't the best way of doing it. It would be easy to have a single typo, say :python:`piece2_y` and you'll start getting strange behavior.
+it probably isn't the best way of storing this information. It would be easy to have a single typo, say :python:`piece2_y` and you'll start getting strange behavior.
 
-Instead there are multiple different ways in which multiple pieces of information can be grouped together under a common variable name. (Here we won't worry about the fact that in chess there are also multiple pieces which you might want to group to help you keep track of them.)
+Instead there are multiple different ways in which multiple pieces of information can be grouped together under a common variable name. (For simplicity here we won't worry about the fact that in chess there are also multiple pieces which you might want to group to help you keep track of them.)
 
 
 Tuples
 ------
-A *tuple* groups data together separated by commas :python:`,` and usually inside round brackets :python:`()` . For the example above, the position could thus be
+A *tuple* groups data together separated by commas :python:`,` and usually inside round brackets :python:`()`. For the example above, the position could thus be
 
 .. code-block:: python 
 
@@ -93,7 +93,7 @@ to update or change the values that are stored in the list. There are more comma
 
 Dictionaries
 ------------
-A *dictionary* groups data together inside curly brackets :python:`{}` and in addition to the raw information to be stored, each piece of information is given its own name known as a *key*. :python:`,`. You get to pick the key names. For the example above, the position could thus be
+A *dictionary* groups data together inside curly brackets :python:`{}` and in addition to the raw information to be stored, each piece of information is given its own name known as a *key*. You get to pick the key names. For the example above, the position could thus be
 
 .. code-block:: python 
 
@@ -136,6 +136,6 @@ For a chess piece, a tuple probably doesn't fit - a chess piece has to move and 
 
 Other variable types
 --------------------
-There are many more variable types (sometimes called *collections*) beyond the three listed here. These are just the *getting started* ones. You'll likely encounter more as you get further into your Python programming, and so don't assume these are all there is. 
+There are many more variable types (sometimes called *collections*) beyond the three listed here. These are just the *getting started* ones. You'll likely encounter more as you get further into your programming, and so don't assume these are all there is. 
 
 For electronic engineering in particular, in Python it's very common to use *numpy arrays* as a variable type. We'll see these in the labs. 

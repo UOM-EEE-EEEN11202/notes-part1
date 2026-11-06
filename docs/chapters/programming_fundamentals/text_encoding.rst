@@ -34,9 +34,9 @@ Unicode and UTF-8 (and UTF-16 and UTF-32) are how plain text is represented in m
   :align: center
   :alt: Highlighting of the text encoding used in VSCode
 
-  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
-The encoding scheme, mapping letters to binary numbers computers can store, is more complicated with Unicode and UFT-8 and the details are not important here. The major benefit of UTF-8/16/32 based schemes is that essentially every character from any language can be represented. It is much more inclusive and should be the default. 
+The encoding scheme, mapping letters to binary numbers that computers can store, is more complicated with Unicode and UFT-8 and the details are not important here. The major benefit of UTF-8/16/32 based schemes is that essentially every character from any language can be represented. It is much more inclusive and should be the default. 
 
 The negative of UTF-8/16/32 based schemes is that there are lots of characters that look very similar. For example, :console:`'` and :console:`’` are both characters for quotes, one is curved and one is straight. It's easy to get the wrong one! Especially if copying and pasting between different programs and/or the Internet. In general, programming files expect a straight quote symbol :console:`'`. You'll get an error if you try and put :console:`’` in your code. 
 
@@ -45,7 +45,7 @@ This is just one example. You can get some very hard to spot errors in your text
 
 Which should I use
 ------------------
-Most modern files and programs will accept UTF-8. You shouldn't need to worry about text encoding more this until you get to more advanced programming.
+Most modern files and programs will accept UTF-8. You shouldn't need to worry about text encoding more than this until you get to more advanced programming.
 
 
 ASCII encoding table

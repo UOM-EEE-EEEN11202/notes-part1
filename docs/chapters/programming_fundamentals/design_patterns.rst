@@ -4,10 +4,9 @@ Once you have data, stored in objects and variables, and ways to manipulate data
 
 We also introduced :ref:`software architecture <software_architecture>` briefly. You do need to *design* a program. In the same way that you wouldn't build a house without having plans and drawings in advance, it's extremely hard to write programs with millions of lines of code without some plans and drawings in advance. 
 
-`UML (Unified Modeling Language) <https://en.wikipedia.org/wiki/Unified_Modeling_Language>`_ is one widely used approach to visualize a program structure, but goes beyond the scope of this course. We thus won't say too much about this. A lot in this area comes from gaining hands on experience, and seeing what works and what doesn't work for your needs. Also, in many cases in practice when starting out you'll be working on a code base which already exists, improving it and adding features, rather than starting from a blank slate. 
+`UML (Unified Modeling Language) <https://en.wikipedia.org/wiki/Unified_Modeling_Language>`_ is one widely used approach to visualize a program structure, but goes beyond the scope of this course. We thus won't say too much about this. A lot in designing programs comes from gaining hands on experience, and seeing what works and what doesn't work for your needs. Also, in many cases in practice when starting out you'll be working on a code base which already exists, improving it and adding features, rather than starting from a blank slate. 
 
-However we want to highlight two common *design patterns*, that is, ways of thinking about how the code is structured. These can help you start thinking about how you might structure your code, and you can then go further in your `further reading <https://uom-eee-eeen11202.github.io/chapters/course_administration/suggested_reading.html>`_ if you desire. 
-
+However we want to highlight two common *design patterns*, that is, ways of thinking about how the code is structured. These can help you start thinking about how you might structure your code.
 
 Flow charts
 -----------

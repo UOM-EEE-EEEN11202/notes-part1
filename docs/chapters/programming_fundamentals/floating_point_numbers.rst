@@ -7,7 +7,7 @@
 Floating point numbers
 ======================
 
-Numbers which aren't integers, i.e. those with decimal places, are stored as *floating point numbers*.  
+Numbers which aren't integers, i.e. numbers with decimal places, are stored as *floating point numbers*.  
 
 Most computers use a standard known as IEEE/ISO/IEC 60559 to define how we interpret the binary bits that are stored on a computer as a number with decimal places. This standard defines multiple types of floating point number, mainly:
 
@@ -25,7 +25,7 @@ The important point is that 32 bits are used to store a single, 64 bits for a do
 
 Consequences of this storage
 ----------------------------
-As with integers, as we're using a finite number of bits to store a number, and that means there are a finite number of numbers that can be represented. There's a maximum possible number that can be represented, a smallest possible number, and a smallest step change between numbers that's possible.The table below gives an indication of the precision. 
+As with integers, as we're using a finite number of bits to store a number, and that means there are a finite number of numbers that can be represented. There's a maximum possible number that can be represented, a smallest possible number, and a smallest step change between numbers that's possible. The table below gives an indication of the precision. 
 
 .. csv-table::
    :file: precisions.csv
@@ -40,7 +40,7 @@ What we find, very quickly, is that not every possible number can be represented
   :align: center
   :alt: An example of a floating point number displayed in the debugger
 
-  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of VSCode, software from `Microsoft <https://code.visualstudio.com/>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
 
 Numbers can have an infinite number of decimal places, but we only have a finite number of bits available in a computer to store a number in. It's thus common to get a small amount of *floating point error*. 

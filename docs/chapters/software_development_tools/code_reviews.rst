@@ -4,7 +4,9 @@
 Code reviews
 ============
 
-The previous testing techniques have focused on automated approaches, and on running the code to see what happens. In addition, you can just have another human read your code and give feedback on it! Code reviews are widely used, getting a peer or a manager to look at code in order to improve its quality. AI code reviews are also increasingly common. Rather than using AI to generate code for you, you still write the code but ask AI for feedback  on it.
+The previous testing techniques have focused on automated approaches, and on running the code to see what happens. In addition, you can just have another party read your code and give feedback on it! This other party may be a human, or may be an AI agent. We'll discuss :ref:`AI tools in more detail later <ai_tools>`.
+
+Code reviews are widely used, getting a peer or a manager or AI agent to look at code and give feedback in order to improve its quality. Rather than using AI to generate code for you, you still write the code but ask AI for feedback  on it.
 
 Say I gave you some Python code:
 
@@ -29,8 +31,8 @@ What would your feedback on it be?
 
 Some options that you might say are below. (You've not seen all of these topics in the course yet, so you might also like to re-visit this when you're a little further on.)
 
-- There are no comments in the code. It's not at all clear what it's meant to be doing.
-- Using upper case G is perfectly fine code, but it's not in-line with our style guide that we're following to keep our code consistent.
+- There are no comments in the code. It's not at all clear what the code meant to be doing.
+- Using upper case G is perfectly fine code, but it's not in-line with :ref:`our style guide <our_style_guide>` that we're following to keep our code consistent.
 - It imports the math module, allowing more maths functions to be used in the code, but none of these are used. You don't need to :python:`import math` just for an addition. If you're not using the functionality, you shouldn't import the module.
 - The :python:`+7` appears multiple times. The :python:`7` is thus *hard coded*. Would this be better as a variable, so if it changes, it changes everywhere? Indeed, :python:`G` contains :python:`7`. Should these lines really be :python:`+G`?
 

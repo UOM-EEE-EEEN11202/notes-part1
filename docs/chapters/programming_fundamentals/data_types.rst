@@ -5,19 +5,18 @@
    :language: python
 
 
-
 Data types
 ==========
 
 Overview
 --------
-Behind the scenes, computers work in *binary*. Everything is stored as either a :console:`0` or a :console:`1`. Many of the details of this are not important for this course, you'll go into detail on binary in your digital electronics courses. However, we always need to remember this, as it shapes how and why computers and programs work the way they do.
+Behind the scenes, computers work in *binary*. Everything is stored as either a :console:`0` or a :console:`1`. Many of the details of this are not important for this course, you'll go into detail on binary in your digital electronics courses. However, we always need to remember that computers are binary behind the scenes, as it shapes how and why computers and programs work the way they do.
 
-For our programs, we need a way of going between the :console:`0`'s and a :console:`1`'s that a computer works with, and the data a human works with. We're used to dealing with numbers (e.g. 0, 8, 22.3), or text (e.g. "*hello*"), or dates (05.11.1955), and many other formats. 
+For our programs, we need a way of going between the :console:`0`'s and a :console:`1`'s that a computer works with, and the data a human works with. As humans we're used to dealing with numbers (e.g. 0, 8, 22.3), or text (e.g. "*hello*"), or dates (05.11.1955), and many other formats. 
 
 To do this, there are two things built in to our programming. Firstly, there is an agreed on *standard*. If we all agree that :console:`01001101` represents the letter :console:`M`, then we can work with that. There are well established standards for how computers represent common types of data (e.g. IEEE/ISO/IEC 60559 for storing numbers that have decimal points). In general, we won't worry about these in this course. The computer knows the standard for us, and we only need to go into a little depth on the following pages.
 
-Secondly, each thing we store in our code, whether via a variable or in an object, is given a *data type*. The program is given some additional information to help it know what kind of information is being kept. For example, in Python, if you have
+Secondly, each thing we store in our code, whether via a variable or in an object, is given a *data type*. The program is given some additional information to help it know what kind of information is being kept, and so which standard to use to interpret the data. For example, in Python, if you have
 
 .. code-block:: python 
 
@@ -51,7 +50,7 @@ Being statically typed makes it more work for the programmer, as you have to ent
 .. admonition:: Aside
    :class: dropdown
 
-    While dynamically typed, Python has the concept of *type hints*. When we make a variable, we can state the data type we think it should have, in addition to giving the name and the value of the variable. The example as we had in :ref:`variables <single_variables>` might now look like
+    While dynamically typed, Python has the concept of *type hints*. When we make a variable, we can state the data type we think it should have, in addition to giving the name and the value of the variable. With type hints the examples as we had in :ref:`variables <single_variables>` might now look like
 
     .. code-block:: python 
 

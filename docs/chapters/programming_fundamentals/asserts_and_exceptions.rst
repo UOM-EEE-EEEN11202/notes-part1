@@ -19,21 +19,23 @@ The basic building block for automated testing is an *assert* statement. This mi
 
 This assert statement means *at this point I the programmer know x should be 0. If it is, carry on as usual. If it's not, flag that the test has failed*. 
 
-There are lots of different types of assert checks that can be use. Generally they rely on you the programmer having some knowledge (for your given test input) of what the code should ideally be doing at a particular point. 
+There are lots of different types of assert checks that can be used. Generally they rely on you the programmer having some knowledge (for your given test input) of what the code should ideally be doing at a particular point. 
 
 Assert statements are for you the programmer, letting you test the code. They are not intended for displaying errors to users. It's possible, for example, to automatically turn assert statements off. That is, they are still in the code, the code remains unedited, but they are just ignored when the code runs. They thus don't have any performance impact. It's possible to run code in *debug* mode, or in *deployment mode* by changing some settings which change how much optimization is performed behind the scenes.
 
 If you run a Python program :python:`my_script.py` from the command line, rather than using a GUI, usually you would start it with
 
-.. code-block:: console
+.. prompt::
+   :language: bash
    
-   > python3 my_script.py
+   python3 my_script.py
 
 If you add the optional :console:`-O`, all debug and assert statements will be ignored, probably making the code run faster.
 
-.. code-block:: console
+.. prompt::
+   :language: bash
    
-   > python3 -O my_script.py
+   python3 -O my_script.py
 
 Adding :console:`-OO` will perform even more optimizations.
 
@@ -55,7 +57,7 @@ You can *raise* an exception directly, for example as:
 
 Here it's very directly an error by the user that's being checked, and so this is handled via an exception. This will present an error message to the user, in red, and you can add information to help the reader understand what went wrong. 
 
-Commonly the above Python syntax isn't used directly. *try-except* (also known as *try-catch*) blocks are used. These *try* to do the commands given, and if they don't work raise the following error. An example is:
+Commonly the above Python syntax isn't used directly. *try-except* (also known as *try-catch*) blocks are used. These *try* to do the commands given, and if they don't work raise the error. An example is:
 
 .. code-block:: python
 

@@ -8,7 +8,7 @@
 Integers
 ========
 
-An integer refers to a whole number, e.g. 0, 1, 2, 55. Integers can also be negative, e.g. -1, -22.
+An integer refers to a whole number, e.g. 0, 1, 42, 47. Integers can also be negative, e.g. -1, -1701.
 
 It's very common to have integers when working with computer code. For example, maybe we want to store how many students are taking the class. Or, count how many files are stored on the computer. It doesn't make any conceptual sense for there to be 202.5 students taking the class. We'd thus store the number of students as an integer.
 
@@ -89,9 +89,9 @@ If using Windows, you can use the *Programmer* view of the Calculator app to pre
   :align: center
   :alt: View of the calculator app to convert number representations
 
-  Screenshot of the example Windows calculator, software from `Microsoft <https://www.microsoft.com/en-gb/windows>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/chapters/about/copyright>`_.
+  Screenshot of the example Windows calculator, software from `Microsoft <https://www.microsoft.com/en-gb/windows>`_. See `course copyright statement <https://uom-eee-eeen11202.github.io/notes-part1/chapters/copyright.html>`_.
 
 
 Which should I use
 ------------------
-If you have to specify a type of integer, :c:`int` if probably the default starting point. Then think about whether you're dealing with numbers which can only be positive, e.g. the number of students in a class. If so, switch to using an unsigned integer :c:`uint`. For more advanced programs, there are more data types that let you specify exactly how many bits to use. We'll see some of these in the labs. 
+If you have to specify a type of integer, :c:`int` if probably the default starting point. Then think about whether you're dealing with numbers which can only be positive, e.g. the number of students in a class. If so, switch to using an unsigned integer :c:`unsigned int`. For more advanced programs, there are more data types that let you specify exactly how many bits to use. We'll see some of these in the labs. 
